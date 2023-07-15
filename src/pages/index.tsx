@@ -1,4 +1,5 @@
 import * as React from "react"
+import "../styles/main.scss"
 import type { HeadFC, PageProps } from "gatsby"
 
 const pageStyles = {
