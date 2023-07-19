@@ -1,11 +1,74 @@
 @import "./variables/initial-variables";
 
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Outfit:wght@700&display=swap");
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
 @import "bulma/sass/utilities/all";
 @import "bulma/sass/base/all";
 @import "bulma/sass/elements/button.sass";
 @import "bulma/sass/elements/container.sass";
 @import "bulma/sass/elements/title.sass";
+@import "bulma/sass/elements/tag.sass";
+@import "bulma/sass/elements/icon.sass";
+@import "bulma/sass/elements/content.sass";
 @import "bulma/sass/form/all";
 @import "bulma/sass/components/navbar.sass";
+@import "bulma/sass/components/card.sass";
 @import "bulma/sass/layout/hero.sass";
 @import "bulma/sass/layout/section.sass";
+@import "bulma/sass/helpers/all.sass";
+@import "bulma/sass/grid/all.sass";
+@import "bulma/sass/utilities/mixins.sass";
+
+body {
+  font-family: "Lato", sans-serif;
+  color: $dark;
+  font-size: 16px;
+}
+
+.title.is-outfit {
+  font-family: "Outfit", sans-serif;
+}
+
+.custom-btn {
+  height: 48px;
+  width: 240px;
+  border-radius: 8px;
+  font-weight: 800;
+}
+
+.card-work-with-us {
+  width: 358px;
+  height: 568px;
+
+  @include tablet {
+    width: 680px;
+    height: 648px;
+  }
+
+  @include desktop {
+    width: 1414px;
+    height: 640px;
+  }
+}
+
+.container-button-work-with-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+
+  @include tablet {
+    justify-content: flex-start;
+  }
+}
+
+.developer-boy-style {
+  position: absolute;
+  top: -58.5px;
+  left: 0;
+
+  @include tablet {
+    top: -48px;
+  }
+}
