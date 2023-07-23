@@ -26,6 +26,24 @@ body {
   font-size: 16px;
 }
 
+// Navbar style
+
+.navbar-menu.is-active {
+  @include touch {
+    background-color: $light;
+    box-shadow: none;
+    padding: 24px 12px;
+  }
+}
+
+.link-redirect-margin {
+  @include touch {
+    margin-bottom: 12px;
+  }
+}
+
+//
+
 .title.is-outfit {
   font-family: "Outfit", sans-serif;
 }
@@ -71,4 +89,33 @@ body {
   @include tablet {
     top: -48px;
   }
+}
+
+// Form section style
+
+.title-contact-us {
+  @include touch {
+    text-align: center;
+  }
+}
+
+.container-button-send-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin: 1.5rem 0;
+  margin-top: 32px;
+
+  @include desktop {
+    justify-content: flex-end;
+  }
+}
+
+// Footer style
+
+.container-signature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
 }
