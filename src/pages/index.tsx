@@ -1,50 +1,52 @@
-import * as React from "react"
-import "../styles/main.scss"
-import type { HeadFC, PageProps } from "gatsby"
+import * as React from "react";
+import "../styles/main.scss";
+import { Link, type HeadFC, type PageProps } from "gatsby";
+import CardHowWeWork from "../components/CardHowWeWork";
+import { StaticImage } from "gatsby-plugin-image";
 
 const pageStyles = {
   color: "#232129",
-  padding: 96,
+  padding: "0px 20px",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
+};
 const headingStyles = {
   marginTop: 0,
   marginBottom: 64,
   maxWidth: 320,
-}
+};
 const headingAccentStyles = {
   color: "#663399",
-}
+};
 const paragraphStyles = {
   marginBottom: 48,
-}
+};
 const codeStyles = {
   color: "#8A6534",
   padding: 4,
   backgroundColor: "#FFF4DB",
   fontSize: "1.25rem",
   borderRadius: 4,
-}
+};
 const listStyles = {
   marginBottom: 96,
   paddingLeft: 0,
-}
+};
 const doclistStyles = {
   paddingLeft: 0,
-}
+};
 const listItemStyles = {
   fontWeight: 300,
   fontSize: 24,
   maxWidth: 560,
   marginBottom: 30,
-}
+};
 
 const linkStyle = {
   color: "#8954A8",
   fontWeight: "bold",
   fontSize: 16,
   verticalAlign: "5%",
-}
+};
 
 const docLinkStyle = {
   ...linkStyle,
@@ -52,7 +54,7 @@ const docLinkStyle = {
   display: `inline-block`,
   marginBottom: 24,
   marginRight: 12,
-}
+};
 
 const descriptionStyle = {
   color: "#232129",
@@ -60,7 +62,7 @@ const descriptionStyle = {
   marginTop: 10,
   marginBottom: 0,
   lineHeight: 1.25,
-}
+};
 
 const docLinks = [
   {
@@ -72,8 +74,8 @@ const docLinks = [
     text: "GraphQL Typegen Documentation",
     url: "https://www.gatsbyjs.com/docs/how-to/local-development/graphql-typegen/",
     color: "#8954A8",
-  }
-]
+  },
+];
 
 const badgeStyle = {
   color: "#fff",
@@ -89,7 +91,7 @@ const badgeStyle = {
   top: -2,
   marginLeft: 10,
   lineHeight: 1,
-}
+};
 
 const links = [
   {
@@ -135,60 +137,280 @@ const links = [
       "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
     color: "#663399",
   },
-]
+];
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this page
-        update in real-time. 😎
-      </p>
-      <ul style={doclistStyles}>
-        {docLinks.map(doc => (
-          <li key={doc.url} style={docLinkStyle}>
-            <a
-              style={linkStyle}
-              href={`${doc.url}?utm_source=starter&utm_medium=ts-docs&utm_campaign=minimal-starter-ts`}
-            >
-              {doc.text}
-            </a>
-          </li>
-        ))}
-      </ul>
-      <ul style={listStyles}>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter-ts`}
+    // NavBar
+    <main>
+      <section className="has-background-light">
+        {/* <div className="columns is-multiline is-mobile">
+          <div className="column has-background-primary has-text-centered  is-6-mobile is-6-tablet is-4-desktop">
+          1
+        </div>
+        <div className="column has-background-primary has-text-centered is-6-mobile is-6-tablet is-4-desktop">
+          2
+        </div>
+        <div className="column has-background-primary has-text-centered is-6-mobile is-6-tablet is-4-desktop">
+          3
+        </div>
+        <div className="column has-background-primary has-text-centered is-6-mobile is-6-tablet is-4-desktop">
+          4
+        </div>
+          <div className="columns is-multiline is-mobile">
+            <div className="column is-12-mobile is-6-tablet is-4-desktop">
+              <h1 className="title is-3 has-text-primary">Somos socios</h1>
+            </div>
+            <div className="column is-12-mobile is-6-tablet is-4-desktop">
+              <h1 className="title is-3 has-text-primary">tecnológicos</h1>
+            </div>
+          </div>
+        </div> */}
+        <div className="p-4">
+          <h1 className="title is-outfit is-2 has-text-primary is-marginless">
+            Somos socios
+          </h1>
+          <h1 className="title is-outfit is-2 has-text-primary mb-3">
+            tecnológicos
+          </h1>
+          {/* <br />
+          <br /> */}
+          <div className="columns is-mobile">
+            <div className="column is-10-mobile is-6-tablet is-4-desktop">
+              <p className="">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Maecenas non ullamcorper leo. Duis aliquet, ex non ultricies
+                fringilla, turpis enim cursus felis.
+              </p>
+            </div>
+          </div>
+          <div className="first-section-button">
+            <button className="button is-primary" style={{ borderRadius: 8 }}>
+              <span className="is-size-6" style={{ fontWeight: 800 }}>
+                Descubre nuestra propuesta
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="">
+        <div className="p-4">
+          <h1 className="is-size-6 has-text-centered mb-4">
+            ¿Cómo trabajamos en Falcode?
+          </h1>
+          <h1 className="title is-outfit is-4 has-text-dark has-text-centered mb-6">
+            Buscamos ser{" "}
+            <span className="has-text-primary">socios tecnológicos</span>, te
+            acompañamos en cada etapa del proyecto y más allá
+          </h1>
+
+          <div className="columns is-mobile is-multiline container-cards my-0">
+            {/* <div className="column is-12-mobile is-6-tablet is-3-desktop">
+              <div
+                className="has-background-light"
+                style={{ borderRadius: 8, position: "relative" }}
               >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
+                <StaticImage
+                  src="../images/lightbulb.png"
+                  alt="lightbulb"
+                  style={{ position: "absolute", top: -27, left: 32.66 }}
+                />
+                <div className="px-5 py-5">
+                  <h1 className="title is-outfit is-4 has-text-primary is-marginless mt-5">
+                    Ideamos la
+                  </h1>
+                  <h1 className="title is-outfit is-4 has-text-primary mb-3">
+                    mejor estrategia
+                  </h1>
+                  
+                  <div className="columns is-mobile">
+                    <div className="column is-12-mobile is-6-tablet is-4-desktop">
+                      <p className="">
+                        Phasellus euismod diam ut quam dictum dignissim. Vivamus
+                        scelerisque nisl nisl, in bibendum erat dictum sit amet.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> */}
+            <CardHowWeWork
+              title={"Ideamos la mejor estrategia"}
+              content={
+                "Phasellus euismod diam ut quam dictum dignissim. Vivamus scelerisque nisl nisl, in bibendum erat dictum sit amet."
+              }
+              image={
+                <StaticImage
+                  src="../images/lightbulb.png"
+                  alt="icon"
+                  style={{ position: "absolute", top: -27, left: 22 }}
+                />
+              }
+            />
+            <CardHowWeWork
+              title={"Aseguramos la calidad"}
+              content={
+                "Phasellus euismod diam ut quam dictum dignissim. Vivamus scelerisque nisl nisl, in bibendum erat dictum sit amet."
+              }
+              image={
+                <StaticImage
+                  src="../images/badge.png"
+                  alt="icon"
+                  style={{ position: "absolute", top: -27, left: 22 }}
+                />
+              }
+            />
+            <CardHowWeWork
+              title={"Seleccionamos el talento"}
+              content={
+                "Phasellus euismod diam ut quam dictum dignissim. Vivamus scelerisque nisl nisl, in bibendum erat dictum sit amet."
+              }
+              image={
+                <StaticImage
+                  src="../images/sniper.png"
+                  alt="icon"
+                  style={{ position: "absolute", top: -27, left: 22 }}
+                />
+              }
+            />
+            <CardHowWeWork
+              title={"Creamos soluciones top"}
+              content={
+                "Phasellus euismod diam ut quam dictum dignissim. Vivamus scelerisque nisl nisl, in bibendum erat dictum sit amet."
+              }
+              image={
+                <StaticImage
+                  src="../images/rocket.png"
+                  alt="icon"
+                  style={{ position: "absolute", top: -27, left: 22 }}
+                />
+              }
+            />
+          </div>
+
+          <div
+            className="has-background-light"
+            style={{ height: "2px", marginTop: -25 }}
+          ></div>
+
+          <h1
+            className="title is-outfit is-4 has-text-dark"
+            style={{ marginTop: 32 }}
+          >
+            Como <span className="has-text-primary">socios tecnológicos</span>{" "}
+            ofrecemos nuestra habilidad para planificar, organizar y construir
+            proyectos innovadores de alto impacto.
+          </h1>
+
+          <div>
+            <h1 className="is-size-6 mb-4">Nuestras soluciones abarcan:</h1>
+
+            <div className="columns is-mobile is-multiline">
+              <div className="column is-narrow">
+                <span className="tag is-dark is-rounded is-size-6">
+                  Desarrollo Web
                 </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
+              </div>
+              <div className="column is-narrow">
+                <span className="tag is-dark is-rounded is-size-6">
+                  Aplicaciones Móbiles
+                </span>
+              </div>
+              <div className="column is-narrow">
+                <span className="tag is-dark is-rounded is-size-6">
+                  Aplicaciones Móbiles
+                </span>
+              </div>
+              <div className="column is-narrow">
+                <span className="tag is-dark is-rounded is-size-6">
+                  Consultoría
+                </span>
+              </div>
+              <div className="column is-narrow">
+                <span className="tag is-dark is-rounded is-size-6">
+                  Consultoría
+                </span>
+              </div>
+              <div className="column is-narrow">
+                <span className="tag is-dark is-rounded is-size-6">
+                  Desarrollo Web
+                </span>
+              </div>
+              <div className="column is-narrow">
+                <span className="tag is-dark is-rounded is-size-6">
+                  Aplicaciones Móbiles
+                </span>
+              </div>
+              <div className="column is-narrow">
+                <span className="tag is-dark is-rounded is-size-6">
+                  Desarrollo Web
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="has-background-dark">
+        <div className="p-4">
+          <h1 className="title is-outfit is-4 has-text-light mb-6">
+            Casos de éxito
+          </h1>
+          <div className="columns is-mobile is-multiline container-cards my-0">
+            <div className="column is-12-mobile is-6-tablet is-3-desktop">
+              <div
+                className="has-background-light"
+                style={{ borderRadius: 8, position: "relative" }}
+              >
+                <StaticImage
+                  src="../images/spotify-mobile.png"
+                  alt="icon"
+                  style={{ position: "absolute", top: -16, right: 0 }}
+                />
+
+                <div className="p-4">
+                  <div className="columns is-mobile ">
+                    <div className="column is-7-mobile is-8-tablet is-8-desktop px-3 pb-0">
+                      <h1 className="title is-outfit is-4 has-text-primary">
+                        Duis autem vel eum iriure
+                      </h1>
+                    </div>
+                  </div>
+
+                  <div className="columns is-mobile mt-3">
+                    <div className="column is-7-mobile is-12-tablet is-12-desktop px-3 pt-0">
+                      <p className="is-size-7">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                        dolore magna aliquam erat volutpat.
+                      </p>
+                    </div>
+                  </div>
+                  <Link to="">
+                    <span className="icon-text mt-3">
+                      <span
+                        className="title is-outfit is-6 has-text-primary is-underlined"
+                        style={{ fontWeight: 800 }}
+                      >
+                        Ver proyecto
+                      </span>
+                      <span className="icon has-text-primary is-marginless">
+                        <i className="fas fa-chevron-right is-size-7"></i>
+                      </span>
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-  )
-}
+    // Footer
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head: HeadFC = () => <title>Home Page</title>;
