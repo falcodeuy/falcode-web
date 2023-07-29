@@ -60,7 +60,7 @@ const Header: React.FC = () => {
             Para Devs
           </a>
 
-          <div className="navbar-item has-text-centered mt-5">
+          <div className="navbar-item container-button-navbar">
             <button className="button is-primary custom-btn">Contactar</button>
           </div>
         </div>

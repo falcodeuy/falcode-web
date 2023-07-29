@@ -42,6 +42,24 @@ body {
   }
 }
 
+.container-button-navbar {
+  display: flex;
+  /*  justify-content: center; */
+
+  @include mobile {
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include tablet-only {
+    justify-content: flex-start;
+  }
+
+  @include touch {
+    margin-top: 48px;
+  }
+}
+
 //
 
 .title.is-outfit {
