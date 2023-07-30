@@ -1,0 +1,31 @@
+.navbar-menu.is-active {
+  @include touch {
+    background-color: $light;
+    box-shadow: none;
+    padding: 24px 12px;
+  }
+}
+
+.link-redirect-margin {
+  @include touch {
+    margin-bottom: 12px;
+  }
+}
+
+.container-button-navbar {
+  display: flex;
+  /*  justify-content: center; */
+
+  @include mobile {
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include tablet-only {
+    justify-content: flex-start;
+  }
+
+  @include touch {
+    margin-top: 48px;
+  }
+}

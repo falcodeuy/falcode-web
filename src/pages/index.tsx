@@ -5,10 +5,13 @@ import Header from "../components/header";
 import WorkWithUs from "../sections/work-with-us";
 import ContactUs from "../sections/contact-us";
 import Footer from "../components/footer";
+import Splash from "../sections/splash";
+import HowWeWork from "../sections/how-we-work";
+import Products from "../sections/products";
 
 const pageStyles = {
   color: "#232129",
-  padding: 96,
+  padding: "0px 20px",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 };
 const headingStyles = {
@@ -146,6 +149,9 @@ const IndexPage: React.FC<PageProps> = () => {
     <>
       <Header />
       <main>
+        <Splash />
+        <HowWeWork />
+        <Products />
         <WorkWithUs />
         <ContactUs />
       </main>

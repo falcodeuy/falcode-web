@@ -1,0 +1,19 @@
+.title-splash-size {
+  font-size: 40px;
+
+  @include tablet {
+    font-size: 72px;
+  }
+
+  @include fullhd {
+    font-size: 96px;
+  }
+}
+
+.splash-content-size {
+  font-size: 16px;
+
+  @include tablet {
+    font-size: 28px;
+  }
+}

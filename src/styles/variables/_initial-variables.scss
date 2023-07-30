@@ -29,9 +29,9 @@ $light: #f7f7f7 !default;
 
 // Typography
 
-$family-sans-serif: BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto',
-  'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  'Helvetica', 'Arial', sans-serif !default;
+$family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto",
+  "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  "Helvetica", "Arial", sans-serif !default;
 $family-monospace: monospace !default;
 $render-mode: optimizeLegibility !default;
 
@@ -68,41 +68,41 @@ $widescreen-enabled: true !default;
 $fullhd: 1344px + (2 * $gap) !default;
 $fullhd-enabled: true !default;
 $breakpoints: (
-  'mobile': (
-    'until': $tablet,
+  "mobile": (
+    "until": $tablet,
   ),
-  'tablet': (
-    'from': $tablet,
+  "tablet": (
+    "from": $tablet,
   ),
-  'tablet-only': (
-    'from': $tablet,
-    'until': $desktop,
+  "tablet-only": (
+    "from": $tablet,
+    "until": $desktop,
   ),
-  'touch': (
-    'from': $desktop,
+  "touch": (
+    "from": $desktop,
   ),
-  'desktop': (
-    'from': $desktop,
+  "desktop": (
+    "from": $desktop,
   ),
-  'desktop-only': (
-    'from': $desktop,
-    'until': $widescreen,
+  "desktop-only": (
+    "from": $desktop,
+    "until": $widescreen,
   ),
-  'until-widescreen': (
-    'until': $widescreen,
+  "until-widescreen": (
+    "until": $widescreen,
   ),
-  'widescreen': (
-    'from': $widescreen,
+  "widescreen": (
+    "from": $widescreen,
   ),
-  'widescreen-only': (
-    'from': $widescreen,
-    'until': $fullhd,
+  "widescreen-only": (
+    "from": $widescreen,
+    "until": $fullhd,
   ),
-  'until-fullhd': (
-    'until': $fullhd,
+  "until-fullhd": (
+    "until": $fullhd,
   ),
-  'fullhd': (
-    'from': $fullhd,
+  "fullhd": (
+    "from": $fullhd,
   ),
 ) !default;
 

@@ -1,0 +1,35 @@
+.card-work-with-us {
+  width: 358px;
+  height: 568px;
+
+  @include tablet {
+    width: 680px;
+    height: 648px;
+  }
+
+  @include desktop {
+    width: 1414px;
+    height: 640px;
+  }
+}
+
+.container-button-work-with-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+
+  @include tablet {
+    justify-content: flex-start;
+  }
+}
+
+.developer-boy-style {
+  position: absolute;
+  top: -58.5px;
+  left: 0;
+
+  @include tablet {
+    top: -48px;
+  }
+}

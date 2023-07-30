@@ -8,6 +8,7 @@
 @import "bulma/sass/elements/button.sass";
 @import "bulma/sass/elements/container.sass";
 @import "bulma/sass/elements/title.sass";
+@import "bulma/sass/elements/box.sass";
 @import "bulma/sass/elements/tag.sass";
 @import "bulma/sass/elements/icon.sass";
 @import "bulma/sass/elements/content.sass";
@@ -18,52 +19,56 @@
 @import "bulma/sass/layout/section.sass";
 @import "bulma/sass/helpers/all.sass";
 @import "bulma/sass/grid/all.sass";
-@import "bulma/sass/utilities/mixins.sass";
+
+@import "./header";
+@import "./splash-section";
+@import "./how-we-work-section";
+@import "./products-section";
+@import "./work-with-us-section";
+@import "./form-section";
+@import "./footer";
 
 body {
   font-family: "Lato", sans-serif;
-  color: $dark;
   font-size: 16px;
-}
+  //   font-weight: 400;
+  //   line-height: 1.5;
+  color: $dark;
+  //   background-color: $light;
 
-// Navbar style
-
-.navbar-menu.is-active {
-  @include touch {
-    background-color: $light;
-    box-shadow: none;
-    padding: 24px 12px;
+  @include tablet {
+    font-size: 20px;
   }
 }
 
-.link-redirect-margin {
-  @include touch {
-    margin-bottom: 12px;
-  }
+.title.is-outfit {
+  // It inherits the characteristics of Bulma's .title class. Overwrites the font-family property with 'Outfit'.
+  font-family: "Outfit", sans-serif;
 }
 
-.container-button-navbar {
-  display: flex;
-  /*  justify-content: center; */
-
+.section-padding {
   @include mobile {
-    justify-content: center;
-    align-items: center;
+    padding: 48px 16px;
   }
 
   @include tablet-only {
-    justify-content: flex-start;
+    padding: 48px 32px;
   }
 
-  @include touch {
-    margin-top: 48px;
+  @include widescreen-only {
+    padding: 48px 50px;
+  }
+
+  @include fullhd {
+    padding: 48px 240px;
   }
 }
 
-//
-
-.title.is-outfit {
-  font-family: "Outfit", sans-serif;
+.button-flexible {
+  @include mobile {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .custom-btn {
@@ -71,69 +76,19 @@ body {
   width: 240px;
   border-radius: 8px;
   font-weight: 800;
-}
+  font-family: "Lato", sans-serif;
 
-.card-work-with-us {
-  width: 358px;
-  height: 568px;
-
-  @include tablet {
-    width: 680px;
-    height: 648px;
+  @include tablet-only {
+    height: 56px;
+    width: 332px;
   }
 
   @include desktop {
-    width: 1414px;
-    height: 640px;
+    height: 64px;
+    width: 360px;
   }
-}
 
-.container-button-work-with-us {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1.5rem 0;
-
-  @include tablet {
-    justify-content: flex-start;
+  @include fullhd {
+    font-size: 24px;
   }
-}
-
-.developer-boy-style {
-  position: absolute;
-  top: -58.5px;
-  left: 0;
-
-  @include tablet {
-    top: -48px;
-  }
-}
-
-// Form section style
-
-.title-contact-us {
-  @include touch {
-    text-align: center;
-  }
-}
-
-.container-button-send-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // margin: 1.5rem 0;
-  margin-top: 32px;
-
-  @include desktop {
-    justify-content: flex-end;
-  }
-}
-
-// Footer style
-
-.container-signature {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1.5rem 0;
 }
