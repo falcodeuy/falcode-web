@@ -19,13 +19,21 @@
 @import 'bulma/sass/grid/columns.sass';
 @import 'bulma/sass/helpers/all';
 
+@import './splash-section';
+@import './how-we-work-section';
+@import './products';
+
 body {
   font-family: "Lato", sans-serif;
-  //   font-size: 1.2rem;
+  font-size: 16px;
   //   font-weight: 400;
   //   line-height: 1.5;
   color: $dark;
   //   background-color: $light;
+
+  @include tablet {
+    font-size: 20px;
+  }
 }
 
 .title.is-outfit {
@@ -43,21 +51,13 @@ body {
   }
 
   @include widescreen-only {
-    padding: 48px 100px;
+    padding: 48px 50px;
   }
 
   @include fullhd {
     padding: 48px 240px;
   }
 
-}
-
-.container-cards {
-  height: 1100px;
-
-  @include tablet {
-    height: 520px;
-  }
 }
 
 .button-flexible {
@@ -73,37 +73,18 @@ body {
   border-radius: 8px;
   font-weight: 800;
   font-family: "Lato", sans-serif;
-}
 
-.reverse-columns {
-  @include touch {
-    flex-direction: column-reverse;
+  @include tablet-only {
+    height: 56px;
+    width: 332px;
   }
-}
 
-.container-content-padding {
-  padding: 16px;
-
-  @include tablet {
-    padding: 32px;
-  }
-}
-
-.columns-gap {
-  @include touch {
-    gap: 32px;
-  }
-}
-
-.columns.columns-margin {
-  margin-top: 0;
-  margin-bottom: 32px;
-}
-
-.images-position{
   @include desktop {
-    position: absolute;
-    top: -25;
-    right: 0;
+    height: 64px;
+    width: 360px;
+  }
+
+  @include fullhd {
+    font-size: 24px;
   }
 }
