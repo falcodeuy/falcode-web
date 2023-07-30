@@ -33,6 +33,25 @@ body {
   font-family: "Outfit", sans-serif;
 }
 
+.section-padding {
+  @include mobile {
+    padding: 48px 16px;
+  }
+
+  @include tablet-only {
+    padding: 48px 32px;
+  }
+
+  @include widescreen-only {
+    padding: 48px 100px;
+  }
+
+  @include fullhd {
+    padding: 48px 240px;
+  }
+
+}
+
 .container-cards {
   height: 1100px;
 
@@ -53,4 +72,38 @@ body {
   width: 240px;
   border-radius: 8px;
   font-weight: 800;
+  font-family: "Lato", sans-serif;
+}
+
+.reverse-columns {
+  @include touch {
+    flex-direction: column-reverse;
+  }
+}
+
+.container-content-padding {
+  padding: 16px;
+
+  @include tablet {
+    padding: 32px;
+  }
+}
+
+.columns-gap {
+  @include touch {
+    gap: 32px;
+  }
+}
+
+.columns.columns-margin {
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.images-position{
+  @include desktop {
+    position: absolute;
+    top: -25;
+    right: 0;
+  }
 }
