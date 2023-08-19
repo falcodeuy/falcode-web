@@ -6,18 +6,22 @@
     display: none;
   }
 
-  .card__highlight {}
+  .card__highlight {
+  }
 
-  .card__background {}
+  .card__background {
+  }
 
-  .card__image {}
+  .card__image {
+  }
 
   .card__content {
-    .card__button {}
+    .card__button {
+    }
   }
 
   &.--mobile {
-    height: 696px;
+    height: 351px;
 
     @include desktop {
       display: none;
@@ -31,5 +35,16 @@
     @include desktop {
       display: block;
     }
+  }
+}
+
+.container-button-work-with-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+
+  @include tablet {
+    justify-content: flex-start;
   }
 }

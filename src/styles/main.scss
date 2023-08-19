@@ -55,7 +55,7 @@ body {
     padding: 48px 32px;
   }
 
-  @include widescreen-only {
+  @include desktop {
     padding: 48px 50px;
   }
 
@@ -71,12 +71,16 @@ body {
   }
 }
 
-.custom-btn {
+.btn {
   height: 48px;
   width: 240px;
   border-radius: 8px;
   font-weight: 800;
   font-family: "Lato", sans-serif;
+}
+
+.custom-btn {
+  @extend .btn;
 
   @include tablet-only {
     height: 56px;
@@ -85,10 +89,24 @@ body {
 
   @include desktop {
     height: 64px;
+    width: 300px;
+  }
+
+  @include widescreen {
+    height: 64px;
     width: 360px;
   }
 
   @include fullhd {
     font-size: 24px;
+  }
+}
+
+.header-btn {
+  @extend .btn;
+
+  @include desktop {
+    height: 40px;
+    width: 162px;
   }
 }

@@ -1,66 +1,69 @@
 .title-secondary-size {
-    font-size: 24px;
-  
-    @include tablet {
-      font-size: 32px;
-    }
-  
-    @include fullhd {
-      font-size: 40px;
-    }
+  font-size: 24px;
+
+  @include tablet {
+    font-size: 32px;
   }
-  
-  .title-cards-size {
-    font-size: 24px;
-  
-    @include fullhd {
-      font-size: 32px;
-    }
+
+  @include fullhd {
+    font-size: 40px;
   }
-  
-  .title-how-we-work {
+}
+
+.title-cards-size {
+  font-size: 24px;
+
+  @include fullhd {
+    font-size: 32px;
+  }
+}
+
+.title-how-we-work {
+  text-align: center;
+  margin-bottom: 16px;
+
+  @include tablet {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+}
+
+.container-cards {
+  height: 1100px;
+
+  @include tablet-only {
+    height: 640px;
+  }
+
+  @include desktop {
+    height: 480px;
+  }
+
+  @include widescreen {
+    height: 380px;
+  }
+
+  /* @include widescreen-only {
+      height: 400px;
+    } */
+
+  /* @include fullhd {
+      height: 400px;
+    } */
+}
+
+.divider {
+  height: 2px;
+
+  @include mobile {
+    margin-top: -25px;
+  }
+}
+
+.title-type-project {
+  margin-top: 32px;
+
+  @include tablet-only {
     text-align: center;
-    margin-bottom: 16px;
-  
-    @include tablet {
-      font-size: 24px;
-      margin-bottom: 32px;
-    }
-  
   }
-  
-  .container-cards {
-    height: 1100px;
-  
-    @include tablet-only {
-      height: 640px;
-    }
-  
-    @include desktop {
-      height: 380px;
-    }
-  
-    /* @include widescreen-only {
-      height: 400px;
-    } */
-  
-    /* @include fullhd {
-      height: 400px;
-    } */
-  }
-  
-  .divider {
-    height: 2px;
-  
-    @include mobile {
-      margin-top: -25px;
-    }
-  }
-  
-  .title-type-project {
-    margin-top: 32px;
-  
-    @include tablet-only {
-      text-align: center;
-    }
-  }
+}

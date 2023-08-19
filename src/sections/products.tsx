@@ -13,7 +13,7 @@ const Products: React.FC = () => {
           Casos de éxito
         </h1>
         <div className="columns is-mobile is-multiline columns-margin columns-gap">
-          <div className="column is-12-mobile is-12-tablet is-4-desktop is-5-widescreen is-5-fullhd">
+          <div className="column is-12-mobile is-12-tablet is-12-desktop is-5-widescreen is-5-fullhd">
             <div
               className="has-background-light container-product"
               // style={{ borderRadius: 8, position: "relative" }}
@@ -66,7 +66,7 @@ const Products: React.FC = () => {
             </div>
           </div>
 
-          <div className="column is-12-mobile is-12-tablet is-8-desktop is-7-widescreen is-7-fullhd">
+          <div className="column is-12-mobile is-12-tablet is-12-desktop is-7-widescreen is-7-fullhd">
             <div
               className="has-background-light container-product"
               // style={{ borderRadius: 8, position: "relative" }}
@@ -126,7 +126,7 @@ const Products: React.FC = () => {
         </div>
 
         <div className="columns is-mobile is-multiline columns-margin columns-gap reverse-columns">
-          <div className="column is-12-mobile is-12-tablet is-8-desktop is-7-widescreen is-7-fullhd">
+          <div className="column is-12-mobile is-12-tablet is-12-desktop is-7-widescreen is-7-fullhd">
             <div
               className="has-background-light container-product"
               // style={{ borderRadius: 8, position: "relative" }}
@@ -183,7 +183,7 @@ const Products: React.FC = () => {
             </div>
           </div>
 
-          <div className="column is-12-mobile is-12-tablet is-4-desktop is-5-widescreen is-5-fullhd">
+          <div className="column is-12-mobile is-12-tablet is-12-desktop is-5-widescreen is-5-fullhd">
             <div
               className="has-background-light container-product"
               // style={{ borderRadius: 8, position: "relative" }}

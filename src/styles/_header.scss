@@ -6,6 +6,24 @@
   }
 }
 
+.padding-navbar {
+  @include desktop {
+    padding: 48px 50px;
+  }
+
+  @include fullhd {
+    padding: 48px 240px;
+  }
+}
+
+.gap-tab {
+  gap: 52px;
+
+  @include desktop-only {
+    gap: 9px;
+  }
+}
+
 .link-redirect-margin {
   @include touch {
     margin-bottom: 12px;

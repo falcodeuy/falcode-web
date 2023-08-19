@@ -1,5 +1,5 @@
 import React from "react";
-import CardHowWeWork from "../components/CardHowWeWork";
+import CardHowWeWork from "../components/card-how-we-work";
 import { StaticImage } from "gatsby-plugin-image";
 
 const HowWeWork: React.FC = () => {
