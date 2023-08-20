@@ -21,7 +21,9 @@
   }
 
   &.--mobile {
-    height: 351px;
+    @include mobile {
+      height: 351px;
+    }
 
     @include desktop {
       display: none;
