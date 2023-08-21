@@ -15,11 +15,11 @@ const Products: React.FC = () => {
         <div className="columns is-mobile is-multiline columns-margin columns-gap">
           <div className="column is-12-mobile is-12-tablet is-4-desktop is-5-widescreen is-5-fullhd">
             <div
-              className="has-background-light"
-              style={{ borderRadius: 8, position: "relative" }}
+              className="has-background-light container-product"
+              // style={{ borderRadius: 8, position: "relative" }}
             >
               <div className="columns is-mobile is-multiline">
-                <div className="column is-8-mobile is-6-tablet is-8-widescreen is-7-fullhd py-0">
+                <div className="column is-8-mobile is-6-tablet is-8-widescreen is-8-fullhd py-0">
                   <div className="container-content-padding pr-0">
                     <div className="columns is-mobile ">
                       <div className="column is-12-mobile is-7-tablet is-10-widescreen is-9-fullhd px-3 pb-0">
@@ -54,11 +54,12 @@ const Products: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="column is-4-mobile is-6-tablet is-4-widescreen is-5-fullhd has-text-centered is-relative">
+                <div className="column is-4-mobile is-6-tablet is-4-widescreen is-4-fullhd has-text-centered is-relative">
                   <StaticImage
-                    src="../images/spotify-mobile.png"
+                    src="../images/spotify-mobile.svg"
                     alt="icon"
-                    style={{ position: "absolute", top: -35, left: 20 }}
+                    // style={{ position: "absolute", top: -35, left: 20 }}
+                    className="image-1-transform"
                   />
                 </div>
               </div>
@@ -67,8 +68,8 @@ const Products: React.FC = () => {
 
           <div className="column is-12-mobile is-12-tablet is-8-desktop is-7-widescreen is-7-fullhd">
             <div
-              className="has-background-light"
-              style={{ borderRadius: 8, position: "relative" }}
+              className="has-background-light container-product"
+              // style={{ borderRadius: 8, position: "relative" }}
             >
               <div className="columns is-mobile is-multiline">
                 <div className="column is-12-mobile is-12-tablet is-7-widescreen is-7-fullhd py-0">
@@ -111,11 +112,11 @@ const Products: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="column is-12-mobile is-12-tablet is-5-widescreen is-5-fullhd has-text-centered pt-0 is-relative">
+                <div className="column is-12-mobile is-12-tablet is-5-widescreen is-5-fullhd has-text-centered p-0 is-relative">
                   <StaticImage
                     src="../images/laptop.svg"
                     alt="icon"
-                    className="images-position"
+                    className="image-2-transform"
                     // style={{ position: 'absolute', top: -25, right: 0 }}
                   />
                 </div>
@@ -127,15 +128,15 @@ const Products: React.FC = () => {
         <div className="columns is-mobile is-multiline columns-margin columns-gap reverse-columns">
           <div className="column is-12-mobile is-12-tablet is-8-desktop is-7-widescreen is-7-fullhd">
             <div
-              className="has-background-light"
-              style={{ borderRadius: 8, position: "relative" }}
+              className="has-background-light container-product"
+              // style={{ borderRadius: 8, position: "relative" }}
             >
               <div className="columns is-mobile is-multiline reverse-columns">
-                <div className="column is-12-mobile is-12-tablet is-5-widescreen is-4-fullhd has-text-centered pt-0 is-relative">
+                <div className="column is-12-mobile is-12-tablet is-5-widescreen is-4-fullhd has-text-centered p-0 is-relative">
                   <StaticImage
                     src="../images/monitor-mac.svg"
                     alt="icon"
-                    className="images-position"
+                    className="image-3-transform"
                     // style={{ position: 'absolute', top: -25, left: 0 }}
                   />
                 </div>
@@ -184,15 +185,16 @@ const Products: React.FC = () => {
 
           <div className="column is-12-mobile is-12-tablet is-4-desktop is-5-widescreen is-5-fullhd">
             <div
-              className="has-background-light"
-              style={{ borderRadius: 8, position: "relative" }}
+              className="has-background-light container-product"
+              // style={{ borderRadius: 8, position: "relative" }}
             >
               <div className="columns is-mobile is-multiline">
                 <div className="column is-4-mobile is-4-tablet is-4-widescreen is-4-fullhd has-text-centered is-relative">
                   <StaticImage
                     src="../images/rocket-mobile.svg"
                     alt="icon"
-                    style={{ position: "absolute", top: -25, left: 30 }}
+                    // style={{ position: "absolute", top: -25, left: 30 }}
+                    className="image-4-transform"
                   />
                 </div>
 
@@ -273,12 +275,12 @@ const Products: React.FC = () => {
               </div>
             </div>
 
-            <div className="column is-12-mobile is-12-tablet is-4-desktop has-text-centered pt-0 is-relative">
+            <div className="column is-12-mobile is-12-tablet is-4-desktop has-text-centered p-0 is-relative">
               <StaticImage
                 // className='laptop'
                 src="../images/monitor-mac.svg"
                 alt="icon"
-                // style={{ position: 'absolute', top: -16, right: 0 }}
+                // style={{ position: "absolute", top: -16, right: 0 }}
               />
             </div>
           </div>
