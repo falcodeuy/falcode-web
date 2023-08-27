@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import LanguageSelector from "./language-selector";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -62,6 +63,8 @@ const Header: React.FC = () => {
           <div className="navbar-item container-button-navbar">
             <button className="button is-primary header-btn">Contactar</button>
           </div>
+
+          <LanguageSelector />
         </div>
       </div>
     </nav>

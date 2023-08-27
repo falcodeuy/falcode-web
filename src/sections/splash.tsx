@@ -1,6 +1,8 @@
+import { useIntl } from "gatsby-plugin-intl";
 import React from "react";
 
 const Splash: React.FC = () => {
+  const intl = useIntl();
   return (
     <section className="has-background-light">
       <div className="section-padding">
@@ -14,9 +16,7 @@ const Splash: React.FC = () => {
         <div className="columns is-mobile">
           <div className="column is-10-mobile is-8-tablet is-6-widescreen is-4-desktop">
             <p className="splash-content-size">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-              non ullamcorper leo. Duis aliquet, ex non ultricies fringilla,
-              turpis enim cursus felis.
+              {intl.formatMessage({ id: "title" })}
             </p>
           </div>
         </div>
