@@ -18,6 +18,12 @@
   }
 }
 
+.container-title-card {
+  @include tablet {
+    height: 54px;
+  }
+}
+
 .title-how-we-work {
   text-align: center;
   margin-bottom: 16px;
@@ -48,6 +54,27 @@
   position: absolute;
   top: -27px;
   left: 22px;
+}
+
+.container-content-card {
+  border-radius: 8px;
+  position: relative;
+
+  @include tablet {
+    height: 260px;
+  }
+
+  @include desktop {
+    height: 385px;
+  }
+
+  @include widescreen {
+    height: 290px;
+  }
+
+  @include fullhd {
+    height: 280px;
+  }
 }
 
 .divider {

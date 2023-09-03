@@ -1,7 +1,10 @@
 import { StaticImage } from "gatsby-plugin-image";
+import { useIntl } from "gatsby-plugin-intl";
 import React from "react";
 
 const ContactUs: React.FC = () => {
+  const intl = useIntl();
+
   return (
     <section className="has-background-dark">
       <div className="section-padding is-flex is-align-items-center is-justify-content-center">
@@ -10,7 +13,7 @@ const ContactUs: React.FC = () => {
             <div className="columns is-mobile mb-4 is-centered">
               <div className="column is-8-mobile is-12-tablet is-8-desktop pb-0">
                 <h1 className="title is-outfit is-3 is-size-1-tablet is-size-1-desktop has-text-primary title-contact-us">
-                  Contáctanos y empecemos a trabajar juntos en un gran proyecto
+                  {intl.formatMessage({ id: "contact_us.title" })}
                 </h1>
               </div>
             </div>
@@ -18,7 +21,9 @@ const ContactUs: React.FC = () => {
 
           <div className="column is-12-mobile is-12-tablet is-6-desktop pb-0">
             <div className="field">
-              <label className="label has-text-white">Nombre</label>
+              <label className="label has-text-white">
+                {intl.formatMessage({ id: "contact_us.form.name" })}
+              </label>
               <div className="control">
                 <input
                   className="input input-inline"
@@ -29,7 +34,9 @@ const ContactUs: React.FC = () => {
             </div>
 
             <div className="field">
-              <label className="label has-text-white">Email</label>
+              <label className="label has-text-white">
+                {intl.formatMessage({ id: "contact_us.form.email" })}
+              </label>
               <div className="control">
                 <input
                   className="input input-inline"
@@ -40,7 +47,9 @@ const ContactUs: React.FC = () => {
             </div>
 
             <div className="field">
-              <label className="label has-text-white">Mensaje</label>
+              <label className="label has-text-white">
+                {intl.formatMessage({ id: "contact_us.form.message" })}
+              </label>
 
               <div className="control">
                 <textarea
@@ -52,7 +61,7 @@ const ContactUs: React.FC = () => {
             </div>
             <div className="container-button-send-form">
               <button className="button is-primary custom-btn">
-                Contactar
+                {intl.formatMessage({ id: "contact_us.form.button" })}
               </button>
             </div>
           </div>

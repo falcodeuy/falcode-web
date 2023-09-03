@@ -1,17 +1,84 @@
 {
-  "title": "Gatsby English",
-  "description": "Kick off your next, great Gatsby project with this default-starter-intl. This barebones starter ships with the main Gatsby configuration files you might need.",
-  "author": "@wiziple",
-  "hello": "Hi people",
-  "welcome": "Welcome to your new Gatsby site.",
-  "title_page2": "Page two",
-  "hello_page2": "Hi from the second page",
-  "go_page2": "Go to page 2",
-  "build": "Now go build something great.",
-  "welcome_page2": "Welcome to page 2",
-  "go_back": "Go back to the homepage",
-  "notfound": {
-    "header": "NOT FOUND",
-    "description": "You just hit a route that doesn't exist... the sadness."
+  "header": {
+    "nav_tab_1": "About us",
+    "nav_tab_2": "About us",
+    "nav_tab_3": "Products",
+    "nav_tab_4": "Work with us",
+    "nav_tab_5": "Contact us"
+  },
+  "splash": {
+    "title_1": "We are technology",
+    "title_2": "partners",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non ullamcorper leo. Duis aliquet, ex non ultricies fringilla, turpis enim cursus felis.",
+    "button": "Discover our proposal"
+  },
+  "how_we_work": {
+    "title_1": "How do we work at Falcode?",
+    "title_2": {
+      "part_1": "We seek to be",
+      "part_2": "technology partners",
+      "part_3": "we accompany you at every stage of the project and beyond"
+    },
+    "card_1": {
+      "title": "We devise the best strategy",
+      "content": "Phasellus euismod diam ut quam dictum dignissim. Vivamus scelerisque nisl nisl, in bibendum erat dictum sit amet."
+    },
+    "card_2": {
+      "title": "Quality assurance",
+      "content": "Phasellus euismod diam ut quam dictum dignissim. Vivamus scelerisque nisl nisl, in bibendum erat dictum sit amet."
+    },
+    "card_3": {
+      "title": "We select talent",
+      "content": "Phasellus euismod diam ut quam dictum dignissim. Vivamus scelerisque nisl nisl, in bibendum erat dictum sit amet."
+    },
+    "card_4": {
+      "title": "We create top solutions",
+      "content": "Phasellus euismod diam ut quam dictum dignissim. Vivamus scelerisque nisl nisl, in bibendum erat dictum sit amet."
+    },
+    "title_3": {
+      "part_1": "As",
+      "part_2": "technology partners",
+      "part_3": "we offer our ability to plan, organize and build innovative, high-impact projects."
+    },
+    "subtitle": "Our solutions include",
+    "chip_1": "Web Development",
+    "chip_2": "Mobile Applications",
+    "chip_3": "Consulting"
+  },
+  "products": {
+    "title": "Success stories",
+    "card_1": {
+      "title": "Duis autem vel eum iriure",
+      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+    },
+    "card_2": {
+      "title": "Exerci tation ullamcorper suscipit lobortis",
+      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper."
+    },
+    "card_3": {
+      "title": "Exerci tation ullamcorper suscipit lobortis",
+      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper."
+    },
+    "card_4": {
+      "title": "Duis autem vel eum iriure",
+      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+    },
+    "link_card": "See project",
+    "summary": "We aspire to be allies in the deployment of ideas, the expansion of creativity and the realization of ambitious concepts in tangible projects. We work hard to orchestrate the different parties involved in each project, with the objective of providing ingenious solutions that end up benefiting society.",
+    "button": "Work with us"
+  },
+  "work_with_us": {
+    "title": "We are dev first, we care about you.",
+    "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+    "button": "Work with us"
+  },
+  "contact_us": {
+    "title": "Contact us and let's start working together on a great project",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "button": "Contact"
+    }
   }
 }

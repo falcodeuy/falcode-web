@@ -1,17 +1,84 @@
 {
-  "title": "Gatsby Deutsch",
-  "description": "Starten Sie Ihr nächstes, tolles Gatsby-Projekt mit diesem default-starter-intl. Dieser Barebones-Starter wird mit den wichtigsten Gatsby-Konfigurationsdateien geliefert, die Sie möglicherweise benötigen.",
-  "author": "@wiziple",
-  "hello": "hallo Leute",
-  "welcome": "Willkommen auf Ihrer neuen Gatsby-Site.",
-  "title_page2": "Seite zwei",
-  "hello_page2": "Hallo von der zweiten Seite",
-  "go_page2": "Gehen Sie zu Seite 2",
-  "build": "Jetzt mach etwas Großartiges.",
-  "welcome_page2": "Willkommen auf Seite 2",
-  "go_back": "Gehe zurück zur Startseite",
-  "notfound": {
-    "header": "Nicht gefunden",
-    "description": "Sie haben gerade eine Route erreicht, die nicht existiert... die Traurigkeit."
+  "header": {
+    "nav_tab_1": "Nosotros",
+    "nav_tab_2": "Servicios",
+    "nav_tab_3": "Casos de éxito",
+    "nav_tab_4": "Para Devs",
+    "nav_tab_5": "Contactar"
+  },
+  "splash": {
+    "title_1": "Somos socios",
+    "title_2": "tecnológicos",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non ullamcorper leo. Duis aliquet, ex non ultricies fringilla, turpis enim cursus felis.",
+    "button": "Descubre nuestra propuesta"
+  },
+  "how_we_work": {
+    "title_1": "¿Cómo trabajamos en Falcode?",
+    "title_2": {
+      "part_1": "Buscamos ser",
+      "part_2": "socios tecnológicos",
+      "part_3": "te acompañamos en cada etapa del proyecto y más allá"
+    },
+    "card_1": {
+      "title": "Ideamos la mejor estrategia",
+      "content": "Phasellus euismod diam ut quam dictum dignissim. Vivamus scelerisque nisl nisl, in bibendum erat dictum sit amet."
+    },
+    "card_2": {
+      "title": "Aseguramos la calidad",
+      "content": "Phasellus euismod diam ut quam dictum dignissim. Vivamus scelerisque nisl nisl, in bibendum erat dictum sit amet."
+    },
+    "card_3": {
+      "title": "Seleccionamos el talento",
+      "content": "Phasellus euismod diam ut quam dictum dignissim. Vivamus scelerisque nisl nisl, in bibendum erat dictum sit amet."
+    },
+    "card_4": {
+      "title": "Creamos soluciones top",
+      "content": "Phasellus euismod diam ut quam dictum dignissim. Vivamus scelerisque nisl nisl, in bibendum erat dictum sit amet."
+    },
+    "title_3": {
+      "part_1": "Como",
+      "part_2": "socios tecnológicos",
+      "part_3": "ofrecemos nuestra habilidad para planificar, organizar y construir proyectos innovadores de alto impacto."
+    },
+    "subtitle": "Nuestras soluciones abarcan",
+    "chip_1": "Desarrollo Web",
+    "chip_2": "Aplicaciones Móviles",
+    "chip_3": "Consultoría"
+  },
+  "products": {
+    "title": "Casos de éxito",
+    "card_1": {
+      "title": "Duis autem vel eum iriure",
+      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+    },
+    "card_2": {
+      "title": "Exerci tation ullamcorper suscipit lobortis",
+      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper."
+    },
+    "card_3": {
+      "title": "Exerci tation ullamcorper suscipit lobortis",
+      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper."
+    },
+    "card_4": {
+      "title": "Duis autem vel eum iriure",
+      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+    },
+    "link_card": "Ver proyecto",
+    "summary": "Aspiramos a ser aliados en el despliegue de ideas, la expansión de la creatividad y la concreción de conceptos ambiciosos en proyectos tangibles. Trabajamos arduamente para orquestar las distintas partes involucradas en cada proyecto, con el objetivo de brindar soluciones ingeniosas que terminen beneficiando a la sociedad.",
+    "button": "Contáctanos"
+  },
+  "work_with_us": {
+    "title": "Somos dev first, nos preocupamos por ti.",
+    "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+    "button": "Trabaja con nosotros"
+  },
+  "contact_us": {
+    "title": "Contáctanos y empecemos a trabajar juntos en un gran proyecto",
+    "form": {
+      "name": "Nombre",
+      "email": "Email",
+      "message": "Mensaje",
+      "button": "Contactar"
+    }
   }
 }
