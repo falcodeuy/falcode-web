@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import LanguageSelector from "./language-selector";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,7 +10,11 @@ const Header: React.FC = () => {
   };
 
   return (
-    <nav className="navbar" role="navigation" aria-label="main navigation">
+    <nav
+      className="navbar padding-navbar"
+      role="navigation"
+      aria-label="main navigation"
+    >
       <div className="navbar-brand">
         <a className="navbar-item" href="#">
           <StaticImage
@@ -38,12 +43,7 @@ const Header: React.FC = () => {
         id="navbarBasicExample"
         className={`navbar-menu ${isMenuOpen ? "is-active" : ""}`}
       >
-        <div
-          className="navbar-end"
-          style={{
-            gap: "52px",
-          }}
-        >
+        <div className="navbar-end gap-tab">
           <a className="navbar-item has-text-dark link-redirect-margin">
             Nosotros
           </a>
@@ -61,8 +61,10 @@ const Header: React.FC = () => {
           </a>
 
           <div className="navbar-item container-button-navbar">
-            <button className="button is-primary custom-btn">Contactar</button>
+            <button className="button is-primary header-btn">Contactar</button>
           </div>
+
+          <LanguageSelector />
         </div>
       </div>
     </nav>

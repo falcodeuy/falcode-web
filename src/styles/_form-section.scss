@@ -15,3 +15,63 @@
     justify-content: flex-end;
   }
 }
+
+.feather-top-right {
+  transform: translate(145px, -20px);
+
+  @include tablet {
+    transform: translate(518px, -111px);
+  }
+
+  @include desktop {
+    transform: translate(800px, -36px);
+  }
+
+  @include widescreen {
+    transform: translate(1050px, -36px);
+  }
+
+  @include fullhd {
+    transform: translate(1600px, -111px);
+  }
+}
+
+.feather-bottom-right {
+  transform: translate(0px, 21px);
+
+  @include tablet {
+    transform: translate(300px, -6px);
+  }
+
+  @include desktop {
+    transform: translate(200px, -86px);
+  }
+
+  @include widescreen {
+    transform: translate(400px, -86px);
+  }
+
+  @include fullhd {
+    transform: translate(550px, -114px);
+  }
+}
+
+.feather-left {
+  transform: translate(21px, -46px);
+
+  @include tablet {
+    transform: translate(63px, -111px);
+  }
+
+  @include desktop {
+    transform: translate(145px, -41px);
+  }
+
+  @include widescreen {
+    transform: translate(221px, -242px);
+  }
+
+  @include fullhd {
+    transform: translate(306px, -304px);
+  }
+}

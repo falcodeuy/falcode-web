@@ -55,7 +55,7 @@ body {
     padding: 48px 32px;
   }
 
-  @include widescreen-only {
+  @include desktop {
     padding: 48px 50px;
   }
 
@@ -71,12 +71,16 @@ body {
   }
 }
 
-.custom-btn {
+.btn {
   height: 48px;
   width: 240px;
   border-radius: 8px;
   font-weight: 800;
   font-family: "Lato", sans-serif;
+}
+
+.custom-btn {
+  @extend .btn;
 
   @include tablet-only {
     height: 56px;
@@ -85,10 +89,71 @@ body {
 
   @include desktop {
     height: 64px;
+    width: 300px;
+  }
+
+  @include widescreen {
+    height: 64px;
     width: 360px;
   }
 
   @include fullhd {
     font-size: 24px;
   }
+}
+
+.header-btn {
+  @extend .btn;
+
+  @include desktop {
+    height: 40px;
+    width: 162px;
+  }
+}
+
+// Divider styles
+
+.container-falcon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.container-stack-tecnologies {
+  width: 100%;
+
+  @include mobile {
+    transform: translate(0px, -23px);
+  }
+
+  @include tablet {
+    transform: translate(0px, -88px);
+  }
+}
+
+.triangle {
+  position: relative;
+  background: $dark;
+}
+
+.triangle::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 100px 0 100px;
+  border-color: $dark transparent transparent transparent;
+  left: 73%;
+  transform: translateX(-50%) translateY(100%);
+}
+
+.curved {
+  position: relative;
+  background: white;
+  height: 6vh;
+  border-bottom-left-radius: 50% 80%;
+  border-bottom-right-radius: 50% 80%;
 }

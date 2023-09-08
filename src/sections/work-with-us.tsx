@@ -3,8 +3,10 @@ import React from "react";
 
 export default function WorkWithUs() {
   return (
-    <>
-      <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
+    <div className="section-padding">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
         height="696"
         viewBox="0 0 680 696"
         className="card-work-with-us --mobile"
@@ -42,13 +44,15 @@ export default function WorkWithUs() {
               We are dev first, we care about you.
             </h1>
             <p className="has-text-white is-size-4-desktop">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-              diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-              aliquam erat volutpat.
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat volutpat.
             </p>
-            <button className="button is-primary custom-btn">
-              Trabaja con nosotros
-            </button>
+            <div className="container-button-work-with-us">
+              <button className="button is-primary custom-btn">
+                Trabaja con nosotros
+              </button>
+            </div>
           </div>
         </foreignObject>
       </svg>
@@ -58,7 +62,8 @@ export default function WorkWithUs() {
         xmlnsXlink="http://www.w3.org/1999/xlink"
         viewBox="0 0 1427 664"
         className="card-work-with-us --desktop"
-        fill="none">
+        fill="none"
+      >
         <rect
           className="card__background"
           width="1414"
@@ -72,7 +77,12 @@ export default function WorkWithUs() {
           d="M328.555 24H17C12.5818 24 9 27.5817 9 32V656C9 660.419 12.5817 664 17 664H568.49C571.724 634.783 573.395 604.946 573.395 574.626C573.395 342.761 475.672 139.225 328.555 24Z"
           fill="#E8536D"
         />
-        <foreignObject key="image" d="M0 0H658V664H0V0Z" width="658" height="664">
+        <foreignObject
+          key="image"
+          d="M0 0H658V664H0V0Z"
+          width="658"
+          height="664"
+        >
           <StaticImage
             key="desktopImage"
             className="card__image"
@@ -86,16 +96,18 @@ export default function WorkWithUs() {
               We are dev first, we care about you.
             </h1>
             <p className="has-text-white is-size-4-desktop">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-              diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-              aliquam erat volutpat.
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat volutpat.
             </p>
-            <button className="button is-primary custom-btn">
-              Trabaja con nosotros
-            </button>
+            <div className="container-button-work-with-us">
+              <button className="button is-primary custom-btn">
+                Trabaja con nosotros
+              </button>
+            </div>
           </div>
         </foreignObject>
       </svg>
-    </>
+    </div>
   );
-};
+}

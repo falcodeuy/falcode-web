@@ -8,6 +8,7 @@ import Footer from "../components/footer";
 import Splash from "../sections/splash";
 import HowWeWork from "../sections/how-we-work";
 import Products from "../sections/products";
+import { StaticImage } from "gatsby-plugin-image";
 
 const pageStyles = {
   color: "#232129",
@@ -150,6 +151,21 @@ const IndexPage: React.FC<PageProps> = () => {
       <Header />
       <main>
         <Splash />
+        <div>
+          <div className="container-falcon has-background-light">
+            <StaticImage
+              src="../images/falcon.svg"
+              alt="icon"
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </div>
+
+          <StaticImage
+            src="../images/stack-tecnologies.svg"
+            alt="icon"
+            className="container-stack-tecnologies"
+          />
+        </div>
         <HowWeWork />
         <Products />
         <WorkWithUs />
