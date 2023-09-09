@@ -7,18 +7,12 @@ const Products: React.FC = () => {
     <section className="has-background-dark">
       <section className="curved"></section>
       <div className="section-padding">
-        <h1
-          className="title is-outfit is-4 has-text-light"
-          style={{ marginBottom: 32 }}
-        >
+        <h1 className="title is-outfit is-4 has-text-light title-margin-bottom">
           Casos de éxito
         </h1>
         <div className="columns is-mobile is-multiline columns-margin columns-gap">
           <div className="column is-12-mobile is-12-tablet is-12-desktop is-5-widescreen is-5-fullhd">
-            <div
-              className="has-background-light container-product"
-              // style={{ borderRadius: 8, position: "relative" }}
-            >
+            <div className="has-background-light container-product">
               <div className="columns is-mobile is-multiline">
                 <div className="column is-8-mobile is-6-tablet is-8-widescreen is-8-fullhd py-0">
                   <div className="container-content-padding pr-0">
@@ -45,10 +39,7 @@ const Products: React.FC = () => {
                           Ver proyecto
                         </span>
                         <span className="icon has-text-primary is-marginless">
-                          <i
-                            className="fas fa-chevron-right fa-sm"
-                            style={{ marginRight: 3 }}
-                          ></i>
+                          <i className="fas fa-chevron-right fa-sm arrow-icon-margin-right"></i>
                         </span>
                       </span>
                     </Link>
@@ -59,7 +50,6 @@ const Products: React.FC = () => {
                   <StaticImage
                     src="../images/spotify-mobile.svg"
                     alt="icon"
-                    // style={{ position: "absolute", top: -35, left: 20 }}
                     className="image-1-transform"
                   />
                 </div>
@@ -68,10 +58,7 @@ const Products: React.FC = () => {
           </div>
 
           <div className="column is-12-mobile is-12-tablet is-12-desktop is-7-widescreen is-7-fullhd">
-            <div
-              className="has-background-light container-product"
-              // style={{ borderRadius: 8, position: "relative" }}
-            >
+            <div className="has-background-light container-product">
               <div className="columns is-mobile is-multiline">
                 <div className="column is-12-mobile is-12-tablet is-7-widescreen is-7-fullhd py-0">
                   <div className="container-content-padding pr-0">
@@ -96,17 +83,11 @@ const Products: React.FC = () => {
                     </div>
                     <Link to="">
                       <span className="icon-text mt-3">
-                        <span
-                          className="title is-outfit is-6 has-text-primary span-see-project"
-                          style={{ fontWeight: 800 }}
-                        >
+                        <span className="title is-outfit is-6 has-text-primary span-see-project">
                           Ver proyecto
                         </span>
                         <span className="icon has-text-primary is-marginless">
-                          <i
-                            className="fas fa-chevron-right fa-sm"
-                            style={{ marginRight: 3 }}
-                          ></i>
+                          <i className="fas fa-chevron-right fa-sm arrow-icon-margin-right"></i>
                         </span>
                       </span>
                     </Link>
@@ -118,7 +99,6 @@ const Products: React.FC = () => {
                     src="../images/laptop.svg"
                     alt="icon"
                     className="image-2-transform"
-                    // style={{ position: 'absolute', top: -25, right: 0 }}
                   />
                 </div>
               </div>
@@ -128,17 +108,13 @@ const Products: React.FC = () => {
 
         <div className="columns is-mobile is-multiline columns-margin columns-gap reverse-columns">
           <div className="column is-12-mobile is-12-tablet is-12-desktop is-7-widescreen is-7-fullhd">
-            <div
-              className="has-background-light container-product"
-              // style={{ borderRadius: 8, position: "relative" }}
-            >
+            <div className="has-background-light container-product">
               <div className="columns is-mobile is-multiline reverse-columns">
                 <div className="column is-12-mobile is-12-tablet is-5-widescreen is-4-fullhd has-text-centered p-0 is-relative">
                   <StaticImage
                     src="../images/monitor-mac.svg"
                     alt="icon"
                     className="image-3-transform"
-                    // style={{ position: 'absolute', top: -25, left: 0 }}
                   />
                 </div>
                 <div className="column is-12-mobile is-12-tablet is-7-widescreen is-8-fullhd py-0">
@@ -164,17 +140,11 @@ const Products: React.FC = () => {
                     </div>
                     <Link to="">
                       <span className="icon-text mt-3">
-                        <span
-                          className="title is-outfit is-6 has-text-primary span-see-project"
-                          style={{ fontWeight: 800 }}
-                        >
+                        <span className="title is-outfit is-6 has-text-primary span-see-project">
                           Ver proyecto
                         </span>
                         <span className="icon has-text-primary is-marginless">
-                          <i
-                            className="fas fa-chevron-right fa-sm"
-                            style={{ marginRight: 3 }}
-                          ></i>
+                          <i className="fas fa-chevron-right fa-sm arrow-icon-margin-right"></i>
                         </span>
                       </span>
                     </Link>
@@ -185,16 +155,12 @@ const Products: React.FC = () => {
           </div>
 
           <div className="column is-12-mobile is-12-tablet is-12-desktop is-5-widescreen is-5-fullhd">
-            <div
-              className="has-background-light container-product"
-              // style={{ borderRadius: 8, position: "relative" }}
-            >
+            <div className="has-background-light container-product">
               <div className="columns is-mobile is-multiline">
                 <div className="column is-4-mobile is-4-tablet is-4-widescreen is-4-fullhd has-text-centered is-relative">
                   <StaticImage
                     src="../images/rocket-mobile.svg"
                     alt="icon"
-                    // style={{ position: "absolute", top: -25, left: 30 }}
                     className="image-4-transform"
                   />
                 </div>
@@ -220,17 +186,11 @@ const Products: React.FC = () => {
                     </div>
                     <Link to="">
                       <span className="icon-text mt-3">
-                        <span
-                          className="title is-outfit is-6 has-text-primary span-see-project"
-                          style={{ fontWeight: 800 }}
-                        >
+                        <span className="title is-outfit is-6 has-text-primary span-see-project">
                           Ver proyecto
                         </span>
                         <span className="icon has-text-primary is-marginless">
-                          <i
-                            className="fas fa-chevron-right fa-sm"
-                            style={{ marginRight: 3 }}
-                          ></i>
+                          <i className="fas fa-chevron-right fa-sm arrow-icon-margin-right"></i>
                         </span>
                       </span>
                     </Link>
@@ -241,21 +201,10 @@ const Products: React.FC = () => {
           </div>
         </div>
 
-        <div
-          className="has-background-primary"
-          style={{ borderRadius: 8, position: "relative" }}
-        >
+        <div className="has-background-primary container-summary">
           <div className="columns is-mobile is-multiline columns-margin">
             <div className="column is-12-mobile is-12-tablet is-7-desktop py-0">
               <div className="container-content-padding">
-                {/* <div className="columns is-mobile ">
-                        <div className="column is-12-mobile is-8-tablet is-8-desktop px-3 pb-0">
-                          <h1 className="title is-outfit is-4 has-text-primary">
-                            Exerci tation ullamcorper suscipit lobortis
-                          </h1>
-                        </div>
-                      </div> */}
-
                 <div className="columns is-mobile mt-3">
                   <div className="column is-12-mobile is-12-tablet is-12-desktop px-3 pt-0">
                     <p className="has-text-white">
@@ -278,11 +227,7 @@ const Products: React.FC = () => {
 
             <div className="column is-12-mobile is-12-tablet is-5-desktop py-0">
               <div className="container-falcon">
-                <StaticImage
-                  src="../images/falcon.svg"
-                  alt="icon"
-                  // style={{ maxWidth: "100%", height: "auto" }}
-                />
+                <StaticImage src="../images/falcon.svg" alt="icon" />
               </div>
             </div>
           </div>

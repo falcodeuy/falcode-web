@@ -21,9 +21,9 @@ const HowWeWork: React.FC = () => {
             }
             image={
               <StaticImage
+                className="badge-card-position"
                 src="../images/lightbulb.png"
                 alt="icon"
-                style={{ position: "absolute", top: -27, left: 22 }}
               />
             }
           />
@@ -34,9 +34,9 @@ const HowWeWork: React.FC = () => {
             }
             image={
               <StaticImage
+                className="badge-card-position"
                 src="../images/badge.png"
                 alt="icon"
-                style={{ position: "absolute", top: -27, left: 22 }}
               />
             }
           />
@@ -47,9 +47,9 @@ const HowWeWork: React.FC = () => {
             }
             image={
               <StaticImage
+                className="badge-card-position"
                 src="../images/sniper.png"
                 alt="icon"
-                style={{ position: "absolute", top: -27, left: 22 }}
               />
             }
           />
@@ -60,9 +60,9 @@ const HowWeWork: React.FC = () => {
             }
             image={
               <StaticImage
+                className="badge-card-position"
                 src="../images/rocket.png"
                 alt="icon"
-                style={{ position: "absolute", top: -27, left: 22 }}
               />
             }
           />
