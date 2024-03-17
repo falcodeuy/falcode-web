@@ -42,14 +42,12 @@
   @include widescreen {
     height: 380px;
   }
+}
 
-  /* @include widescreen-only {
-      height: 400px;
-    } */
-
-  /* @include fullhd {
-      height: 400px;
-    } */
+.badge-card-position {
+  position: absolute;
+  top: -27px;
+  left: 22px;
 }
 
 .divider {

@@ -1,18 +1,7 @@
 import * as React from "react";
+import * as T from "./types";
 
-type CardHowWeWorkProps = {
-  title: string;
-  content: string;
-  image: any;
-};
-
-const ImagePaths = [
-  "../images/lightbulb.png",
-  "../images/lightbulb.png",
-  "../images/lightbulb.png",
-];
-
-const CardHowWeWork: React.FC<CardHowWeWorkProps> = ({
+const CardHowWeWork: React.FC<T.CardHowWeWorkProps> = ({
   title,
   content,
   image,

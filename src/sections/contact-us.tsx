@@ -21,10 +21,9 @@ const ContactUs: React.FC = () => {
               <label className="label has-text-white">Nombre</label>
               <div className="control">
                 <input
-                  className="input"
+                  className="input input-inline"
                   type="text"
                   placeholder="e.g Alex Smith"
-                  style={{ borderRadius: "8px", height: "48px" }}
                 />
               </div>
             </div>
@@ -33,10 +32,9 @@ const ContactUs: React.FC = () => {
               <label className="label has-text-white">Email</label>
               <div className="control">
                 <input
-                  className="input"
+                  className="input input-inline"
                   type="email"
                   placeholder="e.g. alexsmith@gmail.com"
-                  style={{ borderRadius: "8px", height: "48px" }}
                 />
               </div>
             </div>
@@ -46,10 +44,9 @@ const ContactUs: React.FC = () => {
 
               <div className="control">
                 <textarea
-                  className="textarea has-fixed-size"
+                  className="textarea has-fixed-size input-border"
                   placeholder="e.g. Hello world"
                   rows={8}
-                  style={{ borderRadius: "8px" }}
                 ></textarea>
               </div>
             </div>

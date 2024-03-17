@@ -16,6 +16,16 @@
   }
 }
 
+.input-border {
+  border-radius: 8px;
+}
+
+.input-inline {
+  @extend .input-border;
+
+  height: 48px;
+}
+
 .feather-top-right {
   transform: translate(145px, -20px);
 

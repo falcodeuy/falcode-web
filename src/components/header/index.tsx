@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import LanguageSelector from "./language-selector";
+import LanguageSelector from "../language-selector";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +18,7 @@ const Header: React.FC = () => {
       <div className="navbar-brand">
         <a className="navbar-item" href="#">
           <StaticImage
-            src="../images/falcode-logo-navbar.svg"
+            src="../../images/falcode-logo-navbar.svg"
             alt="Descripción de la imagen"
           />
         </a>
