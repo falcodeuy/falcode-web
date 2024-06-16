@@ -48,7 +48,7 @@ const Products: React.FC = () => {
 
                 <div className="column is-4-mobile is-6-tablet is-4-widescreen is-4-fullhd has-text-centered is-relative">
                   <StaticImage
-                    src="../images/spotify-mobile.svg"
+                    src="../images/zalon-cellphone.png"
                     alt="icon"
                     className="image-1-transform"
                   />
@@ -96,7 +96,7 @@ const Products: React.FC = () => {
 
                 <div className="column is-12-mobile is-12-tablet is-5-widescreen is-5-fullhd has-text-centered p-0 is-relative">
                   <StaticImage
-                    src="../images/laptop.svg"
+                    src="../images/laptop-famile.png"
                     alt="icon"
                     className="image-2-transform"
                   />
