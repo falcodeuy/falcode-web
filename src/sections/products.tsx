@@ -118,7 +118,7 @@ const Products: React.FC = () => {
                     <div className='columns is-mobile '>
                       <div className='column is-12-mobile is-12-tablet is-12-widescreen is-12-fullhd px-3 pb-0'>
                         <h1 className='title is-outfit has-text-primary title-cards-size'>
-                          {intl.formatMessage({ id: "zalonDesignTitle" })}
+                          {intl.formatMessage({ id: "familebackofficeTitle" })}
                         </h1>
                       </div>
                     </div>
@@ -126,7 +126,9 @@ const Products: React.FC = () => {
                     <div className='columns is-mobile mt-3'>
                       <div className='column is-12-mobile is-10-tablet is-12-widescreen is-12-fullhd px-3 pt-0'>
                         <p className='content-card-size'>
-                          {intl.formatMessage({ id: "zalonDesignDescription" })}
+                          {intl.formatMessage({
+                            id: "famileBackofficeDescription",
+                          })}
                         </p>
                       </div>
                     </div>
@@ -162,7 +164,7 @@ const Products: React.FC = () => {
                     <div className='columns is-mobile '>
                       <div className='column is-12-mobile is-4-tablet is-10-widescreen is-8-fullhd px-3 pb-0'>
                         <h1 className='title is-outfit has-text-primary title-cards-size'>
-                          {intl.formatMessage({ id: "duisAutemTitle" })}
+                          {intl.formatMessage({ id: "zalonDesignTitle" })}
                         </h1>
                       </div>
                     </div>
@@ -170,7 +172,9 @@ const Products: React.FC = () => {
                     <div className='columns is-mobile mt-3'>
                       <div className='column is-12-mobile is-8-tablet is-12-widescreen is-12-fullhd px-3 pt-0'>
                         <p className='content-card-size'>
-                          {intl.formatMessage({ id: "duisAutemDescription" })}
+                          {intl.formatMessage({
+                            id: "zalonDesignDescription",
+                          })}
                         </p>
                       </div>
                     </div>

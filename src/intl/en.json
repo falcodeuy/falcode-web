@@ -1,4 +1,12 @@
 {
+  "menu": {
+    "aboutUs": "About Us",
+    "services": "Services",
+    "successCases": "Success stories",
+    "forDevs": "For Devs",
+    "contact": "Contact"
+  },
+  "contactButtonText": "Contact",
   "mainSubtitle": "We support you at every stage of the project and beyond.",
   "discoverOurProposal": "Discover our proposal",
   "weArePartners": "We are partners",
@@ -52,8 +60,8 @@
   "famileDescription": "Famil-E is a web platform designed to simplify family meal planning. This solution allows users to organize their weekly menus, control food costs, and have everything delivered directly to their home.",
   "zalonDesignTitle": "Zalon Design",
   "zalonDesignDescription": "Zalon Design is a web platform dedicated to selling Instagram templates to empower businesses in the beauty and wellness sector. The platform offers customizable image templates that users can adapt and use on their own Instagram accounts.",
-  "duisAutemTitle": "Duis autem vel eum iriure",
-  "duisAutemDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+  "familebackofficeTitle": "Famil-e backoffice",
+  "famileBackofficeDescription": "Business-to-business management platform dedicated to crucial areas in the operations of small and medium-sized enterprises that are part of Famil-e's shopper network. This platform serves as a comprehensive back-office for efficient order management, addressing critical aspects such as logistics, finance, and other key operational processes.",
   "summaryText": "We aspire to be allies in the deployment of ideas, the expansion of creativity, and the realization of ambitious concepts into tangible projects. We work hard to orchestrate the different parts involved in each project, aiming to provide ingenious solutions that ultimately benefit society.",
   "contactUs": "Contact us",
   "weAreDevs": "We are dev first, we care about you.",
