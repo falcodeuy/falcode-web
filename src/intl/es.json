@@ -1,5 +1,9 @@
 {
-  "title": "Te acompañamos en cada etapa del proyecto y más allá.",
+  "mainSubtitle": "Te acompañamos en cada etapa del proyecto y más allá.",
+  "title": "Te apoyamos en cada etapa del proyecto y más allá.",
+  "discoverOurProposal": "Descubre nuestra propuesta",
+  "weArePartners": "Somos socios",
+  "technology": "tecnológicos",
   "description": "Starten Sie Ihr nächstes, tolles Gatsby-Projekt mit diesem default-starter-intl. Dieser Barebones-Starter wird mit den wichtigsten Gatsby-Konfigurationsdateien geliefert, die Sie möglicherweise benötigen.",
   "author": "@wiziple",
   "hello": "hallo Leute",
@@ -13,5 +17,33 @@
   "notfound": {
     "header": "Nicht gefunden",
     "description": "Sie haben gerade eine Route erreicht, die nicht existiert... die Traurigkeit."
+  },
+
+  "howWeWorkTitle": "¿Cómo trabajamos en Falcode?",
+  "subTitle": "Buscamos ser ",
+  "subTitleHighlight": "socios tecnológicos",
+  "subTitleContinuation": ", te acompañamos en cada etapa del proyecto y más allá",
+  "card1Title": "Ideamos la mejor estrategia",
+  "card1Content": "Cada plan que diseñamos está cuidadosamente elaborado para aprovechar tus fortalezas y trabajamos contigo para entender tus necesidades, garantizando que siempre estés un paso adelante en tu camino hacia el logro de tus objetivos.",
+  "card2Title": "Aseguramos la calidad",
+  "card2Content": "Contamos con un equipo de expertos altamente capacitados que trabajan rigurosamente para garantizar que cada solución cumpla con los más altos estándares de calidad.",
+  "card3Title": "Seleccionamos el talento",
+  "card3Content": "Nuestra empresa se enorgullece de ser líderes en el desarrollo de soluciones innovadoras para nuestros clientes. Con nuestro enfoque creativo y nuestros años de experiencia, aseguramos que nuestra solución cumplirá con todas tus necesidades y expectativas.",
+  "card4Title": "Creamos soluciones top",
+  "card4Content": "Nuestra empresa se enorgullece de ser líderes en el desarrollo de soluciones innovadoras para nuestros clientes. Con nuestro enfoque creativo y nuestros años de experiencia, aseguramos que nuestra solución cumplirá con todas tus necesidades y expectativas.",
+  "offerTitle": "Como ",
+  "offerTitleHighlight": "socios tecnológicos",
+  "offerTitleContinuation": " ofrecemos nuestra habilidad para planificar, organizar y construir proyectos innovadores de alto impacto.",
+  "solutions": "Nuestras soluciones abarcan:",
+  "tags": {
+    "tag1": "Desarrollo Web",
+    "tag2": "Aplicaciones Móbiles",
+    "tag3": "Inteligencia artificial",
+    "tag4": "Procesamientos de imágenes",
+    "tag5": "Analisis de datos",
+    "tag6": "Gestión de proyectos",
+    "tag7": "Tecnologias en la nube",
+    "tag8": "Gestión de infracstructura",
+    "tag9": "Optimización de procesos"
   }
 }

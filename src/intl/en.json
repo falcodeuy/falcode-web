@@ -1,5 +1,8 @@
 {
-  "title": "Te acompañamos en cada etapa del proyecto y más allá.",
+  "mainSubtitle": "We support you at every stage of the project and beyond.",
+  "discoverOurProposal": "Discover our proposal",
+  "weArePartners": "We are partners",
+  "technology": "in technology",
   "description": "Kick off your next, great Gatsby project with this default-starter-intl. This barebones starter ships with the main Gatsby configuration files you might need.",
   "author": "@wiziple",
   "hello": "Hi people",
@@ -13,5 +16,32 @@
   "notfound": {
     "header": "NOT FOUND",
     "description": "You just hit a route that doesn't exist... the sadness."
+  },
+  "howWeWorkTitle": "How do we work at Falcode?",
+  "subTitle": "We seek to be ",
+  "subTitleHighlight": "technology partners",
+  "subTitleContinuation": ", we accompany you at every stage of the project and beyond",
+  "card1Title": "We devise the best strategy",
+  "card1Content": "Every plan we design is carefully crafted to leverage your strengths, and we work with you to understand your needs, ensuring you are always one step ahead on your path to achieving your goals.",
+  "card2Title": "We ensure quality",
+  "card2Content": "We have a team of highly skilled experts who work rigorously to ensure that every solution meets the highest quality standards.",
+  "card3Title": "We select the talent",
+  "card3Content": "Our company prides itself on being leaders in developing innovative solutions for our clients. With our creative approach and years of experience, we ensure our solution will meet all your needs and expectations.",
+  "card4Title": "We create top solutions",
+  "card4Content": "Our company prides itself on being leaders in developing innovative solutions for our clients. With our creative approach and years of experience, we ensure our solution will meet all your needs and expectations.",
+  "offerTitle": "As ",
+  "offerTitleHighlight": "technology partners",
+  "offerTitleContinuation": " we offer our ability to plan, organize, and build high-impact innovative projects.",
+  "solutions": "Our solutions include:",
+  "tags": {
+    "tag1": "Web Development",
+    "tag2": "Mobile Applications",
+    "tag3": "Artificial Intelligence",
+    "tag4": "Image Processing",
+    "tag5": "Data Analysis",
+    "tag6": "Project Management",
+    "tag7": "Cloud Technologies",
+    "tag8": "Infrastructure Management",
+    "tag9": "Process Optimization"
   }
 }
