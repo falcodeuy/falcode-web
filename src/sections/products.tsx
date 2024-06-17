@@ -1,14 +1,16 @@
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import { useIntl } from "gatsby-plugin-intl";
 import React from "react";
 
 const Products: React.FC = () => {
+  const intl = useIntl();
   return (
     <section className='has-background-dark'>
       <section className='curved'></section>
       <div className='section-padding'>
         <h1 className='title is-outfit is-4 has-text-light title-margin-bottom'>
-          Casos de éxito
+          {intl.formatMessage({ id: "successStories" })}
         </h1>
         <div className='columns is-mobile is-multiline columns-margin columns-gap'>
           <div className='column is-12-mobile is-12-tablet is-12-desktop is-5-widescreen is-5-fullhd'>
@@ -19,7 +21,7 @@ const Products: React.FC = () => {
                     <div className='columns is-mobile '>
                       <div className='column is-12-mobile is-7-tablet is-10-widescreen is-9-fullhd px-3 pb-0'>
                         <h1 className='title is-outfit has-text-primary title-cards-size'>
-                          Zalon
+                          {intl.formatMessage({ id: "zalonTitle" })}
                         </h1>
                       </div>
                     </div>
@@ -27,18 +29,14 @@ const Products: React.FC = () => {
                     <div className='columns is-mobile mt-3'>
                       <div className='column is-12-mobile is-12-tablet is-12-desktop px-3 pt-0'>
                         <p className='content-card-size'>
-                          Zalon es una solución web innovadora diseñada para el
-                          sector de belleza y bienestar. Esta plataforma
-                          reemplaza las tradicionales agendas de papel,
-                          automatizando la gestión de turnos y manteniendo tu
-                          negocio siempre disponible.
+                          {intl.formatMessage({ id: "zalonDescription" })}
                         </p>
                       </div>
                     </div>
                     <Link to=''>
                       <span className='icon-text mt-3'>
                         <span className='title is-outfit is-6 has-text-primary span-see-project'>
-                          Ver proyecto
+                          {intl.formatMessage({ id: "seeProject" })}
                         </span>
                         <span className='icon has-text-primary is-marginless'>
                           <i className='fas fa-chevron-right fa-sm arrow-icon-margin-right'></i>
@@ -67,7 +65,7 @@ const Products: React.FC = () => {
                     <div className='columns is-mobile '>
                       <div className='column is-12-mobile is-12-tablet is-12-widescreen is-12-fullhd px-3 pb-0'>
                         <h1 className='title is-outfit has-text-primary title-cards-size'>
-                          Famil-e
+                          {intl.formatMessage({ id: "famileTitle" })}
                         </h1>
                       </div>
                     </div>
@@ -75,18 +73,14 @@ const Products: React.FC = () => {
                     <div className='columns is-mobile mt-3'>
                       <div className='column is-12-mobile is-10-tablet is-12-widescreen is-12-fullhd px-3 pt-0'>
                         <p className='content-card-size'>
-                          Famil-E es una plataforma web diseñada para
-                          simplificar la planificación de las comidas
-                          familiares. Esta solución permite a los usuarios
-                          organizar sus menús semanales, controlar los costos de
-                          los alimentos y recibir todo directamente en su hogar.
+                          {intl.formatMessage({ id: "famileDescription" })}
                         </p>
                       </div>
                     </div>
                     <Link to=''>
                       <span className='icon-text mt-3'>
                         <span className='title is-outfit is-6 has-text-primary span-see-project'>
-                          Ver proyecto
+                          {intl.formatMessage({ id: "seeProject" })}
                         </span>
                         <span className='icon has-text-primary is-marginless'>
                           <i className='fas fa-chevron-right fa-sm arrow-icon-margin-right'></i>
@@ -124,7 +118,7 @@ const Products: React.FC = () => {
                     <div className='columns is-mobile '>
                       <div className='column is-12-mobile is-12-tablet is-12-widescreen is-12-fullhd px-3 pb-0'>
                         <h1 className='title is-outfit has-text-primary title-cards-size'>
-                          Zalon Design
+                          {intl.formatMessage({ id: "zalonDesignTitle" })}
                         </h1>
                       </div>
                     </div>
@@ -132,19 +126,14 @@ const Products: React.FC = () => {
                     <div className='columns is-mobile mt-3'>
                       <div className='column is-12-mobile is-10-tablet is-12-widescreen is-12-fullhd px-3 pt-0'>
                         <p className='content-card-size'>
-                          Zalon Design es una plataforma web dedicada a la venta
-                          de plantillas de Instagram para potenciar negocios en
-                          el sector de belleza y bienestar. La plataforma ofrece
-                          plantillas de imágenes personalizables que los
-                          usuarios pueden adaptar y utilizar en sus propias
-                          cuentas de Instagram.
+                          {intl.formatMessage({ id: "zalonDesignDescription" })}
                         </p>
                       </div>
                     </div>
                     <Link to=''>
                       <span className='icon-text mt-3'>
                         <span className='title is-outfit is-6 has-text-primary span-see-project'>
-                          Ver proyecto
+                          {intl.formatMessage({ id: "seeProject" })}
                         </span>
                         <span className='icon has-text-primary is-marginless'>
                           <i className='fas fa-chevron-right fa-sm arrow-icon-margin-right'></i>
@@ -173,7 +162,7 @@ const Products: React.FC = () => {
                     <div className='columns is-mobile '>
                       <div className='column is-12-mobile is-4-tablet is-10-widescreen is-8-fullhd px-3 pb-0'>
                         <h1 className='title is-outfit has-text-primary title-cards-size'>
-                          Duis autem vel eum iriure
+                          {intl.formatMessage({ id: "duisAutemTitle" })}
                         </h1>
                       </div>
                     </div>
@@ -181,16 +170,14 @@ const Products: React.FC = () => {
                     <div className='columns is-mobile mt-3'>
                       <div className='column is-12-mobile is-8-tablet is-12-widescreen is-12-fullhd px-3 pt-0'>
                         <p className='content-card-size'>
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing
-                          elit, sed diam nonummy nibh euismod tincidunt ut
-                          laoreet dolore magna aliquam erat volutpat.
+                          {intl.formatMessage({ id: "duisAutemDescription" })}
                         </p>
                       </div>
                     </div>
                     <Link to=''>
                       <span className='icon-text mt-3'>
                         <span className='title is-outfit is-6 has-text-primary span-see-project'>
-                          Ver proyecto
+                          {intl.formatMessage({ id: "seeProject" })}
                         </span>
                         <span className='icon has-text-primary is-marginless'>
                           <i className='fas fa-chevron-right fa-sm arrow-icon-margin-right'></i>
@@ -211,18 +198,13 @@ const Products: React.FC = () => {
                 <div className='columns is-mobile mt-3'>
                   <div className='column is-12-mobile is-12-tablet is-12-desktop px-3 pt-0'>
                     <p className='has-text-white'>
-                      Aspiramos a ser aliados en el despliegue de ideas, la
-                      expansión de la creatividad y la concreción de conceptos
-                      ambiciosos en proyectos tangibles. Trabajamos arduamente
-                      para orquestar las distintas partes involucradas en cada
-                      proyecto, con el objetivo de brindar soluciones ingeniosas
-                      que terminen beneficiando a la sociedad.
+                      {intl.formatMessage({ id: "summaryText" })}
                     </p>
                   </div>
                 </div>
                 <div className='button-flexible button-contact-us-margin'>
                   <button className='button is-dark custom-btn '>
-                    Contáctanos
+                    {intl.formatMessage({ id: "contactUs" })}
                   </button>
                 </div>
               </div>

@@ -1,77 +1,88 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
+import { useIntl } from "gatsby-plugin-intl";
 
 const ContactUs: React.FC = () => {
+  const intl = useIntl();
+
   return (
-    <section className="has-background-dark">
-      <div className="section-padding is-flex is-align-items-center is-justify-content-center">
-        <div className="columns is-mobile is-multiline is-0 m-0 ">
-          <div className="column is-12-mobile is-12-tablet is-6-desktop pb-0">
-            <div className="columns is-mobile mb-4 is-centered">
-              <div className="column is-8-mobile is-12-tablet is-8-desktop pb-0">
-                <h1 className="title is-outfit is-3 is-size-1-tablet is-size-1-desktop has-text-primary title-contact-us">
-                  Contáctanos y empecemos a trabajar juntos en un gran proyecto
+    <section className='has-background-dark'>
+      <div className='section-padding is-flex is-align-items-center is-justify-content-center'>
+        <div className='columns is-mobile is-multiline m-0'>
+          <div className='column is-12-mobile is-12-tablet is-6-desktop'>
+            <div className='columns is-mobile mb-4 is-centered'>
+              <div className='column is-8-mobile is-12-tablet is-8-desktop'>
+                <h1 className='title is-outfit is-3 is-size-1-tablet is-size-1-desktop has-text-primary title-contact-us'>
+                  {intl.formatMessage({ id: "contactUsTitle" })}
                 </h1>
               </div>
             </div>
           </div>
 
-          <div className="column is-12-mobile is-12-tablet is-6-desktop pb-0">
-            <div className="field">
-              <label className="label has-text-white">Nombre</label>
-              <div className="control">
+          <div className='column is-12-mobile is-12-tablet is-6-desktop'>
+            <div className='field'>
+              <label className='label has-text-white'>
+                {intl.formatMessage({ id: "nameLabel" })}
+              </label>
+              <div className='control'>
                 <input
-                  className="input input-inline"
-                  type="text"
-                  placeholder="e.g Alex Smith"
+                  className='input input-inline'
+                  type='text'
+                  placeholder={intl.formatMessage({ id: "namePlaceholder" })}
                 />
               </div>
             </div>
 
-            <div className="field">
-              <label className="label has-text-white">Email</label>
-              <div className="control">
+            <div className='field'>
+              <label className='label has-text-white'>
+                {intl.formatMessage({ id: "emailLabel" })}
+              </label>
+              <div className='control'>
                 <input
-                  className="input input-inline"
-                  type="email"
-                  placeholder="e.g. alexsmith@gmail.com"
+                  className='input input-inline'
+                  type='email'
+                  placeholder={intl.formatMessage({ id: "emailPlaceholder" })}
                 />
               </div>
             </div>
 
-            <div className="field">
-              <label className="label has-text-white">Mensaje</label>
+            <div className='field'>
+              <label className='label has-text-white'>
+                {intl.formatMessage({ id: "messageLabel" })}
+              </label>
 
-              <div className="control">
+              <div className='control'>
                 <textarea
-                  className="textarea has-fixed-size input-border"
-                  placeholder="e.g. Hello world"
+                  className='textarea has-fixed-size input-border'
+                  placeholder={intl.formatMessage({ id: "messagePlaceholder" })}
                   rows={8}
                 ></textarea>
               </div>
             </div>
-            <div className="container-button-send-form">
-              <button className="button is-primary custom-btn">
-                Contactar
+
+            <div className='container-button-send-form'>
+              <button className='button is-primary custom-btn'>
+                {intl.formatMessage({ id: "contactButton" })}
               </button>
             </div>
           </div>
         </div>
       </div>
+
       <StaticImage
-        src="../images/feather-left.svg"
-        alt="icon"
-        className="feather-left"
+        src='../images/feather-left.svg'
+        alt='icon'
+        className='feather-left'
       />
       <StaticImage
-        src="../images/feather-top-right.svg"
-        alt="icon"
-        className="feather-top-right"
+        src='../images/feather-top-right.svg'
+        alt='icon'
+        className='feather-top-right'
       />
       <StaticImage
-        src="../images/feather-bottom-right.svg"
-        alt="icon"
-        className="feather-bottom-right"
+        src='../images/feather-bottom-right.svg'
+        alt='icon'
+        className='feather-bottom-right'
       />
     </section>
   );

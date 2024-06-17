@@ -1,7 +1,10 @@
 import { StaticImage } from "gatsby-plugin-image";
+import { useIntl } from "gatsby-plugin-intl";
 import React from "react";
 
 export default function WorkWithUs() {
+  const intl = useIntl();
+
   return (
     <div className='section-padding'>
       <svg
@@ -35,23 +38,20 @@ export default function WorkWithUs() {
             className='card__image'
             key='mobileImage'
             src='../images/work-with-us-picture.png'
-            alt='Work with us'
+            alt={intl.formatMessage({ id: "buttonText" })}
           />
         </foreignObject>
         <foreignObject key='content' x='30' y='439' width='620' height='228'>
           <div className='card_content'>
             <h1 className='title is-outfit is-4 is-size-3-tablet is-size-2-desktop has-text-primary'>
-              We are dev first, we care about you.
+              {intl.formatMessage({ id: "weAreDevs" })}
             </h1>
             <p className='has-text-white is-size-4-desktop'>
-              Entendemos que los verdaderos protagonistas de la tecnología son
-              los desarrolladores. Somos un equipo apasionado de creadores y
-              soñadores, y estamos buscando a personas excepcionales como tú
-              para unirse a nuestro equipo.
+              {intl.formatMessage({ id: "weAreDevsDescription" })}
             </p>
             <div className='container-button-work-with-us'>
               <button className='button is-primary custom-btn'>
-                Trabaja con nosotros
+                {intl.formatMessage({ id: "buttonText" })}
               </button>
             </div>
           </div>
@@ -88,23 +88,20 @@ export default function WorkWithUs() {
             key='desktopImage'
             className='card__image'
             src='../images/work-with-us-picture.png'
-            alt='Work with us'
+            alt={intl.formatMessage({ id: "buttonText" })}
           />
         </foreignObject>
-        <foreignObject key='content' x='732' y='141' width='571' height='406'>
+        <foreignObject key='content' x='732' y='141' width='571' height='450'>
           <div className='card_content'>
             <h1 className='title is-outfit is-4 is-size-3-tablet is-size-2-desktop has-text-primary'>
-              We are dev first, we care about you.
+              {intl.formatMessage({ id: "weAreDevs" })}
             </h1>
             <p className='has-text-white is-size-4-desktop'>
-              Entendemos que los verdaderos protagonistas de la tecnología son
-              los desarrolladores. Somos un equipo apasionado de creadores y
-              soñadores, y estamos buscando a personas excepcionales como tú
-              para unirse a nuestro equipo.
+              {intl.formatMessage({ id: "weAreDevsDescription" })}
             </p>
             <div className='container-button-work-with-us'>
               <button className='button is-primary custom-btn'>
-                Trabaja con nosotros
+                {intl.formatMessage({ id: "buttonText" })}
               </button>
             </div>
           </div>
