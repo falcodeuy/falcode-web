@@ -13,7 +13,7 @@ const HowWeWork: React.FC = () => {
           acompañamos en cada etapa del proyecto y más allá
         </h1>
 
-        <div className='columns is-mobile is-multiline container-cards my-0'>
+        <div className='columns is-mobile is-multiline my-0'>
           <CardHowWeWork
             title={"Ideamos la mejor estrategia"}
             content={

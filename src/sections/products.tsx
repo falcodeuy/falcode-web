@@ -4,101 +4,103 @@ import React from "react";
 
 const Products: React.FC = () => {
   return (
-    <section className="has-background-dark">
-      <section className="curved"></section>
-      <div className="section-padding">
-        <h1 className="title is-outfit is-4 has-text-light title-margin-bottom">
+    <section className='has-background-dark'>
+      <section className='curved'></section>
+      <div className='section-padding'>
+        <h1 className='title is-outfit is-4 has-text-light title-margin-bottom'>
           Casos de éxito
         </h1>
-        <div className="columns is-mobile is-multiline columns-margin columns-gap">
-          <div className="column is-12-mobile is-12-tablet is-12-desktop is-5-widescreen is-5-fullhd">
-            <div className="has-background-light container-product">
-              <div className="columns is-mobile is-multiline">
-                <div className="column is-8-mobile is-6-tablet is-8-widescreen is-8-fullhd py-0">
-                  <div className="container-content-padding pr-0">
-                    <div className="columns is-mobile ">
-                      <div className="column is-12-mobile is-7-tablet is-10-widescreen is-9-fullhd px-3 pb-0">
-                        <h1 className="title is-outfit has-text-primary title-cards-size">
-                          Duis autem vel eum iriure
+        <div className='columns is-mobile is-multiline columns-margin columns-gap'>
+          <div className='column is-12-mobile is-12-tablet is-12-desktop is-5-widescreen is-5-fullhd'>
+            <div className='has-background-light container-product'>
+              <div className='columns is-mobile is-multiline'>
+                <div className='column is-8-mobile is-6-tablet is-8-widescreen is-8-fullhd py-0'>
+                  <div className='container-content-padding pr-0'>
+                    <div className='columns is-mobile '>
+                      <div className='column is-12-mobile is-7-tablet is-10-widescreen is-9-fullhd px-3 pb-0'>
+                        <h1 className='title is-outfit has-text-primary title-cards-size'>
+                          Zalon
                         </h1>
                       </div>
                     </div>
 
-                    <div className="columns is-mobile mt-3">
-                      <div className="column is-12-mobile is-12-tablet is-12-desktop px-3 pt-0">
-                        <p className="content-card-size">
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing
-                          elit, sed diam nonummy nibh euismod tincidunt ut
-                          laoreet dolore magna aliquam erat volutpat.
+                    <div className='columns is-mobile mt-3'>
+                      <div className='column is-12-mobile is-12-tablet is-12-desktop px-3 pt-0'>
+                        <p className='content-card-size'>
+                          Zalon es una solución web innovadora diseñada para el
+                          sector de belleza y bienestar. Esta plataforma
+                          reemplaza las tradicionales agendas de papel,
+                          automatizando la gestión de turnos y manteniendo tu
+                          negocio siempre disponible.
                         </p>
                       </div>
                     </div>
-                    <Link to="">
-                      <span className="icon-text mt-3">
-                        <span className="title is-outfit is-6 has-text-primary span-see-project">
+                    <Link to=''>
+                      <span className='icon-text mt-3'>
+                        <span className='title is-outfit is-6 has-text-primary span-see-project'>
                           Ver proyecto
                         </span>
-                        <span className="icon has-text-primary is-marginless">
-                          <i className="fas fa-chevron-right fa-sm arrow-icon-margin-right"></i>
+                        <span className='icon has-text-primary is-marginless'>
+                          <i className='fas fa-chevron-right fa-sm arrow-icon-margin-right'></i>
                         </span>
                       </span>
                     </Link>
                   </div>
                 </div>
 
-                <div className="column is-4-mobile is-6-tablet is-4-widescreen is-4-fullhd has-text-centered is-relative">
+                <div className='column is-4-mobile is-6-tablet is-4-widescreen is-4-fullhd has-text-centered is-relative'>
                   <StaticImage
-                    src="../images/zalon-cellphone.png"
-                    alt="icon"
-                    className="image-1-transform"
+                    src='../images/zalon-cellphone.png'
+                    alt='icon'
+                    className='image-1-transform'
                   />
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="column is-12-mobile is-12-tablet is-12-desktop is-7-widescreen is-7-fullhd">
-            <div className="has-background-light container-product">
-              <div className="columns is-mobile is-multiline">
-                <div className="column is-12-mobile is-12-tablet is-7-widescreen is-7-fullhd py-0">
-                  <div className="container-content-padding pr-0">
-                    <div className="columns is-mobile ">
-                      <div className="column is-12-mobile is-12-tablet is-12-widescreen is-12-fullhd px-3 pb-0">
-                        <h1 className="title is-outfit has-text-primary title-cards-size">
-                          Exerci tation ullamcorper suscipit lobortis
+          <div className='column is-12-mobile is-12-tablet is-12-desktop is-7-widescreen is-7-fullhd'>
+            <div className='has-background-light container-product'>
+              <div className='columns is-mobile is-multiline'>
+                <div className='column is-12-mobile is-12-tablet is-7-widescreen is-7-fullhd py-0'>
+                  <div className='container-content-padding pr-0'>
+                    <div className='columns is-mobile '>
+                      <div className='column is-12-mobile is-12-tablet is-12-widescreen is-12-fullhd px-3 pb-0'>
+                        <h1 className='title is-outfit has-text-primary title-cards-size'>
+                          Famil-e
                         </h1>
                       </div>
                     </div>
 
-                    <div className="columns is-mobile mt-3">
-                      <div className="column is-12-mobile is-10-tablet is-12-widescreen is-12-fullhd px-3 pt-0">
-                        <p className="content-card-size">
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing
-                          elit, sed diam nonummy nibh euismod tincidunt ut
-                          laoreet dolore magna aliquam erat volutpat. Ut wisi
-                          enim ad minim veniam, quis nostrud exerci tation
-                          ullamcorper.
+                    <div className='columns is-mobile mt-3'>
+                      <div className='column is-12-mobile is-10-tablet is-12-widescreen is-12-fullhd px-3 pt-0'>
+                        <p className='content-card-size'>
+                          Famil-E es una plataforma web diseñada para
+                          simplificar la planificación de las comidas
+                          familiares. Esta solución permite a los usuarios
+                          organizar sus menús semanales, controlar los costos de
+                          los alimentos y recibir todo directamente en su hogar.
                         </p>
                       </div>
                     </div>
-                    <Link to="">
-                      <span className="icon-text mt-3">
-                        <span className="title is-outfit is-6 has-text-primary span-see-project">
+                    <Link to=''>
+                      <span className='icon-text mt-3'>
+                        <span className='title is-outfit is-6 has-text-primary span-see-project'>
                           Ver proyecto
                         </span>
-                        <span className="icon has-text-primary is-marginless">
-                          <i className="fas fa-chevron-right fa-sm arrow-icon-margin-right"></i>
+                        <span className='icon has-text-primary is-marginless'>
+                          <i className='fas fa-chevron-right fa-sm arrow-icon-margin-right'></i>
                         </span>
                       </span>
                     </Link>
                   </div>
                 </div>
 
-                <div className="column is-12-mobile is-12-tablet is-5-widescreen is-5-fullhd has-text-centered p-0 is-relative">
+                <div className='column is-12-mobile is-12-tablet is-5-widescreen is-5-fullhd has-text-centered p-0 is-relative'>
                   <StaticImage
-                    src="../images/laptop-famile.png"
-                    alt="icon"
-                    className="image-2-transform"
+                    src='../images/laptop-famile.png'
+                    alt='icon'
+                    className='image-2-transform'
                   />
                 </div>
               </div>
@@ -106,45 +108,46 @@ const Products: React.FC = () => {
           </div>
         </div>
 
-        <div className="columns is-mobile is-multiline columns-margin columns-gap reverse-columns">
-          <div className="column is-12-mobile is-12-tablet is-12-desktop is-7-widescreen is-7-fullhd">
-            <div className="has-background-light container-product">
-              <div className="columns is-mobile is-multiline reverse-columns">
-                <div className="column is-12-mobile is-12-tablet is-5-widescreen is-4-fullhd has-text-centered p-0 is-relative">
+        <div className='columns is-mobile is-multiline columns-margin columns-gap reverse-columns'>
+          <div className='column is-12-mobile is-12-tablet is-12-desktop is-7-widescreen is-7-fullhd'>
+            <div className='has-background-light container-product'>
+              <div className='columns is-mobile is-multiline reverse-columns'>
+                <div className='column is-12-mobile is-12-tablet is-5-widescreen is-4-fullhd has-text-centered p-0 is-relative'>
                   <StaticImage
-                    src="../images/monitor-mac.svg"
-                    alt="icon"
-                    className="image-3-transform"
+                    src='../images/monitor-mac.svg'
+                    alt='icon'
+                    className='image-3-transform'
                   />
                 </div>
-                <div className="column is-12-mobile is-12-tablet is-7-widescreen is-8-fullhd py-0">
-                  <div className="container-content-padding">
-                    <div className="columns is-mobile ">
-                      <div className="column is-12-mobile is-12-tablet is-12-widescreen is-12-fullhd px-3 pb-0">
-                        <h1 className="title is-outfit has-text-primary title-cards-size">
-                          Exerci tation ullamcorper suscipit lobortis
+                <div className='column is-12-mobile is-12-tablet is-7-widescreen is-8-fullhd py-0'>
+                  <div className='container-content-padding'>
+                    <div className='columns is-mobile '>
+                      <div className='column is-12-mobile is-12-tablet is-12-widescreen is-12-fullhd px-3 pb-0'>
+                        <h1 className='title is-outfit has-text-primary title-cards-size'>
+                          Zalon Design
                         </h1>
                       </div>
                     </div>
 
-                    <div className="columns is-mobile mt-3">
-                      <div className="column is-12-mobile is-10-tablet is-12-widescreen is-12-fullhd px-3 pt-0">
-                        <p className="content-card-size">
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing
-                          elit, sed diam nonummy nibh euismod tincidunt ut
-                          laoreet dolore magna aliquam erat volutpat. Ut wisi
-                          enim ad minim veniam, quis nostrud exerci tation
-                          ullamcorper.
+                    <div className='columns is-mobile mt-3'>
+                      <div className='column is-12-mobile is-10-tablet is-12-widescreen is-12-fullhd px-3 pt-0'>
+                        <p className='content-card-size'>
+                          Zalon Design es una plataforma web dedicada a la venta
+                          de plantillas de Instagram para potenciar negocios en
+                          el sector de belleza y bienestar. La plataforma ofrece
+                          plantillas de imágenes personalizables que los
+                          usuarios pueden adaptar y utilizar en sus propias
+                          cuentas de Instagram.
                         </p>
                       </div>
                     </div>
-                    <Link to="">
-                      <span className="icon-text mt-3">
-                        <span className="title is-outfit is-6 has-text-primary span-see-project">
+                    <Link to=''>
+                      <span className='icon-text mt-3'>
+                        <span className='title is-outfit is-6 has-text-primary span-see-project'>
                           Ver proyecto
                         </span>
-                        <span className="icon has-text-primary is-marginless">
-                          <i className="fas fa-chevron-right fa-sm arrow-icon-margin-right"></i>
+                        <span className='icon has-text-primary is-marginless'>
+                          <i className='fas fa-chevron-right fa-sm arrow-icon-margin-right'></i>
                         </span>
                       </span>
                     </Link>
@@ -154,43 +157,43 @@ const Products: React.FC = () => {
             </div>
           </div>
 
-          <div className="column is-12-mobile is-12-tablet is-12-desktop is-5-widescreen is-5-fullhd">
-            <div className="has-background-light container-product">
-              <div className="columns is-mobile is-multiline">
-                <div className="column is-4-mobile is-4-tablet is-4-widescreen is-4-fullhd has-text-centered is-relative">
+          <div className='column is-12-mobile is-12-tablet is-12-desktop is-5-widescreen is-5-fullhd'>
+            <div className='has-background-light container-product'>
+              <div className='columns is-mobile is-multiline'>
+                <div className='column is-4-mobile is-4-tablet is-4-widescreen is-4-fullhd has-text-centered is-relative'>
                   <StaticImage
-                    src="../images/rocket-mobile.svg"
-                    alt="icon"
-                    className="image-4-transform"
+                    src='../images/rocket-mobile.svg'
+                    alt='icon'
+                    className='image-4-transform'
                   />
                 </div>
 
-                <div className="column is-8-mobile is-8-tablet is-8-widescreen is-8-fullhd py-0">
-                  <div className="container-content-padding pl-0">
-                    <div className="columns is-mobile ">
-                      <div className="column is-12-mobile is-4-tablet is-10-widescreen is-8-fullhd px-3 pb-0">
-                        <h1 className="title is-outfit has-text-primary title-cards-size">
+                <div className='column is-8-mobile is-8-tablet is-8-widescreen is-8-fullhd py-0'>
+                  <div className='container-content-padding pl-0'>
+                    <div className='columns is-mobile '>
+                      <div className='column is-12-mobile is-4-tablet is-10-widescreen is-8-fullhd px-3 pb-0'>
+                        <h1 className='title is-outfit has-text-primary title-cards-size'>
                           Duis autem vel eum iriure
                         </h1>
                       </div>
                     </div>
 
-                    <div className="columns is-mobile mt-3">
-                      <div className="column is-12-mobile is-8-tablet is-12-widescreen is-12-fullhd px-3 pt-0">
-                        <p className="content-card-size">
+                    <div className='columns is-mobile mt-3'>
+                      <div className='column is-12-mobile is-8-tablet is-12-widescreen is-12-fullhd px-3 pt-0'>
+                        <p className='content-card-size'>
                           Lorem ipsum dolor sit amet, consectetuer adipiscing
                           elit, sed diam nonummy nibh euismod tincidunt ut
                           laoreet dolore magna aliquam erat volutpat.
                         </p>
                       </div>
                     </div>
-                    <Link to="">
-                      <span className="icon-text mt-3">
-                        <span className="title is-outfit is-6 has-text-primary span-see-project">
+                    <Link to=''>
+                      <span className='icon-text mt-3'>
+                        <span className='title is-outfit is-6 has-text-primary span-see-project'>
                           Ver proyecto
                         </span>
-                        <span className="icon has-text-primary is-marginless">
-                          <i className="fas fa-chevron-right fa-sm arrow-icon-margin-right"></i>
+                        <span className='icon has-text-primary is-marginless'>
+                          <i className='fas fa-chevron-right fa-sm arrow-icon-margin-right'></i>
                         </span>
                       </span>
                     </Link>
@@ -201,13 +204,13 @@ const Products: React.FC = () => {
           </div>
         </div>
 
-        <div className="has-background-primary container-summary">
-          <div className="columns is-mobile is-multiline columns-margin">
-            <div className="column is-12-mobile is-12-tablet is-7-desktop py-0">
-              <div className="container-content-padding">
-                <div className="columns is-mobile mt-3">
-                  <div className="column is-12-mobile is-12-tablet is-12-desktop px-3 pt-0">
-                    <p className="has-text-white">
+        <div className='has-background-primary container-summary'>
+          <div className='columns is-mobile is-multiline columns-margin'>
+            <div className='column is-12-mobile is-12-tablet is-7-desktop py-0'>
+              <div className='container-content-padding'>
+                <div className='columns is-mobile mt-3'>
+                  <div className='column is-12-mobile is-12-tablet is-12-desktop px-3 pt-0'>
+                    <p className='has-text-white'>
                       Aspiramos a ser aliados en el despliegue de ideas, la
                       expansión de la creatividad y la concreción de conceptos
                       ambiciosos en proyectos tangibles. Trabajamos arduamente
@@ -217,23 +220,23 @@ const Products: React.FC = () => {
                     </p>
                   </div>
                 </div>
-                <div className="button-flexible button-contact-us-margin">
-                  <button className="button is-dark custom-btn ">
+                <div className='button-flexible button-contact-us-margin'>
+                  <button className='button is-dark custom-btn '>
                     Contáctanos
                   </button>
                 </div>
               </div>
             </div>
 
-            <div className="column is-12-mobile is-12-tablet is-5-desktop py-0">
-              <div className="container-falcon">
-                <StaticImage src="../images/falcon.svg" alt="icon" />
+            <div className='column is-12-mobile is-12-tablet is-5-desktop py-0'>
+              <div className='container-falcon'>
+                <StaticImage src='../images/falcon.svg' alt='icon' />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <section className="triangle"></section>
+      <section className='triangle'></section>
     </section>
   );
 };
