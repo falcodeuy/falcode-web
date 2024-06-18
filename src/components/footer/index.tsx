@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
         >
           <ul className='has-text-white'>
             <li style={{ marginBottom: "32px" }}>
-              <i className='fas fa-envelope mr-3'></i> correo@example.com
+              <i className='fas fa-envelope mr-3'></i> hi@falcode.dev
             </li>
             <li style={{ marginBottom: "32px" }}>
               <i className='fas fa-map-marker-alt mr-3'></i> Montevideo, Uruguay
