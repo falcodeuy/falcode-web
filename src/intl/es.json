@@ -9,7 +9,7 @@
   "splash": {
     "title_1": "Somos socios",
     "title_2": "tecnológicos",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non ullamcorper leo. Duis aliquet, ex non ultricies fringilla, turpis enim cursus felis.",
+    "content": "Te acompañamos en cada etapa del proyecto y más allá.",
     "button": "Descubre nuestra propuesta"
   },
   "how_we_work": {
@@ -21,19 +21,19 @@
     },
     "card_1": {
       "title": "Ideamos la mejor estrategia",
-      "content": "Phasellus euismod diam ut quam dictum dignissim. Vivamus scelerisque nisl nisl, in bibendum erat dictum sit amet."
+      "content": "Cada plan que diseñamos está cuidadosamente elaborado para aprovechar tus fortalezas y trabajamos contigo para entender tus necesidades, garantizando que siempre estés un paso adelante en tu camino hacia el logro de tus objetivos."
     },
     "card_2": {
       "title": "Aseguramos la calidad",
-      "content": "Phasellus euismod diam ut quam dictum dignissim. Vivamus scelerisque nisl nisl, in bibendum erat dictum sit amet."
+      "content": "Contamos con un equipo de expertos altamente capacitados que trabajan rigurosamente para garantizar que cada solución cumpla con los más altos estándares de calidad."
     },
     "card_3": {
       "title": "Seleccionamos el talento",
-      "content": "Phasellus euismod diam ut quam dictum dignissim. Vivamus scelerisque nisl nisl, in bibendum erat dictum sit amet."
+      "content": "En nuestra empresa, creemos que el talento es la clave para la innovación y el éxito. Por eso, nos dedicamos a identificar y atraer a los mejores profesionales del sector. Nuestro proceso de selección es riguroso y minucioso, diseñado para encontrar a individuos apasionados, creativos y altamente calificados"
     },
     "card_4": {
-      "title": "Creamos soluciones top",
-      "content": "Phasellus euismod diam ut quam dictum dignissim. Vivamus scelerisque nisl nisl, in bibendum erat dictum sit amet."
+      "title": "Creamos soluciones de vanguardia",
+      "content": "Nuestra empresa se enorgullece de ser líderes en el desarrollo de soluciones innovadoras para nuestros clientes. Con nuestro enfoque creativo y nuestros años de experiencia, aseguramos que nuestra solución cumplirá con todas tus necesidades y expectativas."
     },
     "title_3": {
       "part_1": "Como",
@@ -42,26 +42,32 @@
     },
     "subtitle": "Nuestras soluciones abarcan",
     "chip_1": "Desarrollo Web",
-    "chip_2": "Aplicaciones Móviles",
-    "chip_3": "Consultoría"
+    "chip_2": "Aplicaciones Móbiles",
+    "chip_3": "Inteligencia artificial",
+    "chip_4": "Procesamientos de imágenes",
+    "chip_5": "Analisis de datos",
+    "chip_6": "Gestión de proyectos",
+    "chip_7": "Tecnologias en la nube",
+    "chip_8": "Gestión de infraestructura",
+    "chip_9": "Optimización de procesos"
   },
   "products": {
     "title": "Casos de éxito",
     "card_1": {
-      "title": "Duis autem vel eum iriure",
-      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+      "title": "Zalon",
+      "content": "Zalon es una solución web innovadora diseñada para el sector de belleza y bienestar. Esta plataforma reemplaza las tradicionales agendas de papel, automatizando la gestión de turnos y manteniendo tu negocio siempre disponible."
     },
     "card_2": {
-      "title": "Exerci tation ullamcorper suscipit lobortis",
-      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper."
+      "title": "Famil-E",
+      "content": "Famil-E es una plataforma web diseñada para simplificar la planificación de las comidas familiares. Esta solución permite a los usuarios organizar sus menús semanales, controlar los costos de los alimentos y recibir todo directamente en su hogar."
     },
     "card_3": {
-      "title": "Exerci tation ullamcorper suscipit lobortis",
-      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper."
+      "title": "Zalon Design",
+      "content": "Zalon Design es una plataforma web dedicada a la venta de plantillas de Instagram para potenciar negocios en el sector de belleza y bienestar. La plataforma ofrece plantillas de imágenes personalizables que los usuarios pueden adaptar y utilizar en sus propias cuentas de Instagram."
     },
     "card_4": {
-      "title": "Duis autem vel eum iriure",
-      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+      "title": "Sistema de gestión y logistica para pymes",
+      "content": "Plataforma de gestión B2B dedicada a las áreas cruciales en la operativa de las pequeñas y medianas empresas. Esta plataforma sirve como backoffice integral para la gestión eficiente de pedidos, abordando aspectos críticos como la logística, las finanzas y otros procesos operativos clave."
     },
     "link_card": "Ver proyecto",
     "summary": "Aspiramos a ser aliados en el despliegue de ideas, la expansión de la creatividad y la concreción de conceptos ambiciosos en proyectos tangibles. Trabajamos arduamente para orquestar las distintas partes involucradas en cada proyecto, con el objetivo de brindar soluciones ingeniosas que terminen beneficiando a la sociedad.",
@@ -69,15 +75,18 @@
   },
   "work_with_us": {
     "title": "Somos dev first, nos preocupamos por ti.",
-    "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+    "content": "Entendemos que los verdaderos protagonistas de la tecnología son los desarrolladores. Somos un equipo apasionado de creadores y soñadores, y estamos buscando a personas excepcionales como tú para unirse a nuestro equipo.",
     "button": "Trabaja con nosotros"
   },
   "contact_us": {
     "title": "Contáctanos y empecemos a trabajar juntos en un gran proyecto",
     "form": {
       "name": "Nombre",
+      "name_placeholder": "Nombre y Apellido",
       "email": "Email",
+      "email_placeholder": "Email",
       "message": "Mensaje",
+      "message_placeholder": "Mensaje",
       "button": "Contactar"
     }
   }

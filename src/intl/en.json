@@ -1,83 +1,92 @@
 {
   "header": {
-    "nav_tab_1": "About us",
-    "nav_tab_2": "About us",
-    "nav_tab_3": "Products",
-    "nav_tab_4": "Work with us",
-    "nav_tab_5": "Contact us"
+    "nav_tab_1": "About Us",
+    "nav_tab_2": "Services",
+    "nav_tab_3": "Success Stories",
+    "nav_tab_4": "For Devs",
+    "nav_tab_5": "Contact"
   },
   "splash": {
-    "title_1": "We are technology",
-    "title_2": "partners",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non ullamcorper leo. Duis aliquet, ex non ultricies fringilla, turpis enim cursus felis.",
+    "title_1": "We are",
+    "title_2": "technology partners",
+    "content": "We support you in every stage of the project and beyond.",
     "button": "Discover our proposal"
   },
   "how_we_work": {
     "title_1": "How do we work at Falcode?",
     "title_2": {
-      "part_1": "We seek to be",
+      "part_1": "We aim to be",
       "part_2": "technology partners",
-      "part_3": "we accompany you at every stage of the project and beyond"
+      "part_3": "we support you in every stage of the project and beyond"
     },
     "card_1": {
       "title": "We devise the best strategy",
-      "content": "Phasellus euismod diam ut quam dictum dignissim. Vivamus scelerisque nisl nisl, in bibendum erat dictum sit amet."
+      "content": "Every plan we design is carefully crafted to leverage your strengths, and we work with you to understand your needs, ensuring you are always a step ahead in achieving your goals."
     },
     "card_2": {
-      "title": "Quality assurance",
-      "content": "Phasellus euismod diam ut quam dictum dignissim. Vivamus scelerisque nisl nisl, in bibendum erat dictum sit amet."
+      "title": "We ensure quality",
+      "content": "We have a team of highly trained experts who work rigorously to ensure that every solution meets the highest quality standards."
     },
     "card_3": {
-      "title": "We select talent",
-      "content": "Phasellus euismod diam ut quam dictum dignissim. Vivamus scelerisque nisl nisl, in bibendum erat dictum sit amet."
+      "title": "We select the talent",
+      "content": "In our company, we believe that talent is the key to innovation and success. That's why we are dedicated to identifying and attracting the best professionals in the industry. Our selection process is rigorous and thorough, designed to find passionate, creative, and highly qualified individuals."
     },
     "card_4": {
-      "title": "We create top solutions",
-      "content": "Phasellus euismod diam ut quam dictum dignissim. Vivamus scelerisque nisl nisl, in bibendum erat dictum sit amet."
+      "title": "We create cutting-edge solutions",
+      "content": "Our company prides itself on being a leader in developing innovative solutions for our clients. With our creative approach and years of experience, we ensure that our solution will meet all your needs and expectations."
     },
     "title_3": {
       "part_1": "As",
       "part_2": "technology partners",
-      "part_3": "we offer our ability to plan, organize and build innovative, high-impact projects."
+      "part_3": "we offer our skills to plan, organize, and build high-impact innovative projects."
     },
-    "subtitle": "Our solutions include",
+    "subtitle": "Our solutions cover",
     "chip_1": "Web Development",
     "chip_2": "Mobile Applications",
-    "chip_3": "Consulting"
+    "chip_3": "Artificial Intelligence",
+    "chip_4": "Image Processing",
+    "chip_5": "Data Analysis",
+    "chip_6": "Project Management",
+    "chip_7": "Cloud Technologies",
+    "chip_8": "Infrastructure Management",
+    "chip_9": "Process Optimization"
   },
   "products": {
-    "title": "Success stories",
+    "title": "Success Stories",
     "card_1": {
-      "title": "Duis autem vel eum iriure",
-      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+      "title": "Zalon",
+      "content": "Zalon is an innovative web solution designed for the beauty and wellness sector. This platform replaces traditional paper agendas, automating appointment management and keeping your business always available."
     },
     "card_2": {
-      "title": "Exerci tation ullamcorper suscipit lobortis",
-      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper."
+      "title": "Famil-E",
+      "content": "Famil-E is a web platform designed to simplify family meal planning. This solution allows users to organize their weekly menus, control food costs, and receive everything directly at their home."
     },
     "card_3": {
-      "title": "Exerci tation ullamcorper suscipit lobortis",
-      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper."
+      "title": "Zalon Design",
+      "content": "Zalon Design is a web platform dedicated to selling Instagram templates to enhance businesses in the beauty and wellness sector. The platform offers customizable image templates that users can adapt and use on their own Instagram accounts."
     },
     "card_4": {
-      "title": "Duis autem vel eum iriure",
-      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+      "title": "Management and logistics system for SMEs",
+      "content": "A B2B management platform dedicated to crucial areas in the operations of small and medium-sized enterprises. This platform serves as an integral back office for efficient order management, addressing critical aspects such as logistics, finance, and other key operational processes."
     },
-    "link_card": "See project",
-    "summary": "We aspire to be allies in the deployment of ideas, the expansion of creativity and the realization of ambitious concepts in tangible projects. We work hard to orchestrate the different parties involved in each project, with the objective of providing ingenious solutions that end up benefiting society.",
-    "button": "Work with us"
+    "link_card": "View project",
+    "summary": "We aspire to be allies in the deployment of ideas, the expansion of creativity, and the realization of ambitious concepts into tangible projects. We work hard to orchestrate the various parts involved in each project, aiming to provide ingenious solutions that ultimately benefit society.",
+    "button": "Contact us"
   },
   "work_with_us": {
     "title": "We are dev first, we care about you.",
-    "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+    "content": "We understand that the true protagonists of technology are the developers. We are a passionate team of creators and dreamers, and we are looking for exceptional people like you to join our team.",
     "button": "Work with us"
   },
   "contact_us": {
     "title": "Contact us and let's start working together on a great project",
     "form": {
       "name": "Name",
+      "name_placeholder": "First and Last Name",
       "email": "Email",
+      "email_placeholder": "Email",
       "message": "Message",
+      "message_placeholder": "Message",
       "button": "Contact"
     }
   }
