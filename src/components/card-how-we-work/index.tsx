@@ -14,7 +14,7 @@ const CardHowWeWork: React.FC<T.CardHowWeWorkProps> = ({
       >
         {image}
         <div className='p-5'>
-          <div className='columns is-mobile mt-5 mb-4 container-title-card'>
+          <div className='columns is-mobile mt-5 mb-4'>
             <div className='column is-8-mobile is-8-tablet is-12-desktop is-11-widescreen is-12-fullhd py-0'>
               <h1 className='title is-outfit has-text-primary title-cards-size'>
                 {title}
