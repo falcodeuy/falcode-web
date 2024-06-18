@@ -6,6 +6,18 @@ import { useIntl } from "gatsby-plugin-intl";
 const HowWeWork: React.FC = () => {
   const intl = useIntl();
 
+  const chips = [
+    intl.formatMessage({ id: "how_we_work.chip_1" }),
+    intl.formatMessage({ id: "how_we_work.chip_2" }),
+    intl.formatMessage({ id: "how_we_work.chip_3" }),
+    intl.formatMessage({ id: "how_we_work.chip_4" }),
+    intl.formatMessage({ id: "how_we_work.chip_5" }),
+    intl.formatMessage({ id: "how_we_work.chip_6" }),
+    intl.formatMessage({ id: "how_we_work.chip_7" }),
+    intl.formatMessage({ id: "how_we_work.chip_8" }),
+    intl.formatMessage({ id: "how_we_work.chip_9" }),
+  ];
+
   return (
     <section className=''>
       <div className='section-padding'>
@@ -83,46 +95,11 @@ const HowWeWork: React.FC = () => {
           </h1>
 
           <div className='columns is-mobile is-multiline'>
-            <div className='column is-narrow'>
-              <span className='tag is-dark is-rounded is-size-6'>
-                {intl.formatMessage({ id: "how_we_work.chip_1" })}
-              </span>
-            </div>
-            <div className='column is-narrow'>
-              <span className='tag is-dark is-rounded is-size-6'>
-                {intl.formatMessage({ id: "how_we_work.chip_2" })}
-              </span>
-            </div>
-            <div className='column is-narrow'>
-              <span className='tag is-dark is-rounded is-size-6'>
-                {intl.formatMessage({ id: "how_we_work.chip_2" })}
-              </span>
-            </div>
-            <div className='column is-narrow'>
-              <span className='tag is-dark is-rounded is-size-6'>
-                {intl.formatMessage({ id: "how_we_work.chip_3" })}
-              </span>
-            </div>
-            <div className='column is-narrow'>
-              <span className='tag is-dark is-rounded is-size-6'>
-                {intl.formatMessage({ id: "how_we_work.chip_3" })}
-              </span>
-            </div>
-            <div className='column is-narrow'>
-              <span className='tag is-dark is-rounded is-size-6'>
-                {intl.formatMessage({ id: "how_we_work.chip_1" })}
-              </span>
-            </div>
-            <div className='column is-narrow'>
-              <span className='tag is-dark is-rounded is-size-6'>
-                {intl.formatMessage({ id: "how_we_work.chip_2" })}
-              </span>
-            </div>
-            <div className='column is-narrow'>
-              <span className='tag is-dark is-rounded is-size-6'>
-                {intl.formatMessage({ id: "how_we_work.chip_1" })}
-              </span>
-            </div>
+            {chips.map((tag: string, index: number) => (
+              <div className='column is-narrow' key={index}>
+                <span className='tag is-dark is-rounded is-size-6'>{tag}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
