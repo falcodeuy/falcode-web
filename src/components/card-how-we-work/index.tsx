@@ -8,7 +8,10 @@ const CardHowWeWork: React.FC<T.CardHowWeWorkProps> = ({
 }) => {
   return (
     <div className='column is-12-mobile is-6-tablet is-3-desktop'>
-      <div className='has-background-light'>
+      <div
+        className='has-background-light'
+        style={{ borderRadius: 8, position: "relative" }}
+      >
         {image}
         <div className='p-5'>
           <div className='columns is-mobile mt-5 mb-4 container-title-card'>
