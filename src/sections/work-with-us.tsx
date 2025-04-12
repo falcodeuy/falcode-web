@@ -1,7 +1,10 @@
-import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
+import { useIntl } from "gatsby-plugin-intl";
 
 export default function WorkWithUs() {
+  const intl = useIntl();
+
   return (
     <div className="section-padding">
       <svg
@@ -41,16 +44,14 @@ export default function WorkWithUs() {
         <foreignObject key="content" x="30" y="439" width="620" height="228">
           <div className="card_content">
             <h1 className="title is-outfit is-4 is-size-3-tablet is-size-2-desktop has-text-primary">
-              We are dev first, we care about you.
+              {intl.formatMessage({ id: "work_with_us.title" })}
             </h1>
             <p className="has-text-white is-size-4-desktop">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-              erat volutpat.
+              {intl.formatMessage({ id: "work_with_us.content" })}
             </p>
             <div className="container-button-work-with-us">
               <button className="button is-primary custom-btn">
-                Trabaja con nosotros
+                {intl.formatMessage({ id: "work_with_us.button" })}
               </button>
             </div>
           </div>
@@ -93,16 +94,14 @@ export default function WorkWithUs() {
         <foreignObject key="content" x="732" y="141" width="571" height="406">
           <div className="card_content">
             <h1 className="title is-outfit is-4 is-size-3-tablet is-size-2-desktop has-text-primary">
-              We are dev first, we care about you.
+              {intl.formatMessage({ id: "work_with_us.title" })}
             </h1>
             <p className="has-text-white is-size-4-desktop">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-              erat volutpat.
+              {intl.formatMessage({ id: "work_with_us.content" })}
             </p>
             <div className="container-button-work-with-us">
               <button className="button is-primary custom-btn">
-                Trabaja con nosotros
+                {intl.formatMessage({ id: "work_with_us.button" })}
               </button>
             </div>
           </div>
