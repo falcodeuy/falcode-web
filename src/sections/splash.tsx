@@ -1,5 +1,5 @@
-import { useIntl } from "gatsby-plugin-intl";
 import React from "react";
+import { useIntl } from "gatsby-plugin-intl";
 
 const Splash: React.FC = () => {
   const intl = useIntl();

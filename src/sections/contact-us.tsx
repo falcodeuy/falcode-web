@@ -1,6 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
-import React from "react";
 import { useIntl } from "gatsby-plugin-intl";
+import React from "react";
 
 const ContactUs: React.FC = () => {
   const intl = useIntl();

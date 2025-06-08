@@ -1,7 +1,8 @@
+import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { useIntl } from "gatsby-plugin-intl";
-import React from "react";
+
 
 const Products: React.FC = () => {
   const intl = useIntl();

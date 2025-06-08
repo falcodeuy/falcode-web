@@ -4,12 +4,13 @@ import LanguageSelector from "../language-selector";
 import { useIntl } from "gatsby-plugin-intl";
 
 const Header: React.FC = () => {
-  const intl = useIntl();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const intl = useIntl();
 
   return (
     <nav
