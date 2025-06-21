@@ -17,18 +17,18 @@ const IndexPage: React.FC<PageProps> = () => {
       <main>
         <Splash />
         <div>
-          <div className="container-falcon has-background-light">
+          <div className='container-falcon has-background-light'>
             <StaticImage
-              src="../images/falcon.svg"
-              alt="icon"
-              className="falcon-image"
+              src='../images/falcon.svg'
+              alt='icon'
+              className='falcon-image'
             />
           </div>
 
           <StaticImage
-            src="../images/stack-tecnologies.svg"
-            alt="icon"
-            className="container-stack-tecnologies"
+            src='../images/stack-tecnologies.svg'
+            alt='icon'
+            className='container-stack-tecnologies'
           />
         </div>
         <HowWeWork />

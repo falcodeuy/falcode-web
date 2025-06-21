@@ -8,71 +8,67 @@ const ContactUs: React.FC = () => {
   return (
     <section className='has-background-dark'>
       <div className='section-padding is-flex is-align-items-center is-justify-content-center'>
-        <div className='columns is-mobile is-multiline is-0 m-0 '>
-          <div className='column is-12-mobile is-12-tablet is-6-desktop pb-0'>
+        <div className='columns is-mobile is-multiline m-0'>
+          <div className='column is-12-mobile is-12-tablet is-6-desktop'>
             <div className='columns is-mobile mb-4 is-centered'>
-              <div className='column is-8-mobile is-12-tablet is-8-desktop pb-0'>
+              <div className='column is-8-mobile is-12-tablet is-8-desktop'>
                 <h1 className='title is-outfit is-3 is-size-1-tablet is-size-1-desktop has-text-primary title-contact-us'>
-                  {intl.formatMessage({ id: "contact_us.title" })}
+                  {intl.formatMessage({ id: "contactUsTitle" })}
                 </h1>
               </div>
             </div>
           </div>
 
-          <div className='column is-12-mobile is-12-tablet is-6-desktop pb-0'>
+          <div className='column is-12-mobile is-12-tablet is-6-desktop'>
             <div className='field'>
               <label className='label has-text-white'>
-                {intl.formatMessage({ id: "contact_us.form.name" })}
+                {intl.formatMessage({ id: "nameLabel" })}
               </label>
               <div className='control'>
                 <input
                   className='input input-inline'
                   type='text'
-                  placeholder={intl.formatMessage({
-                    id: "contact_us.form.name_placeholder",
-                  })}
+                  placeholder={intl.formatMessage({ id: "namePlaceholder" })}
                 />
               </div>
             </div>
 
             <div className='field'>
               <label className='label has-text-white'>
-                {intl.formatMessage({ id: "contact_us.form.email" })}
+                {intl.formatMessage({ id: "emailLabel" })}
               </label>
               <div className='control'>
                 <input
                   className='input input-inline'
                   type='email'
-                  placeholder={intl.formatMessage({
-                    id: "contact_us.form.email_placeholder",
-                  })}
+                  placeholder={intl.formatMessage({ id: "emailPlaceholder" })}
                 />
               </div>
             </div>
 
             <div className='field'>
               <label className='label has-text-white'>
-                {intl.formatMessage({ id: "contact_us.form.message" })}
+                {intl.formatMessage({ id: "messageLabel" })}
               </label>
 
               <div className='control'>
                 <textarea
                   className='textarea has-fixed-size input-border'
-                  placeholder={intl.formatMessage({
-                    id: "contact_us.form.message_placeholder",
-                  })}
+                  placeholder={intl.formatMessage({ id: "messagePlaceholder" })}
                   rows={8}
                 ></textarea>
               </div>
             </div>
+
             <div className='container-button-send-form'>
               <button className='button is-primary custom-btn'>
-                {intl.formatMessage({ id: "contact_us.form.button" })}
+                {intl.formatMessage({ id: "contactButton" })}
               </button>
             </div>
           </div>
         </div>
       </div>
+
       <StaticImage
         src='../images/feather-left.svg'
         alt='icon'

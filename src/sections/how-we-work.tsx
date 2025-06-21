@@ -6,36 +6,36 @@ import { useIntl } from "gatsby-plugin-intl";
 const HowWeWork: React.FC = () => {
   const intl = useIntl();
 
-  const chips = [
-    intl.formatMessage({ id: "how_we_work.chip_1" }),
-    intl.formatMessage({ id: "how_we_work.chip_2" }),
-    intl.formatMessage({ id: "how_we_work.chip_3" }),
-    intl.formatMessage({ id: "how_we_work.chip_4" }),
-    intl.formatMessage({ id: "how_we_work.chip_5" }),
-    intl.formatMessage({ id: "how_we_work.chip_6" }),
-    intl.formatMessage({ id: "how_we_work.chip_7" }),
-    intl.formatMessage({ id: "how_we_work.chip_8" }),
-    intl.formatMessage({ id: "how_we_work.chip_9" }),
+  const tags = [
+    intl.formatMessage({ id: "tags.tag1" }),
+    intl.formatMessage({ id: "tags.tag2" }),
+    intl.formatMessage({ id: "tags.tag3" }),
+    intl.formatMessage({ id: "tags.tag4" }),
+    intl.formatMessage({ id: "tags.tag5" }),
+    intl.formatMessage({ id: "tags.tag6" }),
+    intl.formatMessage({ id: "tags.tag7" }),
+    intl.formatMessage({ id: "tags.tag8" }),
+    intl.formatMessage({ id: "tags.tag9" }),
   ];
 
   return (
     <section className=''>
       <div className='section-padding'>
         <h1 className='title-how-we-work'>
-          {intl.formatMessage({ id: "how_we_work.title_1" })}
+          {intl.formatMessage({ id: "howWeWorkTitle" })}
         </h1>
         <h1 className='title is-outfit has-text-dark has-text-centered mb-6 title-secondary-size'>
-          {intl.formatMessage({ id: "how_we_work.title_2.part_1" })}{" "}
+          {intl.formatMessage({ id: "subTitle" })}
           <span className='has-text-primary'>
-            {intl.formatMessage({ id: "how_we_work.title_2.part_2" })}
+            {intl.formatMessage({ id: "subTitleHighlight" })}
           </span>
-          , {intl.formatMessage({ id: "how_we_work.title_2.part_3" })}
+          {intl.formatMessage({ id: "subTitleContinuation" })}
         </h1>
 
         <div className='columns is-mobile is-multiline my-0'>
           <CardHowWeWork
-            title={intl.formatMessage({ id: "how_we_work.card_1.title" })}
-            content={intl.formatMessage({ id: "how_we_work.card_1.content" })}
+            title={intl.formatMessage({ id: "card1Title" })}
+            content={intl.formatMessage({ id: "card1Content" })}
             image={
               <StaticImage
                 className='badge-card-position'
@@ -45,8 +45,8 @@ const HowWeWork: React.FC = () => {
             }
           />
           <CardHowWeWork
-            title={intl.formatMessage({ id: "how_we_work.card_2.title" })}
-            content={intl.formatMessage({ id: "how_we_work.card_2.content" })}
+            title={intl.formatMessage({ id: "card2Title" })}
+            content={intl.formatMessage({ id: "card2Content" })}
             image={
               <StaticImage
                 className='badge-card-position'
@@ -56,8 +56,8 @@ const HowWeWork: React.FC = () => {
             }
           />
           <CardHowWeWork
-            title={intl.formatMessage({ id: "how_we_work.card_3.title" })}
-            content={intl.formatMessage({ id: "how_we_work.card_3.content" })}
+            title={intl.formatMessage({ id: "card3Title" })}
+            content={intl.formatMessage({ id: "card3Content" })}
             image={
               <StaticImage
                 className='badge-card-position'
@@ -67,8 +67,8 @@ const HowWeWork: React.FC = () => {
             }
           />
           <CardHowWeWork
-            title={intl.formatMessage({ id: "how_we_work.card_4.title" })}
-            content={intl.formatMessage({ id: "how_we_work.card_4.content" })}
+            title={intl.formatMessage({ id: "card4Title" })}
+            content={intl.formatMessage({ id: "card4Content" })}
             image={
               <StaticImage
                 className='badge-card-position'
@@ -82,20 +82,20 @@ const HowWeWork: React.FC = () => {
         <div className='has-background-light divider'></div>
 
         <h1 className='title is-outfit has-text-dark title-type-project title-secondary-size'>
-          {intl.formatMessage({ id: "how_we_work.title_3.part_1" })}{" "}
+          {intl.formatMessage({ id: "offerTitle" })}
           <span className='has-text-primary'>
-            {intl.formatMessage({ id: "how_we_work.title_3.part_2" })}
-          </span>{" "}
-          {intl.formatMessage({ id: "how_we_work.title_3.part_3" })}
+            {intl.formatMessage({ id: "offerTitleHighlight" })}
+          </span>
+          {intl.formatMessage({ id: "offerTitleContinuation" })}
         </h1>
 
         <div>
           <h1 className='is-size-6 mb-4'>
-            {intl.formatMessage({ id: "how_we_work.subtitle" })}:
+            {intl.formatMessage({ id: "solutions" })}
           </h1>
 
           <div className='columns is-mobile is-multiline'>
-            {chips.map((tag: string, index: number) => (
+            {tags.map((tag: string, index: number) => (
               <div className='column is-narrow' key={index}>
                 <span className='tag is-dark is-rounded is-size-6'>{tag}</span>
               </div>

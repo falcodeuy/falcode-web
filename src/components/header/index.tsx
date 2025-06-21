@@ -48,24 +48,24 @@ const Header: React.FC = () => {
       >
         <div className='navbar-end gap-tab'>
           <a className='navbar-item has-text-dark link-redirect-margin'>
-            {intl.formatMessage({ id: "header.nav_tab_1" })}
+            {intl.formatMessage({ id: "menu.aboutUs" })}
           </a>
 
           <a className='navbar-item has-text-dark link-redirect-margin'>
-            {intl.formatMessage({ id: "header.nav_tab_2" })}
+            {intl.formatMessage({ id: "menu.services" })}
           </a>
 
           <a className='navbar-item has-text-dark link-redirect-margin'>
-            {intl.formatMessage({ id: "header.nav_tab_3" })}
+            {intl.formatMessage({ id: "menu.successCases" })}
           </a>
 
           <a className='navbar-item has-text-dark link-redirect-margin'>
-            {intl.formatMessage({ id: "header.nav_tab_4" })}
+            {intl.formatMessage({ id: "menu.forDevs" })}
           </a>
 
           <div className='navbar-item container-button-navbar'>
             <button className='button is-primary header-btn'>
-              {intl.formatMessage({ id: "header.nav_tab_5" })}
+              {intl.formatMessage({ id: "contactButtonText" })}
             </button>
           </div>
 

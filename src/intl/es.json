@@ -1,93 +1,80 @@
 {
-  "header": {
-    "nav_tab_1": "Nosotros",
-    "nav_tab_2": "Servicios",
-    "nav_tab_3": "Casos de éxito",
-    "nav_tab_4": "Para Devs",
-    "nav_tab_5": "Contactar"
+  "menu": {
+    "aboutUs": "Nosotros",
+    "services": "Servicios",
+    "successCases": "Casos de éxito",
+    "forDevs": "Para Devs",
+    "contact": "Contactar"
   },
-  "splash": {
-    "title_1": "Somos socios",
-    "title_2": "tecnológicos",
-    "content": "Te acompañamos en cada etapa del proyecto y más allá.",
-    "button": "Descubre nuestra propuesta"
+  "contactButtonText": "Contactar",
+  "mainSubtitle": "Te acompañamos en cada etapa del proyecto y más allá.",
+  "title": "Te apoyamos en cada etapa del proyecto y más allá.",
+  "discoverOurProposal": "Descubre nuestra propuesta",
+  "weArePartners": "Somos socios",
+  "technology": "tecnológicos",
+  "description": "Starten Sie Ihr nächstes, tolles Gatsby-Projekt mit diesem default-starter-intl. Dieser Barebones-Starter wird mit den wichtigsten Gatsby-Konfigurationsdateien geliefert, die Sie möglicherweise benötigen.",
+  "author": "@wiziple",
+  "hello": "hallo Leute",
+  "welcome": "Willkommen auf Ihrer neuen Gatsby-Site.",
+  "title_page2": "Seite zwei",
+  "hello_page2": "Hallo von der zweiten Seite",
+  "go_page2": "Gehen Sie zu Seite 2",
+  "build": "Jetzt mach etwas Großartiges.",
+  "welcome_page2": "Willkommen auf Seite 2",
+  "go_back": "Gehe zurück zur Startseite",
+  "notfound": {
+    "header": "Nicht gefunden",
+    "description": "Sie haben gerade eine Route erreicht, die nicht existiert... die Traurigkeit."
   },
-  "how_we_work": {
-    "title_1": "¿Cómo trabajamos en Falcode?",
-    "title_2": {
-      "part_1": "Buscamos ser",
-      "part_2": "socios tecnológicos",
-      "part_3": "te acompañamos en cada etapa del proyecto y más allá"
-    },
-    "card_1": {
-      "title": "Ideamos la mejor estrategia",
-      "content": "Cada plan que diseñamos está cuidadosamente elaborado para aprovechar tus fortalezas y trabajamos contigo para entender tus necesidades, garantizando que siempre estés un paso adelante en tu camino hacia el logro de tus objetivos."
-    },
-    "card_2": {
-      "title": "Aseguramos la calidad",
-      "content": "Contamos con un equipo de expertos altamente capacitados que trabajan rigurosamente para garantizar que cada solución cumpla con los más altos estándares de calidad."
-    },
-    "card_3": {
-      "title": "Seleccionamos el talento",
-      "content": "En nuestra empresa, creemos que el talento es la clave para la innovación y el éxito. Por eso, nos dedicamos a identificar y atraer a los mejores profesionales del sector. Nuestro proceso de selección es riguroso y minucioso, diseñado para encontrar a individuos apasionados, creativos y altamente calificados"
-    },
-    "card_4": {
-      "title": "Creamos soluciones de vanguardia",
-      "content": "Nuestra empresa se enorgullece de ser líderes en el desarrollo de soluciones innovadoras para nuestros clientes. Con nuestro enfoque creativo y nuestros años de experiencia, aseguramos que nuestra solución cumplirá con todas tus necesidades y expectativas."
-    },
-    "title_3": {
-      "part_1": "Como",
-      "part_2": "socios tecnológicos",
-      "part_3": "ofrecemos nuestra habilidad para planificar, organizar y construir proyectos innovadores de alto impacto."
-    },
-    "subtitle": "Nuestras soluciones abarcan",
-    "chip_1": "Desarrollo Web",
-    "chip_2": "Aplicaciones Móbiles",
-    "chip_3": "Inteligencia artificial",
-    "chip_4": "Procesamientos de imágenes",
-    "chip_5": "Analisis de datos",
-    "chip_6": "Gestión de proyectos",
-    "chip_7": "Tecnologias en la nube",
-    "chip_8": "Gestión de infraestructura",
-    "chip_9": "Optimización de procesos"
+
+  "howWeWorkTitle": "¿Cómo trabajamos en Falcode?",
+  "subTitle": "Buscamos ser ",
+  "subTitleHighlight": "socios tecnológicos",
+  "subTitleContinuation": ", te acompañamos en cada etapa del proyecto y más allá",
+  "card1Title": "Ideamos la mejor estrategia",
+  "card1Content": "Cada plan que diseñamos está cuidadosamente elaborado para aprovechar tus fortalezas y trabajamos contigo para entender tus necesidades, garantizando que siempre estés un paso adelante en tu camino hacia el logro de tus objetivos.",
+  "card2Title": "Aseguramos la calidad",
+  "card2Content": "Contamos con un equipo de expertos altamente capacitados que trabajan rigurosamente para garantizar que cada solución cumpla con los más altos estándares de calidad.",
+  "card3Title": "Seleccionamos el talento",
+  "card3Content": "Nuestra empresa se enorgullece de ser líderes en el desarrollo de soluciones innovadoras para nuestros clientes. Con nuestro enfoque creativo y nuestros años de experiencia, aseguramos que nuestra solución cumplirá con todas tus necesidades y expectativas.",
+  "card4Title": "Creamos soluciones top",
+  "card4Content": "Nuestra empresa se enorgullece de ser líderes en el desarrollo de soluciones innovadoras para nuestros clientes. Con nuestro enfoque creativo y nuestros años de experiencia, aseguramos que nuestra solución cumplirá con todas tus necesidades y expectativas.",
+  "offerTitle": "Como ",
+  "offerTitleHighlight": "socios tecnológicos",
+  "offerTitleContinuation": " ofrecemos nuestra habilidad para planificar, organizar y construir proyectos innovadores de alto impacto.",
+  "solutions": "Nuestras soluciones abarcan:",
+  "tags": {
+    "tag1": "Desarrollo Web",
+    "tag2": "Aplicaciones Móbiles",
+    "tag3": "Inteligencia artificial",
+    "tag4": "Procesamientos de imágenes",
+    "tag5": "Analisis de datos",
+    "tag6": "Gestión de proyectos",
+    "tag7": "Tecnologias en la nube",
+    "tag8": "Gestión de infracstructura",
+    "tag9": "Optimización de procesos"
   },
-  "products": {
-    "title": "Casos de éxito",
-    "card_1": {
-      "title": "Zalon",
-      "content": "Zalon es una solución web innovadora diseñada para el sector de belleza y bienestar. Esta plataforma reemplaza las tradicionales agendas de papel, automatizando la gestión de turnos y manteniendo tu negocio siempre disponible."
-    },
-    "card_2": {
-      "title": "Famil-E",
-      "content": "Famil-E es una plataforma web diseñada para simplificar la planificación de las comidas familiares. Esta solución permite a los usuarios organizar sus menús semanales, controlar los costos de los alimentos y recibir todo directamente en su hogar."
-    },
-    "card_3": {
-      "title": "Sistema de gestión y logistica para pymes",
-      "content": "Plataforma de gestión B2B dedicada a las áreas cruciales en la operativa de las pequeñas y medianas empresas. Esta plataforma sirve como backoffice integral para la gestión eficiente de pedidos, abordando aspectos críticos como la logística, las finanzas y otros procesos operativos clave."
-    },
-    "card_4": {
-      "title": "Zalon Design",
-      "content": "Zalon Design es una plataforma web dedicada a la venta de plantillas de Instagram para potenciar negocios en el sector de belleza y bienestar. La plataforma ofrece plantillas de imágenes personalizables que los usuarios pueden adaptar y utilizar en sus propias cuentas de Instagram."
-    },
-    "link_card": "Ver proyecto",
-    "summary": "Aspiramos a ser aliados en el despliegue de ideas, la expansión de la creatividad y la concreción de conceptos ambiciosos en proyectos tangibles. Trabajamos arduamente para orquestar las distintas partes involucradas en cada proyecto, con el objetivo de brindar soluciones ingeniosas que terminen beneficiando a la sociedad.",
-    "button": "Contáctanos"
-  },
-  "work_with_us": {
-    "title": "Somos dev first, nos preocupamos por ti.",
-    "content": "Entendemos que los verdaderos protagonistas de la tecnología son los desarrolladores. Somos un equipo apasionado de creadores y soñadores, y estamos buscando a personas excepcionales como tú para unirse a nuestro equipo.",
-    "button": "Trabaja con nosotros"
-  },
-  "contact_us": {
-    "title": "Contáctanos y empecemos a trabajar juntos en un gran proyecto",
-    "form": {
-      "name": "Nombre",
-      "name_placeholder": "Nombre y Apellido",
-      "email": "Email",
-      "email_placeholder": "Email",
-      "message": "Mensaje",
-      "message_placeholder": "Mensaje",
-      "button": "Contactar"
-    }
-  }
+  "successStories": "Casos de éxito",
+  "zalonTitle": "Zalon",
+  "zalonDescription": "Zalon es una solución web innovadora diseñada para el sector de belleza y bienestar. Esta plataforma reemplaza las tradicionales agendas de papel, automatizando la gestión de turnos y manteniendo tu negocio siempre disponible.",
+  "seeProject": "Ver proyecto",
+  "famileTitle": "Famil-E",
+  "famileDescription": "Famil-E es una plataforma web diseñada para simplificar la planificación de las comidas familiares. Esta solución permite a los usuarios organizar sus menús semanales, controlar los costos de los alimentos y recibir todo directamente en su hogar.",
+  "zalonDesignTitle": "Zalon Design",
+  "zalonDesignDescription": "Zalon Design es una plataforma web dedicada a la venta de plantillas de Instagram para potenciar negocios en el sector de belleza y bienestar. La plataforma ofrece plantillas de imágenes personalizables que los usuarios pueden adaptar y utilizar en sus propias cuentas de Instagram.",
+  "familebackofficeTitle": "Famil-e backoffice",
+  "famileBackofficeDescription": "Plataforma de gestión B2B dedicada a las áreas cruciales en la operativa de las pequeñas y medianas empresas que forman parte de la red de 'shoppers' del marketplace de Famil-e. Esta plataforma sirve como backoffice integral para la gestión eficiente de pedidos, abordando aspectos críticos como la logística, las finanzas y otros procesos operativos clave.",
+  "summaryText": "Aspiramos a ser aliados en el despliegue de ideas, la expansión de la creatividad y la concreción de conceptos ambiciosos en proyectos tangibles. Trabajamos arduamente para orquestar las distintas partes involucradas en cada proyecto, con el objetivo de brindar soluciones ingeniosas que terminen beneficiando a la sociedad.",
+  "contactUs": "Contáctanos",
+  "weAreDevs": "Somos desarrolladores primero, nos preocupamos por ti.",
+  "weAreDevsDescription": "Entendemos que los verdaderos protagonistas de la tecnología son los desarrolladores. Somos un equipo apasionado de creadores y soñadores, y estamos buscando a personas excepcionales como tú para unirse a nuestro equipo.",
+  "buttonText": "Trabaja con nosotros",
+  "contactUsTitle": "Contáctanos y empecemos a trabajar juntos en un gran proyecto",
+  "nameLabel": "Nombre",
+  "namePlaceholder": "Por ejemplo, Alex Smith",
+  "emailLabel": "Email",
+  "emailPlaceholder": "Por ejemplo, alexsmith@gmail.com",
+  "messageLabel": "Mensaje",
+  "messagePlaceholder": "Por ejemplo, Hola mundo",
+  "contactButton": "Contactar"
 }
