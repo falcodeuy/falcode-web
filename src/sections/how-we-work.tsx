@@ -19,7 +19,7 @@ const HowWeWork: React.FC = () => {
   ];
 
   return (
-    <section className=''>
+    <section id="how-we-work">
       <div className='section-padding'>
         <h1 className='title is-outfit has-text-dark has-text-centered mb-6 title-secondary-size'>
           {intl.formatMessage({ id: "subTitle" })}
@@ -89,11 +89,6 @@ const HowWeWork: React.FC = () => {
           </div>
         </div>
 
-        <div className='button-flexible mt-6'>
-          <button className='button is-primary custom-btn'>
-            {intl.formatMessage({ id: "discoverOurProposal" })}
-          </button>
-        </div>
       </div>
     </section>
   );
