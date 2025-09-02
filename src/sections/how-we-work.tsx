@@ -21,9 +21,6 @@ const HowWeWork: React.FC = () => {
   return (
     <section className=''>
       <div className='section-padding'>
-        <h1 className='title-how-we-work'>
-          {intl.formatMessage({ id: "howWeWorkTitle" })}
-        </h1>
         <h1 className='title is-outfit has-text-dark has-text-centered mb-6 title-secondary-size'>
           {intl.formatMessage({ id: "subTitle" })}
           <span className='has-text-primary'>

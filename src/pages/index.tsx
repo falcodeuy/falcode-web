@@ -2,7 +2,6 @@ import React from "react";
 import "../styles/main.scss";
 import type { HeadFC, PageProps } from "gatsby";
 import Header from "../components/header";
-import WorkWithUs from "../sections/work-with-us";
 import ContactUs from "../sections/contact-us";
 import Footer from "../components/footer";
 import Splash from "../sections/splash";
@@ -33,7 +32,6 @@ const IndexPage: React.FC<PageProps> = () => {
         </div>
         <HowWeWork />
         <Products />
-        <WorkWithUs />
         <ContactUs />
       </main>
       <Footer />

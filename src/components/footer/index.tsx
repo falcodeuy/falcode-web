@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
       </div>
 
       <div className='container-signature'>
-        <p className='has-text-white'>Falcode © 2023</p>
+        <p className='has-text-white'>Falcode © {new Date().getFullYear()}</p>
       </div>
     </footer>
   );

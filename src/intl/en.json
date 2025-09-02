@@ -6,9 +6,9 @@
     "contact": "Contact"
   },
   "contactButtonText": "Contact",
-  "mainSubtitle": "We support you at every stage of the project and beyond.",
+  "mainSubtitle": "We support you at every step and beyond.",
   "discoverOurProposal": "Discover our proposal",
-  "weArePartners": "We are partners",
+  "weArePartners": "We are your partners",
   "technology": "in technology",
   "description": "Kick off your next, great Gatsby project with this default-starter-intl. This barebones starter ships with the main Gatsby configuration files you might need.",
   "author": "@wiziple",
@@ -24,10 +24,9 @@
     "header": "NOT FOUND",
     "description": "You just hit a route that doesn't exist... the sadness."
   },
-  "howWeWorkTitle": "How do we work at Falcode?",
-  "subTitle": "We seek to be ",
+  "subTitle": "We aim to be your ",
   "subTitleHighlight": "technology partners",
-  "subTitleContinuation": ", we accompany you at every stage of the project and beyond",
+  "subTitleContinuation": ", we support you in every stage of the product and beyond",
   "card1Title": "We devise the best strategy",
   "card1Content": "Every plan we design is carefully crafted to leverage your strengths, and we work with you to understand your needs, ensuring you are always one step ahead on your path to achieving your goals.",
   "card2Title": "We ensure quality",
@@ -36,7 +35,7 @@
   "card3Content": "Our company prides itself on being leaders in developing innovative solutions for our clients. With our creative approach and years of experience, we ensure our solution will meet all your needs and expectations.",
   "card4Title": "We create top solutions",
   "card4Content": "Our company prides itself on being leaders in developing innovative solutions for our clients. With our creative approach and years of experience, we ensure our solution will meet all your needs and expectations.",
-  "offerTitle": "As ",
+  "offerTitle": "As your ",
   "offerTitleHighlight": "technology partners",
   "offerTitleContinuation": " we offer our ability to plan, organize, and build high-impact innovative projects.",
   "solutions": "Our solutions include:",
@@ -66,12 +65,12 @@
   "weAreDevs": "We are dev first, we care about you.",
   "weAreDevsDescription": "We understand that the true protagonists of technology are the developers. We are a passionate team of creators and dreamers, and we are looking for exceptional people like you to join our team.",
   "buttonText": "Work with us",
-  "contactUsTitle": "Contact Us and Let's Start Working Together on a Great Project",
+  "contactUsTitle": "Contact us and let's start working together on a great project",
   "nameLabel": "Name",
   "namePlaceholder": "e.g. Alex Smith",
   "emailLabel": "Email",
   "emailPlaceholder": "e.g. alexsmith@gmail.com",
   "messageLabel": "Message",
   "messagePlaceholder": "e.g. Hello world",
-  "contactButton": "Contact"
+  "contactButton": "Contact us"
 }
