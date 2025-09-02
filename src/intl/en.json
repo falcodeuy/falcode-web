@@ -65,10 +65,7 @@
   "buttonText": "Work with us",
   "contactUsTitle": "Contact us and let's start working together on a great project",
   "nameLabel": "Name",
-  "namePlaceholder": "e.g. Alex Smith",
   "emailLabel": "Email",
-  "emailPlaceholder": "e.g. alexsmith@gmail.com",
   "messageLabel": "Message",
-  "messagePlaceholder": "e.g. Hello world",
   "contactButton": "Contact us"
 }

@@ -21,11 +21,7 @@ const Splash: React.FC = () => {
           </div>
         </div>
 
-        <div className='button-flexible'>
-          <button className='button is-primary custom-btn'>
-            {intl.formatMessage({ id: "discoverOurProposal" })}
-          </button>
-        </div>
+
       </div>
     </section>
   );

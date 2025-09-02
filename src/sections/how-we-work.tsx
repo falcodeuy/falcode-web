@@ -88,6 +88,12 @@ const HowWeWork: React.FC = () => {
             ))}
           </div>
         </div>
+
+        <div className='button-flexible mt-6'>
+          <button className='button is-primary custom-btn'>
+            {intl.formatMessage({ id: "discoverOurProposal" })}
+          </button>
+        </div>
       </div>
     </section>
   );

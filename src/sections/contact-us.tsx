@@ -28,7 +28,6 @@ const ContactUs: React.FC = () => {
                 <input
                   className='input input-inline'
                   type='text'
-                  placeholder={intl.formatMessage({ id: "namePlaceholder" })}
                 />
               </div>
             </div>
@@ -41,7 +40,6 @@ const ContactUs: React.FC = () => {
                 <input
                   className='input input-inline'
                   type='email'
-                  placeholder={intl.formatMessage({ id: "emailPlaceholder" })}
                 />
               </div>
             </div>
@@ -54,7 +52,6 @@ const ContactUs: React.FC = () => {
               <div className='control'>
                 <textarea
                   className='textarea has-fixed-size input-border'
-                  placeholder={intl.formatMessage({ id: "messagePlaceholder" })}
                   rows={8}
                 ></textarea>
               </div>

@@ -65,10 +65,7 @@
   "buttonText": "Trabaja con nosotros",
   "contactUsTitle": "Contáctanos y empecemos a trabajar juntos en un gran proyecto",
   "nameLabel": "Nombre",
-  "namePlaceholder": "Por ejemplo, Alex Smith",
   "emailLabel": "Email",
-  "emailPlaceholder": "Por ejemplo, alexsmith@gmail.com",
   "messageLabel": "Mensaje",
-  "messagePlaceholder": "Por ejemplo, Hola mundo",
   "contactButton": "Contactar"
 }
