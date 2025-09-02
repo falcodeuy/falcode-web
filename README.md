@@ -1,49 +1,42 @@
+# Falcode - Organizational Website
+
 <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
+  <img alt="Falcode Logo" src="src/images/falcode-logo-navbar.svg" width="200" />
 </p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+<p align="center">
+  This is the organizational website of Falcode, built with Gatsby and TypeScript.
+</p>
 
-## 🚀 Quick start
+## 🌐 Deployment
 
-1.  **Create a Gatsby site.**
+This website is deployed on **Cloudflare Pages**.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+**🌍 Live Site:** [www.falcode.dev](https://www.falcode.dev)
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+## 🚀 Development
 
-2.  **Start developing.**
+To start the development server:
 
-    Navigate into your new site’s directory and start it up.
+```bash
+# Install dependencies
+npm install
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+# Start development server
+npm run develop
+```
 
-3.  **Open the code and start customizing!**
+Your site will be running at http://localhost:8000!
 
-    Your site is now running at http://localhost:8000!
+## 🛠️ Tech Stack
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+- **Gatsby** - React-based static site generator
+- **TypeScript** - Type-safe JavaScript
+- **SASS** - CSS preprocessor for styling
 
-4.  **Learn more**
+## 📁 Project Structure
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Netlify)
-
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+- `src/pages/` - Main page components
+- `src/sections/` - Website sections
+- `src/components/` - Reusable components
+- `src/styles/` - SASS stylesheets
+- `src/intl/` - Internationalization files

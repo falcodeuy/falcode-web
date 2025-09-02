@@ -59,10 +59,6 @@ const Header: React.FC = () => {
             {intl.formatMessage({ id: "menu.successCases" })}
           </a>
 
-          <a className='navbar-item has-text-dark link-redirect-margin'>
-            {intl.formatMessage({ id: "menu.forDevs" })}
-          </a>
-
           <div className='navbar-item container-button-navbar'>
             <button className='button is-primary header-btn'>
               {intl.formatMessage({ id: "contactButtonText" })}
