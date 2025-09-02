@@ -29,9 +29,10 @@ Your site will be running at http://localhost:8000!
 
 ## 🛠️ Tech Stack
 
-- **Gatsby** - React-based static site generator
-- **TypeScript** - Type-safe JavaScript
-- **SASS** - CSS preprocessor for styling
+- **Gatsby** - React-based static site. [gatsbyjs.com](https://www.gatsbyjs.com/)
+- **TypeScript** - Type-safe JavaScript. [typescriptlang.org](https://www.typescriptlang.org/)
+- **Bulma** - Modern CSS framework based on Flexbox. [bulma.io](https://bulma.io/)
+- **SASS** - CSS preprocessor for styling. [sass-lang.com](https://sass-lang.com/)
 
 ## 📁 Project Structure
 

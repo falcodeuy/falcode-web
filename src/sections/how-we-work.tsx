@@ -53,17 +53,6 @@ const HowWeWork: React.FC = () => {
             }
           />
           <CardHowWeWork
-            title={intl.formatMessage({ id: "card3Title" })}
-            content={intl.formatMessage({ id: "card3Content" })}
-            image={
-              <StaticImage
-                className='badge-card-position'
-                src='../images/sniper.png'
-                alt='icon'
-              />
-            }
-          />
-          <CardHowWeWork
             title={intl.formatMessage({ id: "card4Title" })}
             content={intl.formatMessage({ id: "card4Content" })}
             image={

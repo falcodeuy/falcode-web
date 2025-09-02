@@ -35,6 +35,8 @@ const Footer: React.FC = () => {
               <a
                 href='https://github.com/falcodeuy'
                 className='icon is-medium mr-5 is-size-3 has-text-white'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 <i className='fab fa-github'></i>
               </a>
@@ -43,6 +45,8 @@ const Footer: React.FC = () => {
               <a
                 href='https://www.linkedin.com/company/falcode'
                 className='icon is-medium mr-5 is-size-3 has-text-white'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 <i className='fab fa-linkedin'></i>
               </a>
