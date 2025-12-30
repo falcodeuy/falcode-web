@@ -136,6 +136,11 @@ body {
   @include tablet {
     transform: translate(0px, -88px);
   }
+
+  @include widescreen {
+    margin-top: -50px;
+    height: 500px;
+  }
 }
 
 .triangle {
