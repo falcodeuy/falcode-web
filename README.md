@@ -33,6 +33,7 @@ Your site will be running at http://localhost:8000!
 - **TypeScript** - Type-safe JavaScript. [typescriptlang.org](https://www.typescriptlang.org/)
 - **Bulma** - Modern CSS framework based on Flexbox. [bulma.io](https://bulma.io/)
 - **SASS** - CSS preprocessor for styling. [sass-lang.com](https://sass-lang.com/)
+- **AOS** - Animate on scroll library. [aos.github.io](https://aos.github.io/)
 
 ## 📁 Project Structure
 

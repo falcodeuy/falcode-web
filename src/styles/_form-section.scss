@@ -1,3 +1,12 @@
+@keyframes feather-float {
+  0%, 100% {
+    top: 0;
+  }
+  50% {
+    top: -12px;
+  }
+}
+
 .title-contact-us {
   @include touch {
     text-align: center;
@@ -27,6 +36,9 @@
 }
 
 .feather-top-right {
+  position: relative;
+  animation: feather-float 3.5s ease-in-out infinite;
+  animation-delay: 0s;
   transform: translate(145px, -20px);
 
   @include tablet {
@@ -47,6 +59,9 @@
 }
 
 .feather-bottom-right {
+  position: relative;
+  animation: feather-float 4s ease-in-out infinite;
+  animation-delay: 1.2s;
   transform: translate(0px, 21px);
 
   @include tablet {
@@ -67,6 +82,9 @@
 }
 
 .feather-left {
+  position: relative;
+  animation: feather-float 3s ease-in-out infinite;
+  animation-delay: 0.6s;
   transform: translate(21px, -46px);
 
   @include tablet {
