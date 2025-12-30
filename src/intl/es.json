@@ -6,22 +6,22 @@
     "contact": "Contactar"
   },
   "contactButtonText": "Contactar",
-  "mainSubtitle": "Te acompañamos en cada paso y más allá.",
+  "mainSubtitle": "Impulsa el crecimiento de tu negocio con nuestras soluciones a medida",
   "discoverOurProposal": "Descubre nuestra propuesta",
   "weArePartners": "Somos tus socios",
   "technology": "tecnológicos",
-  "subTitle": "Nos interesa ser tus ",
-  "subTitleHighlight": "socios tecnológicos",
-  "subTitleContinuation": ", te acompañamos en cada etapa del producto y más allá",
+  "subTitle": "Dejanos a cargo de la ",
+  "subTitleHighlight": "tecnología",
+  "subTitleContinuation": ", enfocate en tu negocio",
   "card1Title": "Ideamos la mejor estrategia",
-  "card1Content": "Cada plan que diseñamos está cuidadosamente elaborado para aprovechar tus fortalezas y trabajamos contigo para entender tus necesidades, garantizando que siempre estés un paso adelante en tu camino hacia el logro de tus objetivos.",
+  "card1Content": "Cada plan que diseñamos está cuidadosamente elaborado para aprovechar las fortalezas de tu organización. Trabajamos contigo para entender tus necesidades, garantizando que siempre estés un paso adelante en tu camino hacia el logro de tus objetivos.",
   "card2Title": "Aseguramos la calidad",
   "card2Content": "Contamos con un equipo de expertos altamente capacitados que trabajan rigurosamente para garantizar que cada solución cumpla con los más altos estándares de calidad.",
   "card4Title": "Creamos soluciones top",
-  "card4Content": "Con nuestro enfoque creativo y nuestros años de experiencia, aseguramos que nuestra solución cumplirá con todas tus necesidades y expectativas.",
+  "card4Content": "Con nuestro enfoque creativo y nuestros años de experiencia, aseguramos que nuestra solución cumplirá con las necesidades y expectativas de tu negocio.",
   "offerTitle": "Como tus ",
   "offerTitleHighlight": "socios tecnológicos",
-  "offerTitleContinuation": " ofrecemos nuestra habilidad para planificar, organizar y construir proyectos innovadores de alto impacto.",
+  "offerTitleContinuation": " ofrecemos nuestra habilidad para planificar, construir y mantener sistemas innovadores de alto impacto.",
   "solutions": "Nuestras soluciones abarcan:",
   "tags": {
     "tag1": "Desarrollo Web",
@@ -32,7 +32,8 @@
     "tag6": "Gestión de proyectos",
     "tag7": "Tecnologías en la nube",
     "tag8": "Gestión de infraestructura",
-    "tag9": "Optimización de procesos"
+    "tag9": "Optimización de procesos",
+    "tag10": "Diseño y Desarrollo de Sistemas"
   },
   "successStories": "Casos de éxito",
   "zalonTitle": "Zalon",
@@ -49,9 +50,9 @@
   "weAreDevs": "Somos desarrolladores primero, nos preocupamos por ti.",
   "weAreDevsDescription": "Entendemos que los verdaderos protagonistas de la tecnología son los desarrolladores. Somos un equipo apasionado de creadores y soñadores, y estamos buscando a personas excepcionales como tú para unirse a nuestro equipo.",
   "buttonText": "Trabaja con nosotros",
-  "contactUsTitle": "Contáctanos y empecemos a trabajar juntos en un gran proyecto",
+  "contactUsTitle": "Contáctanos para empezar a escalar tu negocio en la era digital",
   "nameLabel": "Nombre",
   "emailLabel": "Email",
   "messageLabel": "Mensaje",
-  "contactButton": "Contactar"
+  "contactButton": "Enviar mensaje"
 }

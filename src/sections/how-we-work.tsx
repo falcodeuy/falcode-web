@@ -7,6 +7,7 @@ const HowWeWork: React.FC = () => {
   const intl = useIntl();
 
   const tags = [
+    intl.formatMessage({ id: "tags.tag10" }),
     intl.formatMessage({ id: "tags.tag1" }),
     intl.formatMessage({ id: "tags.tag2" }),
     intl.formatMessage({ id: "tags.tag3" }),
@@ -76,7 +77,7 @@ const HowWeWork: React.FC = () => {
         </h1>
 
         <div>
-          <h1 className='is-size-6 mb-4'>
+          <h1 className='is-size-5 mb-4'>
             {intl.formatMessage({ id: "solutions" })}
           </h1>
 

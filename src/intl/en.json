@@ -6,22 +6,22 @@
     "contact": "Contact"
   },
   "contactButtonText": "Contact",
-  "mainSubtitle": "We support you at every step and beyond.",
+  "mainSubtitle": "Boost the growth of your business with our tailored solutions",
   "discoverOurProposal": "Discover our proposal",
   "weArePartners": "We are your partners",
   "technology": "in technology",
-  "subTitle": "We aim to be your ",
-  "subTitleHighlight": "technology partners",
-  "subTitleContinuation": ", we support you in every stage of the product and beyond",
+  "subTitle": "Leave us in charge of the ",
+  "subTitleHighlight": "technology",
+  "subTitleContinuation": ", focus on your business",
   "card1Title": "We devise the best strategy",
-  "card1Content": "Every plan we design is carefully crafted to leverage your strengths, and we work with you to understand your needs, ensuring you are always one step ahead on your path to achieving your goals.",
+  "card1Content": "Every plan we design is carefully crafted to leverage the strengths of your organization. We work with you to understand your needs, ensuring you are always one step ahead on your path to achieving your goals.",
   "card2Title": "We ensure quality",
   "card2Content": "We have a team of highly skilled experts who work rigorously to ensure that every solution meets the highest quality standards.",
   "card4Title": "We create top solutions",
-  "card4Content": "With our creative approach and years of experience, we ensure our solution will meet all your needs and expectations.",
+  "card4Content": "With our creative approach and years of experience, we ensure our solution will meet the needs and expectations of your business.",
   "offerTitle": "As your ",
   "offerTitleHighlight": "technology partners",
-  "offerTitleContinuation": " we offer our ability to plan, organize, and build high-impact innovative projects.",
+  "offerTitleContinuation": " we offer our ability to plan, build, and maintain high-impact innovative systems.",
   "solutions": "Our solutions include:",
   "tags": {
     "tag1": "Web Development",
@@ -32,7 +32,8 @@
     "tag6": "Project Management",
     "tag7": "Cloud Technologies",
     "tag8": "Infrastructure Management",
-    "tag9": "Process Optimization"
+    "tag9": "Process Optimization",
+    "tag10": "System Design and Development"
   },
   "successStories": "Success stories",
   "zalonTitle": "Zalon",
@@ -49,9 +50,9 @@
   "weAreDevs": "We are dev first, we care about you.",
   "weAreDevsDescription": "We understand that the true protagonists of technology are the developers. We are a passionate team of creators and dreamers, and we are looking for exceptional people like you to join our team.",
   "buttonText": "Work with us",
-  "contactUsTitle": "Contact us and let's start working together on a great project",
+  "contactUsTitle": "Contact us to start scaling your business in the digital era",
   "nameLabel": "Name",
   "emailLabel": "Email",
   "messageLabel": "Message",
-  "contactButton": "Contact us"
+  "contactButton": "Send message"
 }
