@@ -31,7 +31,7 @@ const HowWeWork: React.FC = () => {
         </h1>
 
         <div className='columns is-mobile is-multiline my-0'>
-          <CardHowWeWork
+          <CardHowWeWork data-aos='flip-up' data-aos-delay='100'
             title={intl.formatMessage({ id: "card1Title" })}
             content={intl.formatMessage({ id: "card1Content" })}
             image={
@@ -42,7 +42,7 @@ const HowWeWork: React.FC = () => {
               />
             }
           />
-          <CardHowWeWork
+          <CardHowWeWork data-aos='flip-up' data-aos-delay='200'
             title={intl.formatMessage({ id: "card2Title" })}
             content={intl.formatMessage({ id: "card2Content" })}
             image={
@@ -53,7 +53,7 @@ const HowWeWork: React.FC = () => {
               />
             }
           />
-          <CardHowWeWork
+          <CardHowWeWork data-aos='flip-up' data-aos-delay='300'
             title={intl.formatMessage({ id: "card4Title" })}
             content={intl.formatMessage({ id: "card4Content" })}
             image={
@@ -83,7 +83,7 @@ const HowWeWork: React.FC = () => {
 
           <div className='columns is-mobile is-multiline'>
             {tags.map((tag: string, index: number) => (
-              <div className='column is-narrow' key={index}>
+              <div className='column is-narrow' key={index} data-aos='zoom-in-up' data-aos-delay={index * 100}>
                 <span className='tag is-dark is-rounded is-size-6'>{tag}</span>
               </div>
             ))}

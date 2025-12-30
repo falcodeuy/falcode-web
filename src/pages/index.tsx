@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from 'aos';
+import "aos/dist/aos.css";
 import "../styles/main.scss";
 import type { HeadFC, PageProps } from "gatsby";
 import Header from "../components/header";
@@ -10,6 +12,10 @@ import Products from "../sections/products";
 import { StaticImage } from "gatsby-plugin-image";
 
 const IndexPage: React.FC<PageProps> = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
       <Header />

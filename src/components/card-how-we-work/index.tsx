@@ -5,9 +5,10 @@ const CardHowWeWork: React.FC<T.CardHowWeWorkProps> = ({
   title,
   content,
   image,
+  ...rest
 }) => {
   return (
-    <div className='column is-12-mobile is-4-tablet is-4-desktop'>
+    <div className='column is-12-mobile is-4-tablet is-4-desktop' {...rest}>
       <div
         className='has-background-light'
         style={{ borderRadius: 8, position: "relative" }}

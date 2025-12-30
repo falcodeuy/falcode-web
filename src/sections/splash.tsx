@@ -6,16 +6,16 @@ const Splash: React.FC = () => {
   return (
     <section className='has-background-light'>
       <div className='section-padding'>
-        <h1 className='title is-outfit has-text-primary is-marginless title-splash-size'>
+        <h1 className='title is-outfit has-text-primary is-marginless title-splash-size' data-aos='fade-down'>
           {intl.formatMessage({ id: "weArePartners" })}
         </h1>
-        <h1 className='title is-outfit has-text-primary mb-3 title-splash-size'>
+        <h1 className='title is-outfit has-text-primary mb-3 title-splash-size' data-aos='fade-down'>
           {intl.formatMessage({ id: "technology" })}
         </h1>
 
         <div className='columns is-mobile'>
           <div className='column is-10-mobile is-8-tablet is-6-widescreen is-4-desktop'>
-            <p className='splash-content-size'>
+            <p className='splash-content-size' data-aos='fade-down'>
               {intl.formatMessage({ id: "mainSubtitle" })}
             </p>
           </div>
