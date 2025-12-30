@@ -24,7 +24,7 @@ const LanguageSelector: React.FC = () => {
           padding: "0.5rem 0.75rem",
         }}
       >
-        {otherLocale === "en" ? "English" : "Español"}
+        {otherLocale === "en" ? "🇺🇸 English" : "🇪🇸 Español"}
       </button>
     </div>
   );

@@ -89,17 +89,30 @@ body {
   }
 
   @include desktop {
-    height: 64px;
+    height: 56px;
     width: 300px;
   }
 
   @include widescreen {
-    height: 64px;
+    height: 56px;
     width: 360px;
   }
 
   @include fullhd {
-    font-size: 24px;
+    font-size: 20px;
+  }
+}
+
+.zoom-bounce {
+  animation: zoom-bounce 2.5s ease-in-out infinite;
+}
+
+@keyframes zoom-bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
   }
 }
 

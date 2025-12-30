@@ -22,7 +22,7 @@ const Splash: React.FC = () => {
         </div>
 
         <div className='button-flexible'>
-          <button className='button is-primary custom-btn' onClick={() => {
+          <button className='button is-primary custom-btn zoom-bounce' onClick={() => {
             document.getElementById('how-we-work')?.scrollIntoView({ behavior: 'smooth' });
           }}>
             {intl.formatMessage({ id: "discoverOurProposal" })}
