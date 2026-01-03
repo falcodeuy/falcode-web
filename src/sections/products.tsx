@@ -7,10 +7,10 @@ import { useIntl } from "gatsby-plugin-intl";
 const Products: React.FC = () => {
   const intl = useIntl();
   return (
-    <section className='has-background-dark'>
+    <section id="products" className='has-background-dark'>
       <section className='curved'></section>
       <div className='section-padding'>
-        <h1 className='title is-outfit is-4 has-text-light title-margin-bottom'>
+        <h1 className='title is-outfit is-size-1-desktop  has-text-light title-margin-bottom'>
           {intl.formatMessage({ id: "successStories" })}
         </h1>
         <div className='columns is-mobile is-multiline columns-margin columns-gap'>

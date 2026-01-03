@@ -24,8 +24,21 @@
     height: 350px;
   }
 
+  @include desktop {
+    height: 400px;
+  }
+
+  @include widescreen {
+    height: 450px;
+  }
+
   @include fullhd {
     height: 500px;
+    max-height: 500px;
+  }
+
+  img {
+    object-fit: cover;
   }
 }
 
@@ -45,7 +58,7 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 16px;
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 3px;
   opacity: 0.9;
@@ -85,7 +98,7 @@
 .technologies-track {
   display: flex;
   gap: 40px;
-  animation: scroll-technologies 60s linear infinite;
+  animation: scroll-technologies 120s linear infinite;
   width: max-content;
 
   @include mobile {

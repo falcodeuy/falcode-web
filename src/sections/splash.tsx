@@ -13,7 +13,7 @@ const Splash: React.FC = () => {
           {intl.formatMessage({ id: "technology" })}
         </h1>
 
-        <div className='columns is-mobile'>
+        <div className='columns is-mobile is-centered'>
           <div className='column is-10-mobile is-8-tablet is-6-widescreen is-4-desktop'>
             <p className='splash-content-size' data-aos='fade-down'>
               {intl.formatMessage({ id: "mainSubtitle" })}

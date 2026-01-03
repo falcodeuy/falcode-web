@@ -44,7 +44,7 @@ const Technologies: React.FC = () => {
   const intl = useIntl();
 
   return (
-    <section className="technologies-section">
+    <section id="technologies" className="technologies-section">
       <StaticImage
         src="../images/stack-tecnologies.svg"
         alt="technologies background"

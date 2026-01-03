@@ -6,7 +6,7 @@ const ContactUs: React.FC = () => {
   const intl = useIntl();
 
   return (
-    <section className='has-background-dark'>
+    <section id="contact-us" className='has-background-dark'>
       <div className='section-padding is-flex is-align-items-center is-justify-content-center'>
         <div className='columns is-mobile is-multiline m-0'>
           <div className='column is-12-mobile is-12-tablet is-6-desktop'>
