@@ -49,6 +49,9 @@ body {
 }
 
 .section-padding {
+  max-width: 1920px;
+  margin: 0 auto;
+
   @include mobile {
     padding: 48px 16px;
   }
