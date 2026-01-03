@@ -23,7 +23,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <main>
         <Splash />
         <div>
-          <div className='container-falcon has-background-light pb-6'>
+          <div className='container-falcon has-background-light pb-6 dynamic-margin-top'>
             <StaticImage
               src='../images/falcon.svg'
               alt='icon'

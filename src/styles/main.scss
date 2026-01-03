@@ -128,6 +128,16 @@ body {
 
 // Divider styles
 
+.dynamic-margin-top { 
+  @include widescreen {
+    margin-top: -10rem;
+  }
+
+  @include fullhd {
+    margin-top: -15rem;
+  }
+}
+
 .container-falcon {
   display: flex;
   justify-content: flex-end;
