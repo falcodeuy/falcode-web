@@ -54,5 +54,6 @@
   "nameLabel": "Name",
   "emailLabel": "Email",
   "messageLabel": "Message",
-  "contactButton": "Send message"
+  "contactButton": "Send message",
+  "ourToolbox": "Our Toolbox"
 }
