@@ -1,5 +1,6 @@
 import React from "react";
 import { useIntl } from "gatsby-plugin-intl";
+import { scrollToSection } from "../utils/scroll";
 
 const Splash: React.FC = () => {
   const intl = useIntl();
@@ -13,18 +14,17 @@ const Splash: React.FC = () => {
           {intl.formatMessage({ id: "technology" })}
         </h1>
 
-        <div className='columns is-mobile is-centered'>
-          <div className='column is-10-mobile is-8-tablet is-6-widescreen is-4-desktop'>
-            <p className='splash-content-size' data-aos='fade-down'>
-              {intl.formatMessage({ id: "mainSubtitle" })}
-            </p>
-          </div>
+        <div className='splash-subtitle-container'>
+          <p className='splash-content-size' data-aos='fade-down'>
+            {intl.formatMessage({ id: "mainSubtitle" })}
+          </p>
         </div>
 
         <div className='button-flexible'>
-          <button className='button is-primary custom-btn zoom-bounce' onClick={() => {
-            document.getElementById('how-we-work')?.scrollIntoView({ behavior: 'smooth' });
-          }}>
+          <button 
+            className='button is-primary custom-btn zoom-bounce' 
+            onClick={() => scrollToSection('how-we-work')}
+          >
             {intl.formatMessage({ id: "discoverOurProposal" })}
           </button>
         </div>

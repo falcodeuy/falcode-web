@@ -2,24 +2,17 @@ import React, { useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import LanguageSelector from "../language-selector";
 import { useIntl } from "gatsby-plugin-intl";
+import { handleScrollClick } from "../../utils/scroll";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const intl = useIntl();
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
-    e.preventDefault();
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false);
-    }
-  };
-
-  const intl = useIntl();
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <nav
@@ -60,7 +53,7 @@ const Header: React.FC = () => {
           <a 
             href='#how-we-work' 
             className='navbar-item has-text-dark link-redirect-margin'
-            onClick={(e) => scrollToSection(e, "how-we-work")}
+            onClick={(e) => handleScrollClick(e, "how-we-work", closeMenu)}
           >
             {intl.formatMessage({ id: "menu.aboutUs" })}
           </a>
@@ -68,7 +61,7 @@ const Header: React.FC = () => {
           <a 
             href='#technologies' 
             className='navbar-item has-text-dark link-redirect-margin'
-            onClick={(e) => scrollToSection(e, "technologies")}
+            onClick={(e) => handleScrollClick(e, "technologies", closeMenu)}
           >
             {intl.formatMessage({ id: "menu.services" })}
           </a>
@@ -76,7 +69,7 @@ const Header: React.FC = () => {
           <a 
             href='#products' 
             className='navbar-item has-text-dark link-redirect-margin'
-            onClick={(e) => scrollToSection(e, "products")}
+            onClick={(e) => handleScrollClick(e, "products", closeMenu)}
           >
             {intl.formatMessage({ id: "menu.successCases" })}
           </a>
@@ -84,13 +77,7 @@ const Header: React.FC = () => {
           <div className='navbar-item container-button-navbar'>
             <button 
               className='button is-primary header-btn'
-              onClick={() => {
-                const element = document.getElementById("contact-us");
-                if (element) {
-                  element.scrollIntoView({ behavior: "smooth" });
-                  setIsMenuOpen(false);
-                }
-              }}
+              onClick={(e) => handleScrollClick(e, "contact-us", closeMenu)}
             >
               {intl.formatMessage({ id: "contactButtonText" })}
             </button>

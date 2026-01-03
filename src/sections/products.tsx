@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { useIntl } from "gatsby-plugin-intl";
+import { handleScrollClick } from "../utils/scroll";
 
 
 const Products: React.FC = () => {
@@ -208,9 +209,13 @@ const Products: React.FC = () => {
                   </div>
                 </div>
                 <div className='button-flexible button-contact-us-margin'>
-                  <button className='button is-dark custom-btn '>
+                  <a 
+                    href='#contact-us' 
+                    className='button is-dark custom-btn'
+                    onClick={(e) => handleScrollClick(e, "contact-us")}
+                  >
                     {intl.formatMessage({ id: "contactUs" })}
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
