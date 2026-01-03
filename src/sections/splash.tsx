@@ -5,7 +5,7 @@ const Splash: React.FC = () => {
   const intl = useIntl();
   return (
     <section className='has-background-light'>
-      <div className='section-padding'>
+      <div className='section-padding has-text-centered-mobile'>
         <h1 className='title is-outfit has-text-primary is-marginless title-splash-size' data-aos='fade-down'>
           {intl.formatMessage({ id: "weArePartners" })}
         </h1>

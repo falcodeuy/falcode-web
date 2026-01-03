@@ -1,0 +1,114 @@
+.technologies-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  @include mobile {
+    margin-top: -4.5rem;
+  }
+
+  @include tablet {
+    margin-top: -9rem;
+  }
+}
+
+.technologies-background {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  @include widescreen {
+    height: 350px;
+  }
+
+  @include fullhd {
+    height: 500px;
+  }
+}
+
+.technologies-carousel-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.technologies-carousel {
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.technologies-track {
+  display: flex;
+  gap: 40px;
+  animation: scroll-technologies 60s linear infinite;
+  width: max-content;
+
+  @include mobile {
+    gap: 24px;
+  }
+
+  @include tablet {
+    gap: 48px;
+  }
+
+  @include widescreen {
+    gap: 64px;
+  }
+}
+
+@keyframes scroll-technologies {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.technology-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    font-size: 40px;
+    color: white;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+
+    @include mobile {
+      font-size: 34px;
+    }
+
+    @include tablet {
+      font-size: 60px;
+    }
+
+    @include widescreen {
+      font-size: 80px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

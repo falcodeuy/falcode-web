@@ -9,6 +9,7 @@ import Footer from "../components/footer";
 import Splash from "../sections/splash";
 import HowWeWork from "../sections/how-we-work";
 import Products from "../sections/products";
+import Technologies from "../sections/technologies";
 import { StaticImage } from "gatsby-plugin-image";
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -22,7 +23,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <main>
         <Splash />
         <div>
-          <div className='container-falcon has-background-light'>
+          <div className='container-falcon has-background-light pb-6'>
             <StaticImage
               src='../images/falcon.svg'
               alt='icon'
@@ -30,11 +31,7 @@ const IndexPage: React.FC<PageProps> = () => {
             />
           </div>
 
-          <StaticImage
-            src='../images/stack-tecnologies.svg'
-            alt='icon'
-            className='container-stack-tecnologies'
-          />
+          <Technologies />
         </div>
         <HowWeWork />
         <Products />
@@ -47,4 +44,9 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Falcode</title>;
+export const Head: HeadFC = () => (
+  <>
+    <title>Falcode</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  </>
+);

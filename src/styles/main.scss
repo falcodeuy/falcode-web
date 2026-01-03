@@ -22,6 +22,7 @@
 
 @import "./header";
 @import "./splash-section";
+@import "./technologies-section";
 @import "./how-we-work-section";
 @import "./products-section";
 @import "./work-with-us-section";
@@ -139,22 +140,6 @@ body {
   height: auto;
 }
 
-.container-stack-tecnologies {
-  width: 100%;
-
-  @include mobile {
-    transform: translate(0px, -23px);
-  }
-
-  @include tablet {
-    transform: translate(0px, -88px);
-  }
-
-  @include widescreen {
-    margin-top: -50px;
-    height: 500px;
-  }
-}
 
 .triangle {
   position: relative;
