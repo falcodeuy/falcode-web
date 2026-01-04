@@ -1,6 +1,6 @@
 import React from "react";
 import { useIntl } from "gatsby-plugin-intl";
-import SeeProjectLink from "./see-project-link";
+import SeeProjectLink from "./seeProjectLink";
 import { ProductCardProps } from "./types";
 
 const ProductCard: React.FC<ProductCardProps> = ({
@@ -11,6 +11,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   imagePosition = "right",
   size = "small",
   reversed = false,
+  link,
 }) => {
   const intl = useIntl();
 
@@ -45,7 +46,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <p className="content-card-size px-3">
           {intl.formatMessage({ id: descriptionId })}
         </p>
-        <SeeProjectLink />
+        <SeeProjectLink link={link} />
       </div>
     </div>
   );

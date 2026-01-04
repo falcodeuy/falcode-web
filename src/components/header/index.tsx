@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import LanguageSelector from "../language-selector";
+import LanguageSelector from "../languageSelector";
 import { useIntl } from "gatsby-plugin-intl";
 import { handleScrollClick } from "../../utils/scroll";
 

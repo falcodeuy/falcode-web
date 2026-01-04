@@ -3,13 +3,13 @@ import AOS from 'aos';
 import "aos/dist/aos.css";
 import "../styles/main.scss";
 import type { HeadFC, PageProps } from "gatsby";
-import Header from "../components/header";
-import ContactUs from "../sections/contact-us";
-import Footer from "../components/footer";
-import Splash from "../sections/splash";
-import HowWeWork from "../sections/how-we-work";
-import Products from "../sections/products";
-import Technologies from "../sections/technologies";
+import Header from "../components/Header";
+import ContactUs from "../sections/ContactUs";
+import Footer from "../components/Footer";
+import Splash from "../sections/Splash";
+import HowWeWork from "../sections/HowWeWork";
+import Products from "../sections/Products";
+import Technologies from "../sections/Technologies";
 import { StaticImage } from "gatsby-plugin-image";
 
 const IndexPage: React.FC<PageProps> = () => {

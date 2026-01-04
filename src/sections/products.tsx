@@ -2,7 +2,7 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { useIntl } from "gatsby-plugin-intl";
 import { handleScrollClick } from "../utils/scroll";
-import ProductCard from "../components/product-card";
+import ProductCard from "../components/productCard";
 
 const Products: React.FC = () => {
   const intl = useIntl();
@@ -19,6 +19,7 @@ const Products: React.FC = () => {
           <ProductCard
             titleId="zalonTitle"
             descriptionId="zalonDescription"
+            link="https://agenda.zalon.app"
             imagePosition="right"
             size="small"
             imageClassName="image-1-transform"
@@ -33,6 +34,7 @@ const Products: React.FC = () => {
           <ProductCard
             titleId="famileTitle"
             descriptionId="famileDescription"
+            link="https://famil-e.cl"
             imagePosition="right"
             size="large"
             imageClassName="image-2-transform"
@@ -49,6 +51,7 @@ const Products: React.FC = () => {
           <ProductCard
             titleId="manungoTitle"
             descriptionId="manungoDescription"
+            link="https://manungo.cl"
             imagePosition="left"
             size="large"
             reversed
@@ -62,8 +65,9 @@ const Products: React.FC = () => {
           />
 
           <ProductCard
-            titleId="zalonDesignTitle"
-            descriptionId="zalonDesignDescription"
+            titleId="showappTitle"
+            descriptionId="showappDescription"
+            link="https://showapp.com.uy"
             imagePosition="left"
             size="small"
             imageClassName="image-4-transform"
@@ -81,23 +85,27 @@ const Products: React.FC = () => {
             <div className="column is-12-mobile is-12-tablet is-7-desktop py-0">
               <div className="container-content-padding">
                 <p className="has-text-white px-3">
-                  {intl.formatMessage({ id: "summaryText" })}
+                  {intl.formatMessage({ id: "sellingText1" })}
                 </p>
-                <div className="button-flexible mt-5">
-                  <a
-                    href="#contact-us"
-                    className="button is-dark custom-btn"
-                    onClick={(e) => handleScrollClick(e, "contact-us")}
-                  >
-                    {intl.formatMessage({ id: "contactUs" })}
-                  </a>
+                <p className="has-text-white px-3 pt-4">
+                  {intl.formatMessage({ id: "sellingText2" })}
+                </p>
+                <div className="aws-partner-badge mt-4 px-3 is-flex is-align-items-center" style={{ gap: "1rem" }}>
+                  <StaticImage
+                    src="../images/aws-partner-badge.png"
+                    alt="AWS Partner"
+                    height={150}
+                  />
+                  <span className="has-text-white is-size-6 is-italic">
+                    {intl.formatMessage({ id: "awsPartnerText" })}
+                  </span>
                 </div>
               </div>
             </div>
 
             <div className="column is-12-mobile is-12-tablet is-5-desktop py-0">
               <div className="container-falcon">
-                <StaticImage src="../images/falcon.svg" alt="Falcon mascot" />
+                <StaticImage src="../images/falcon.svg" alt="Falkey" />
               </div>
             </div>
           </div>

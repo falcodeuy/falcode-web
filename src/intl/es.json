@@ -38,14 +38,15 @@
   "successStories": "Casos de éxito",
   "zalonTitle": "Zalon",
   "zalonDescription": "Zalon es una solución web innovadora diseñada para el sector de belleza y bienestar. Esta plataforma reemplaza las tradicionales agendas de papel, automatizando la gestión de turnos y manteniendo tu negocio siempre disponible.",
-  "seeProject": "Ver proyecto",
+  "seeProject": "Visitar",
   "famileTitle": "Famil-E",
   "famileDescription": "Famil-E es una plataforma web diseñada para simplificar la planificación de las comidas familiares. Esta solución permite a los usuarios organizar sus menús semanales, controlar los costos de los alimentos y recibir todo directamente en su hogar.",
-  "zalonDesignTitle": "ShowApp",
-  "zalonDesignDescription": "ShowApp es una aplicación móvil dedicada a la centralización y manejo de la vida social de los usuarios, permitiendo la creación de eventos, la invitación a eventos y la gestión de asistencia a eventos.",
+  "showappTitle": "ShowApp",
+  "showappDescription": "ShowApp es una aplicación móvil dedicada a la centralización y manejo de la vida social de los usuarios, permitiendo la creación de eventos, la invitación a eventos y la gestión de asistencia a eventos.",
   "manungoTitle": "Mañungo",
   "manungoDescription": "Plataforma de gestión de catering para eventos corporativos y familiares. Calcula y gestiona la preparación y despacho de los ingredientes por separado, listos para armar y servir.",
-  "summaryText": "Aspiramos a ser aliados en el despliegue de ideas, la expansión de la creatividad y la concreción de conceptos ambiciosos en proyectos tangibles. Trabajamos arduamente para orquestar las distintas partes involucradas en cada proyecto, con el objetivo de brindar soluciones ingeniosas que terminen beneficiando a la sociedad.",
+  "sellingText1": "Con más de 30 años de experiencia combinada en nuestro equipo fundador, nos apasiona la tecnología y su potencial para impulsar negocios. Nos ocupamos del desarrollo y la gestión tecnológica, para que puedas enfocarte en lo que realmente importa: tu empresa.",
+  "sellingText2": "Buscamos siempre el mejor balance costo-beneficio en cada proyecto, priorizando soluciones prácticas, eficientes y alineadas con tus objetivos. Deja la tecnología en nuestras manos; nosotros nos encargamos de que funcione a tu favor.",
   "contactUs": "Contáctanos",
   "weAreDevs": "Somos desarrolladores primero, nos preocupamos por ti.",
   "weAreDevsDescription": "Entendemos que los verdaderos protagonistas de la tecnología son los desarrolladores. Somos un equipo apasionado de creadores y soñadores, y estamos buscando a personas excepcionales como tú para unirse a nuestro equipo.",
@@ -59,5 +60,6 @@
   "contactSuccess": "¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.",
   "contactError": "Algo salió mal. Por favor, inténtalo de nuevo.",
   "ourToolbox": "Nuestra caja de herramientas",
-  "docsForDevs": "Documentación para desarrolladores"
+  "docsForDevs": "Documentación para desarrolladores",
+  "awsPartnerText": "Somos AWS Partners; accedé a los beneficios de la infraestructura cloud más importante del planeta a través nuestro."
 }

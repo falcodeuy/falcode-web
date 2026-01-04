@@ -6,4 +6,5 @@ export interface ProductCardProps {
   imagePosition?: "left" | "right";
   size?: "small" | "large";
   reversed?: boolean;
+  link?: string;
 }

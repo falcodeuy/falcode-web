@@ -38,14 +38,15 @@
   "successStories": "Success stories",
   "zalonTitle": "Zalon",
   "zalonDescription": "Zalon is an innovative web solution designed for the beauty and wellness sector. This platform replaces traditional paper schedules, automating shift management and keeping your business always available.",
-  "seeProject": "See project",
+  "seeProject": "Visit",
   "famileTitle": "Famil-E",
   "famileDescription": "Famil-E is a web platform designed to simplify family meal planning. This solution allows users to organize their weekly menus, control food costs, and have everything delivered directly to their home.",
-  "zalonDesignTitle": "ShowApp",
-  "zalonDesignDescription": "ShowApp is a mobile application dedicated to centralizing and managing the social life of users, allowing the creation of events, the invitation to events, and the management of event attendance.",
+  "showappTitle": "ShowApp",
+  "showappDescription": "ShowApp is a mobile application dedicated to centralizing and managing the social life of users, allowing the creation of events, the invitation to events, and the management of event attendance.",
   "manungoTitle": "Mañungo",
   "manungoDescription": "Event catering management platform for corporate and family events. Calculates and manages the preparation and dispatch of ingredients separately, ready to assemble and serve.",
-  "summaryText": "We aspire to be allies in the deployment of ideas, the expansion of creativity, and the realization of ambitious concepts into tangible projects. We work hard to orchestrate the different parts involved in each project, aiming to provide ingenious solutions that ultimately benefit society.",
+  "sellingText1": "More than 30 years of combined experience in our founding team, we are passionate about technology and its potential to boost businesses. We take care of the development and technological management, so you can focus on what really matters: your business.",
+  "sellingText2": "We always seek the best cost-benefit balance in each project, prioritizing practical, efficient, and aligned solutions with your goals. Leave technology in our hands; we will take care of it to your advantage.",
   "contactUs": "Contact us",
   "weAreDevs": "We are dev first, we care about you.",
   "weAreDevsDescription": "We understand that the true protagonists of technology are the developers. We are a passionate team of creators and dreamers, and we are looking for exceptional people like you to join our team.",
@@ -59,5 +60,6 @@
   "contactSuccess": "Message sent successfully! We'll get back to you soon.",
   "contactError": "Something went wrong. Please try again.",
   "ourToolbox": "Our Toolbox",
-  "docsForDevs": "Documentation for devs"
+  "docsForDevs": "Documentation for devs",
+  "awsPartnerText": "We are AWS Partners; access the benefits of the most important cloud infrastructure planet through us."
 }

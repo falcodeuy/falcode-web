@@ -1,5 +1,5 @@
 import React from "react";
-import CardHowWeWork from "../components/card-how-we-work";
+import CardHowWeWork from "../components/CardHowWeWork";
 import { StaticImage } from "gatsby-plugin-image";
 import { useIntl } from "gatsby-plugin-intl";
 

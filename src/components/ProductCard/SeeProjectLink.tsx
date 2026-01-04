@@ -1,12 +1,17 @@
 import React from "react";
-import { Link } from "gatsby";
 import { useIntl } from "gatsby-plugin-intl";
 
-const SeeProjectLink: React.FC = () => {
+interface SeeProjectLinkProps {
+  link?: string;
+}
+
+const SeeProjectLink: React.FC<SeeProjectLinkProps> = ({ link }) => {
   const intl = useIntl();
 
+  if (!link) return null;
+
   return (
-    <Link to="" className="px-3">
+    <a href={link} target="_blank" rel="noopener noreferrer" className="px-3">
       <span className="icon-text mt-3">
         <span className="title is-outfit is-6 has-text-primary span-see-project">
           {intl.formatMessage({ id: "seeProject" })}
@@ -15,7 +20,7 @@ const SeeProjectLink: React.FC = () => {
           <i className="fas fa-chevron-right fa-sm arrow-icon-margin-right"></i>
         </span>
       </span>
-    </Link>
+    </a>
   );
 };
 
