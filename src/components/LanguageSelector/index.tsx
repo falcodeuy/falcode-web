@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useIntl } from "gatsby-plugin-intl";
+import { changeLocale, useIntl } from "gatsby-plugin-intl";
 
 const LanguageSelector: React.FC = () => {
   const intl = useIntl();
@@ -7,14 +7,14 @@ const LanguageSelector: React.FC = () => {
 
   const otherLocale = currentLocale === "en" ? "es" : "en";
 
-  const redirectTo = () => {
-    window.location.href = `/${otherLocale}`;
+  const handleChangeLocale = () => {
+    changeLocale(otherLocale);
   };
 
   return (
     <div>
       <button
-        onClick={redirectTo}
+        onClick={handleChangeLocale}
         style={{
           background: "transparent",
           border: "none",
