@@ -1,7 +1,7 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { useIntl } from "gatsby-plugin-intl";
-import ProductCard from "../components/product-card";
+import ProductCard from "../components/ProductCard";
 
 const Products: React.FC = () => {
   const intl = useIntl();

@@ -71,7 +71,7 @@ export const Head: HeadFC = ({ pageContext }) => {
 
   return (
     <SEO
-      title={isSpanish ? "Falcode: Tus Socios Tecnológicos" : "Falcode: Your Technology Partner"}
+      title={isSpanish ? "Falcode - Tus Socios Tecnológicos" : "Falcode - Your Technology Partner"}
       description={
         isSpanish
           ? "Impulsa el crecimiento de tu negocio con soluciones tecnológicas a medida. Desarrollo web, apps móviles, inteligencia artificial y más."
