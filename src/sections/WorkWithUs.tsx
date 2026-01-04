@@ -43,9 +43,9 @@ export default function WorkWithUs() {
         </foreignObject>
         <foreignObject key='content' x='30' y='439' width='620' height='228'>
           <div className='card_content'>
-            <h1 className='title is-outfit is-4 is-size-3-tablet is-size-2-desktop has-text-primary'>
+            <h2 className='title is-outfit is-4 is-size-3-tablet is-size-2-desktop has-text-primary'>
               {intl.formatMessage({ id: "weAreDevs" })}
-            </h1>
+            </h2>
             <p className='has-text-white is-size-4-desktop'>
               {intl.formatMessage({ id: "weAreDevsDescription" })}
             </p>
@@ -93,9 +93,9 @@ export default function WorkWithUs() {
         </foreignObject>
         <foreignObject key='content' x='732' y='141' width='571' height='450'>
           <div className='card_content'>
-            <h1 className='title is-outfit is-4 is-size-3-tablet is-size-2-desktop has-text-primary'>
+            <h2 className='title is-outfit is-4 is-size-3-tablet is-size-2-desktop has-text-primary'>
               {intl.formatMessage({ id: "weAreDevs" })}
-            </h1>
+            </h2>
             <p className='has-text-white is-size-4-desktop'>
               {intl.formatMessage({ id: "weAreDevsDescription" })}
             </p>

@@ -22,13 +22,13 @@ const HowWeWork: React.FC = () => {
   return (
     <section id="how-we-work">
       <div className='section-padding'>
-        <h1 className='title is-outfit has-text-dark has-text-centered mb-6 title-secondary-size'>
+        <h2 className='title is-outfit has-text-dark has-text-centered mb-6 title-secondary-size'>
           {intl.formatMessage({ id: "subTitle" })}
           <span className='has-text-primary'>
             {intl.formatMessage({ id: "subTitleHighlight" })}
           </span>
           {intl.formatMessage({ id: "subTitleContinuation" })}
-        </h1>
+        </h2>
 
         <div className='columns is-mobile is-multiline my-0'>
           <CardHowWeWork data-aos='flip-up' data-aos-delay='100'
@@ -68,18 +68,18 @@ const HowWeWork: React.FC = () => {
 
         <div className='has-background-light divider'></div>
 
-        <h1 className='title is-outfit has-text-dark title-type-project title-secondary-size'>
+        <h2 className='title is-outfit has-text-dark title-type-project title-secondary-size'>
           {intl.formatMessage({ id: "offerTitle" })}
           <span className='has-text-primary'>
             {intl.formatMessage({ id: "offerTitleHighlight" })}
           </span>
           {intl.formatMessage({ id: "offerTitleContinuation" })}
-        </h1>
+        </h2>
 
         <div>
-          <h1 className='is-size-5 mb-4'>
+          <h3 className='is-size-5 mb-4'>
             {intl.formatMessage({ id: "solutions" })}
-          </h1>
+          </h3>
 
           <div className='columns is-mobile is-multiline'>
             {tags.map((tag: string, index: number) => (

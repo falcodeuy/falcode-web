@@ -34,9 +34,9 @@ const ContactUs: React.FC = () => {
           <div className='column is-12-mobile is-12-tablet is-6-desktop'>
             <div className='columns is-mobile mb-4 is-centered'>
               <div className='column is-8-mobile is-12-tablet is-8-desktop'>
-                <h1 className='title is-outfit is-3 is-size-1-tablet is-size-1-desktop has-text-primary has-text-centered-touch'>
+                <h2 className='title is-outfit is-3 is-size-1-tablet is-size-1-desktop has-text-primary has-text-centered-touch'>
                   {intl.formatMessage({ id: "contactUsTitle" })}
-                </h1>
+                </h2>
               </div>
             </div>
           </div>
