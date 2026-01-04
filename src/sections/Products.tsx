@@ -10,9 +10,9 @@ const Products: React.FC = () => {
     <section id="products" className="has-background-dark">
       <section className="curved"></section>
       <div className="section-padding">
-        <h1 className="title is-outfit is-size-1-desktop has-text-light mb-5">
+        <h2 className="title is-outfit is-size-1-desktop has-text-light mb-5">
           {intl.formatMessage({ id: "successStories" })}
-        </h1>
+        </h2>
 
         <div className="columns is-mobile is-multiline columns-margin columns-gap">
           <ProductCard

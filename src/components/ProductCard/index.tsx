@@ -40,9 +40,9 @@ const ProductCard: React.FC<ProductCardProps> = ({
   const ContentSection = (
     <div className={`column ${contentColSize} py-0`}>
       <div className={`container-content-padding ${contentPadding}`}>
-        <h1 className="title is-outfit has-text-primary title-cards-size px-3 mb-4">
+        <h3 className="title is-outfit has-text-primary title-cards-size px-3 mb-4">
           {intl.formatMessage({ id: titleId })}
-        </h1>
+        </h3>
         <p className="content-card-size px-3">
           {intl.formatMessage({ id: descriptionId })}
         </p>
