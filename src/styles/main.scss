@@ -133,11 +133,11 @@ body {
 
 .dynamic-margin-top { 
   @include widescreen {
-    margin-top: -10rem;
+    margin-top: -12rem;
   }
 
   @include fullhd {
-    margin-top: -15rem;
+    margin-top: -17rem;
   }
 }
 

@@ -1,7 +1,6 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { useIntl } from "gatsby-plugin-intl";
-import { handleScrollClick } from "../utils/scroll";
 import ProductCard from "../components/product-card";
 
 const Products: React.FC = () => {

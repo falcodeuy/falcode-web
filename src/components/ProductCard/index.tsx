@@ -1,6 +1,6 @@
 import React from "react";
 import { useIntl } from "gatsby-plugin-intl";
-import SeeProjectLink from "./seeProjectLink";
+import SeeProjectLink from "./SeeProjectLink";
 import { ProductCardProps } from "./types";
 
 const ProductCard: React.FC<ProductCardProps> = ({

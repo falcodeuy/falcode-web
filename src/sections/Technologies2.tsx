@@ -40,7 +40,6 @@ let technologies = [
   { icon: "devicon-mysql-plain", name: "MySQL" },
   { icon: "devicon-nginx-original", name: "NGINX" },
   { icon: "devicon-git-plain", name: "Git" },
- 
 ];
 
 technologies = technologies.concat(technologies);
