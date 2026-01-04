@@ -1,7 +1,3 @@
-.title-margin-bottom {
-  margin-bottom: 32px;
-}
-
 .reverse-columns {
   @include until-widescreen {
     flex-direction: column-reverse;
@@ -27,14 +23,6 @@
   margin-bottom: 32px;
 }
 
-.images-position {
-  @include desktop {
-    position: absolute;
-    top: -25;
-    right: 0;
-  }
-}
-
 .span-see-project {
   font-weight: 800;
   text-decoration-line: underline;
@@ -53,17 +41,19 @@
   }
 }
 
-.button-contact-us-margin {
-  margin-top: 32px;
+.title-cards-size {
+  font-size: 1rem;
 
-  @include fullhd {
-    margin-top: 46px;
+  @include tablet {
+    font-size: 1.25rem;
+  }
+
+  @include widescreen {
+    font-size: 1.5rem;
   }
 }
 
-.image-1-transform {
-  // transform: translate(-16px, 5px) scale(1.3);
-
+.image-1-transform .gatsby-image-wrapper {
   @include from(360px) {
     transform: translate(-12px, 35px) scale(1.5);
   }
@@ -97,7 +87,7 @@
   }
 }
 
-.image-2-transform {
+.image-2-transform .gatsby-image-wrapper {
   @include tablet {
     transform: translate(15px, -25px) scale(1.3);
   }
@@ -111,7 +101,7 @@
   }
 }
 
-.image-3-transform {
+.image-3-transform .gatsby-image-wrapper {
   transform: translate(50px, -15px) scale(1.1);
 
   @include tablet {
@@ -127,9 +117,7 @@
   }
 }
 
-.image-4-transform {
-  // transform: translate(12px, 5px) scale(1.3);
-
+.image-4-transform .gatsby-image-wrapper {
   @include from(360px) {
     transform: translate(10px, 35px) scale(1.5);
   }
