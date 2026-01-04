@@ -1,9 +1,31 @@
 import { StaticImage } from "gatsby-plugin-image";
 import { useIntl } from "gatsby-plugin-intl";
-import React from "react";
+import React, { useState } from "react";
 
 const ContactUs: React.FC = () => {
   const intl = useIntl();
+  const [result, setResult] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setResult("loading");
+
+    const formData = new FormData(event.currentTarget);
+    formData.append("access_key", "3761718e-53f6-435d-a26c-e10b08b7d548");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+    if (data.success) {
+      setResult("success");
+      event.currentTarget.reset();
+    } else {
+      setResult("error");
+    }
+  };
 
   return (
     <section id="contact-us" className='has-background-dark'>
@@ -12,7 +34,7 @@ const ContactUs: React.FC = () => {
           <div className='column is-12-mobile is-12-tablet is-6-desktop'>
             <div className='columns is-mobile mb-4 is-centered'>
               <div className='column is-8-mobile is-12-tablet is-8-desktop'>
-                <h1 className='title is-outfit is-3 is-size-1-tablet is-size-1-desktop has-text-primary title-contact-us'>
+                <h1 className='title is-outfit is-3 is-size-1-tablet is-size-1-desktop has-text-primary has-text-centered-touch'>
                   {intl.formatMessage({ id: "contactUsTitle" })}
                 </h1>
               </div>
@@ -20,48 +42,74 @@ const ContactUs: React.FC = () => {
           </div>
 
           <div className='column is-12-mobile is-12-tablet is-6-desktop'>
-            <div className='field'>
-              <label className='label has-text-white'>
-                {intl.formatMessage({ id: "nameLabel" })}
-              </label>
-              <div className='control'>
-                <input
-                  className='input input-inline'
-                  type='text'
-                />
+            <form onSubmit={onSubmit}>
+              <div className='field'>
+                <label className='label has-text-white'>
+                  {intl.formatMessage({ id: "nameLabel" })}
+                </label>
+                <div className='control'>
+                  <input
+                    className='input input-inline'
+                    type='text'
+                    name='name'
+                    required
+                  />
+                </div>
               </div>
-            </div>
 
-            <div className='field'>
-              <label className='label has-text-white'>
-                {intl.formatMessage({ id: "emailLabel" })}
-              </label>
-              <div className='control'>
-                <input
-                  className='input input-inline'
-                  type='email'
-                />
+              <div className='field'>
+                <label className='label has-text-white'>
+                  {intl.formatMessage({ id: "emailLabel" })}
+                </label>
+                <div className='control'>
+                  <input
+                    className='input input-inline'
+                    type='email'
+                    name='email'
+                    required
+                  />
+                </div>
               </div>
-            </div>
 
-            <div className='field'>
-              <label className='label has-text-white'>
-                {intl.formatMessage({ id: "messageLabel" })}
-              </label>
+              <div className='field'>
+                <label className='label has-text-white'>
+                  {intl.formatMessage({ id: "messageLabel" })}
+                </label>
 
-              <div className='control'>
-                <textarea
-                  className='textarea has-fixed-size input-border'
-                  rows={8}
-                ></textarea>
+                <div className='control'>
+                  <textarea
+                    className='textarea has-fixed-size input-border'
+                    rows={8}
+                    name='message'
+                    required
+                  ></textarea>
+                </div>
               </div>
-            </div>
 
-            <div className='container-button-send-form'>
-              <button className='button is-primary custom-btn'>
-                {intl.formatMessage({ id: "contactButton" })}
-              </button>
-            </div>
+              <div className='container-button-send-form'>
+                <button 
+                  type='submit' 
+                  className='button is-primary custom-btn'
+                  disabled={result === "loading"}
+                >
+                  {result === "loading" 
+                    ? intl.formatMessage({ id: "contactButtonSending" })
+                    : intl.formatMessage({ id: "contactButton" })
+                  }
+                </button>
+              </div>
+
+              {result === "success" && (
+                <p className='has-text-success mt-3 has-text-right'>
+                  {intl.formatMessage({ id: "contactSuccess" })}
+                </p>
+              )}
+              {result === "error" && (
+                <p className='has-text-danger mt-3 has-text-right'>
+                  {intl.formatMessage({ id: "contactError" })}
+                </p>
+              )}
+            </form>
           </div>
         </div>
       </div>

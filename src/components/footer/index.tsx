@@ -1,30 +1,37 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import { useIntl } from "gatsby-plugin-intl";
 
 const Footer: React.FC = () => {
+  const intl = useIntl();
+
   return (
     <footer className='p-4 has-background-dark'>
       <div className='columns is-mobile is-multiline is-0 m-0 mb-6'>
-        <div
-          className='column is-12-mobile is-4-tablet is-4-desktop pb-0'
-          style={{ marginBottom: "40px" }}
-        >
+        <div className='column is-12-mobile is-4-tablet is-4-desktop pb-0 mb-6'>
           <StaticImage
             src='../images/falcode-logo-footer.svg'
             alt='Falcode footer logo'
           />
         </div>
 
-        <div
-          className='column is-12-mobile is-4-tablet is-4-desktop pb-0'
-          style={{ marginBottom: "40px" }}
-        >
+        <div className='column is-12-mobile is-4-tablet is-4-desktop pb-0 mb-6'>
           <ul className='has-text-white'>
-            <li style={{ marginBottom: "32px" }}>
+            <li className='mb-5'>
               <i className='fas fa-envelope mr-3'></i> hi@falcode.dev
             </li>
-            <li style={{ marginBottom: "32px" }}>
+            <li className='mb-5'>
               <i className='fas fa-map-marker-alt mr-3'></i> Montevideo, Uruguay
+            </li>
+            <li className='mb-5'>
+              <a
+                href='https://docs.falcode.dev/'
+                className='has-text-white'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <i className='fas fa-book mr-3'></i> {intl.formatMessage({ id: "docsForDevs" })}
+              </a>
             </li>
           </ul>
         </div>

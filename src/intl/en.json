@@ -43,8 +43,8 @@
   "famileDescription": "Famil-E is a web platform designed to simplify family meal planning. This solution allows users to organize their weekly menus, control food costs, and have everything delivered directly to their home.",
   "zalonDesignTitle": "ShowApp",
   "zalonDesignDescription": "ShowApp is a mobile application dedicated to centralizing and managing the social life of users, allowing the creation of events, the invitation to events, and the management of event attendance.",
-  "familebackofficeTitle": "Clusterpay",
-  "famileBackofficeDescription": "Business-to-business management platform dedicated to crucial areas in the operations of small and medium-sized enterprises that are part of Famil-e's shopper network. This platform serves as a comprehensive back-office for efficient order management, addressing critical aspects such as logistics, finance, and other key operational processes.",
+  "manungoTitle": "Mañungo",
+  "manungoDescription": "Event catering management platform for corporate and family events. Calculates and manages the preparation and dispatch of ingredients separately, ready to assemble and serve.",
   "summaryText": "We aspire to be allies in the deployment of ideas, the expansion of creativity, and the realization of ambitious concepts into tangible projects. We work hard to orchestrate the different parts involved in each project, aiming to provide ingenious solutions that ultimately benefit society.",
   "contactUs": "Contact us",
   "weAreDevs": "We are dev first, we care about you.",
@@ -52,8 +52,12 @@
   "buttonText": "Work with us",
   "contactUsTitle": "Contact us to start scaling your business in the digital era",
   "nameLabel": "Name",
-  "emailLabel": "Email",
+  "emailLabel": "Contact email",
   "messageLabel": "Message",
   "contactButton": "Send message",
-  "ourToolbox": "Our Toolbox"
+  "contactButtonSending": "Sending...",
+  "contactSuccess": "Message sent successfully! We'll get back to you soon.",
+  "contactError": "Something went wrong. Please try again.",
+  "ourToolbox": "Our Toolbox",
+  "docsForDevs": "Documentation for devs"
 }

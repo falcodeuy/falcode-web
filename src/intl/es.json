@@ -43,8 +43,8 @@
   "famileDescription": "Famil-E es una plataforma web diseñada para simplificar la planificación de las comidas familiares. Esta solución permite a los usuarios organizar sus menús semanales, controlar los costos de los alimentos y recibir todo directamente en su hogar.",
   "zalonDesignTitle": "ShowApp",
   "zalonDesignDescription": "ShowApp es una aplicación móvil dedicada a la centralización y manejo de la vida social de los usuarios, permitiendo la creación de eventos, la invitación a eventos y la gestión de asistencia a eventos.",
-  "familebackofficeTitle": "Clusterpay",
-  "famileBackofficeDescription": "Plataforma de gestión B2B dedicada a las áreas cruciales en la operativa de las pequeñas y medianas empresas que forman parte de la red de 'shoppers' del marketplace de Famil-e. Esta plataforma sirve como backoffice integral para la gestión eficiente de pedidos, abordando aspectos críticos como la logística, las finanzas y otros procesos operativos clave.",
+  "manungoTitle": "Mañungo",
+  "manungoDescription": "Plataforma de gestión de catering para eventos corporativos y familiares. Calcula y gestiona la preparación y despacho de los ingredientes por separado, listos para armar y servir.",
   "summaryText": "Aspiramos a ser aliados en el despliegue de ideas, la expansión de la creatividad y la concreción de conceptos ambiciosos en proyectos tangibles. Trabajamos arduamente para orquestar las distintas partes involucradas en cada proyecto, con el objetivo de brindar soluciones ingeniosas que terminen beneficiando a la sociedad.",
   "contactUs": "Contáctanos",
   "weAreDevs": "Somos desarrolladores primero, nos preocupamos por ti.",
@@ -52,8 +52,12 @@
   "buttonText": "Trabaja con nosotros",
   "contactUsTitle": "Contáctanos para empezar a escalar tu negocio en la era digital",
   "nameLabel": "Nombre",
-  "emailLabel": "Email",
+  "emailLabel": "Email de contacto",
   "messageLabel": "Mensaje",
   "contactButton": "Enviar mensaje",
-  "ourToolbox": "Nuestras herramientas"
+  "contactButtonSending": "Enviando...",
+  "contactSuccess": "¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.",
+  "contactError": "Algo salió mal. Por favor, inténtalo de nuevo.",
+  "ourToolbox": "Nuestra caja de herramientas",
+  "docsForDevs": "Documentación para desarrolladores"
 }

@@ -13,15 +13,18 @@ let technologies = [
   { icon: "devicon-htmx-plain", name: "HTMX" },
   { icon: "devicon-postgresql-plain", name: "PostgreSQL" },
   { icon: "devicon-djangorest-plain-wordmark", name: "DRF" },
+  { icon: "devicon-android-plain", name: "Android" },
   { icon: "devicon-flask-original", name: "Flask" },
   { icon: "devicon-portainer-plain", name: "Portainer" },
   { icon: "devicon-harbor-plain", name: "Harbor" },
   { icon: "devicon-chartjs-plain", name: "Chart.js" },
+  { icon: "devicon-apple-original", name: "Apple" },
   { icon: "devicon-cloudflare-plain", name: "Cloudflare" },
   { icon: "devicon-nextjs-plain", name: "Next.js" },
   { icon: "devicon-gatsby-plain", name: "Gatsby" },
   { icon: "devicon-linux-plain", name: "Linux" },
   { icon: "devicon-astro-plain", name: "Astro" },
+  { icon: "devicon-github-original", name: "GitHub" },
   { icon: "devicon-tailwindcss-plain", name: "Tailwind" },
   { icon: "devicon-html5-plain", name: "HTML5" },
   { icon: "devicon-sass-plain", name: "Sass" },
@@ -35,7 +38,9 @@ let technologies = [
   { icon: "devicon-javascript-plain", name: "JavaScript" },
   { icon: "devicon-oracle-original", name: "Oracle" },
   { icon: "devicon-mysql-plain", name: "MySQL" },
-  { icon: "devicon-android-plain", name: "Android" },
+  { icon: "devicon-nginx-original", name: "NGINX" },
+  { icon: "devicon-git-plain", name: "Git" },
+ 
 ];
 
 technologies = technologies.concat(technologies);

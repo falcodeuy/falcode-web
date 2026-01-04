@@ -47,8 +47,8 @@ const Products: React.FC = () => {
 
         <div className="columns is-mobile is-multiline columns-margin columns-gap reverse-columns">
           <ProductCard
-            titleId="familebackofficeTitle"
-            descriptionId="famileBackofficeDescription"
+            titleId="manungoTitle"
+            descriptionId="manungoDescription"
             imagePosition="left"
             size="large"
             reversed
