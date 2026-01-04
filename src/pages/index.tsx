@@ -3,6 +3,7 @@ import AOS from 'aos';
 import "aos/dist/aos.css";
 import "../styles/main.scss";
 import type { HeadFC, PageProps } from "gatsby";
+import { useIntl } from "gatsby-plugin-intl";
 import Header from "../components/Header";
 import ContactUs from "../sections/ContactUs";
 import Footer from "../components/Footer";
@@ -11,6 +12,7 @@ import HowWeWork from "../sections/HowWeWork";
 import Products from "../sections/Products";
 import Technologies from "../sections/Technologies";
 import { StaticImage } from "gatsby-plugin-image";
+import SEO from "../components/SEO";
 
 const IndexPage: React.FC<PageProps> = () => {
   useEffect(() => {
@@ -44,9 +46,47 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => (
-  <>
-    <title>Falcode</title>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-  </>
-);
+export const Head: HeadFC = ({ pageContext }) => {
+  const lang = (pageContext as { intl?: { language?: string } })?.intl?.language || "es";
+  const isSpanish = lang === "es";
+
+  const keywords = isSpanish
+    ? [
+        "desarrollo web",
+        "aplicaciones móviles",
+        "software a medida",
+        "inteligencia artificial",
+        "consultoría tecnológica",
+        "AWS partners",
+        "desarrollo de sistemas",
+      ]
+    : [
+        "web development",
+        "mobile applications",
+        "custom software",
+        "artificial intelligence",
+        "technology consulting",
+        "AWS partners",
+        "systems development",
+      ];
+
+  return (
+    <SEO
+      title={isSpanish ? "Falcode: Tus Socios Tecnológicos" : "Falcode: Your Technology Partner"}
+      description={
+        isSpanish
+          ? "Impulsa el crecimiento de tu negocio con soluciones tecnológicas a medida. Desarrollo web, apps móviles, inteligencia artificial y más."
+          : "Boost your business growth with tailored technology solutions. Web development, mobile apps, artificial intelligence and more."
+      }
+      lang={lang}
+      pathname="/"
+      keywords={keywords}
+    >
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+      />
+    </SEO>
+  );
+};

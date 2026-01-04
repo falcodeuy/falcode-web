@@ -2,8 +2,20 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `falcode-web`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Falcode`,
+    description: `Impulsa el crecimiento de tu negocio con soluciones tecnológicas a medida. Desarrollo web, apps móviles, IA y más.`,
+    siteUrl: `https://falcode.dev`,
+    author: `@falcode`,
+    image: `/icons/icon-512x512.png`,
+    keywords: [
+      "desarrollo web",
+      "aplicaciones móviles",
+      "software a medida",
+      "inteligencia artificial",
+      "consultoría tecnológica",
+      "AWS partners",
+      "desarrollo de sistemas",
+    ],
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -27,7 +39,38 @@ const config: GatsbyConfig = {
         trackingIds: ["GA-TRACKING_ID"],
       },
     },
-    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+            allSitePage {
+              nodes {
+                path
+              }
+            }
+          }
+        `,
+        serialize: ({ path }: { path: string }) => ({
+          url: path,
+          changefreq: "weekly",
+          priority: path === "/" || path === "/es/" || path === "/en/" ? 1.0 : 0.7,
+        }),
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://falcode.dev",
+        sitemap: "https://falcode.dev/sitemap-index.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {

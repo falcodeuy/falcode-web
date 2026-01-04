@@ -1,4 +1,8 @@
 {
+  "seo": {
+    "title": "Falcode - Your Technology Partner",
+    "description": "Boost your business growth with tailored technology solutions. Web development, mobile apps, artificial intelligence and more. +30 years of combined experience."
+  },
   "menu": {
     "aboutUs": "About Us",
     "services": "Services",
@@ -61,5 +65,5 @@
   "contactError": "Something went wrong. Please try again.",
   "ourToolbox": "Our Toolbox",
   "docsForDevs": "Documentation for devs",
-  "awsPartnerText": "We are AWS Partners; access the benefits of the most important cloud infrastructure planet through us."
+  "awsPartnerText": "We are AWS Partners; access the benefits of the most important cloud infrastructure of the planet through us."
 }
