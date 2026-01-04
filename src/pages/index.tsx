@@ -8,8 +8,8 @@ import ContactUs from "../sections/ContactUs";
 import Footer from "../components/Footer";
 import Splash from "../sections/Splash";
 import HowWeWork from "../sections/HowWeWork";
-import Products from "../sections/Products2";
-import Technologies from "../sections/Technologies2";
+import Products from "../sections/Products";
+import Technologies from "../sections/Technologies";
 import { StaticImage } from "gatsby-plugin-image";
 
 const IndexPage: React.FC<PageProps> = () => {
