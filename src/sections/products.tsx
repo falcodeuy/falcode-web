@@ -2,7 +2,7 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { useIntl } from "gatsby-plugin-intl";
 import { handleScrollClick } from "../utils/scroll";
-import ProductCard from "../components/productCard";
+import ProductCard from "../components/product-card";
 
 const Products: React.FC = () => {
   const intl = useIntl();
@@ -90,15 +90,19 @@ const Products: React.FC = () => {
                 <p className="has-text-white px-3 pt-4">
                   {intl.formatMessage({ id: "sellingText2" })}
                 </p>
-                <div className="aws-partner-badge mt-4 px-3 is-flex is-align-items-center" style={{ gap: "1rem" }}>
-                  <StaticImage
-                    src="../images/aws-partner-badge.png"
-                    alt="AWS Partner"
-                    height={150}
-                  />
-                  <span className="has-text-white is-size-6 is-italic">
-                    {intl.formatMessage({ id: "awsPartnerText" })}
-                  </span>
+                <div className="columns is-vcentered mt-5 px-3">
+                  <div className="column is-2 height-100">
+                    <StaticImage
+                      src="../images/aws-partner-badge.png"
+                      alt="AWS Partner"
+                      height={120}
+                    />
+                  </div>
+                  <div className="column is-10">
+                    <span className="has-text-white is-size-6 is-italic">
+                      {intl.formatMessage({ id: "awsPartnerText" })}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
