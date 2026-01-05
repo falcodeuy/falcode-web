@@ -9,6 +9,45 @@
     "successCases": "Casos de éxito",
     "contact": "Contacto"
   },
+  "team": {
+    "title": "Nuestro Equipo Fundador",
+    "subtitle": "Conoce a las personas apasionadas detrás de Falcode que hacen posible la innovación tecnológica.",
+    "member1": {
+      "name": "Nombre del Miembro 1",
+      "role": "CEO & Co-Fundador",
+      "description": "Descripción breve del miembro del equipo. Experiencia y especialidades principales."
+    },
+    "member2": {
+      "name": "Nombre del Miembro 2",
+      "role": "CTO & Co-Fundador",
+      "description": "Descripción breve del miembro del equipo. Experiencia y especialidades principales."
+    },
+    "member3": {
+      "name": "Nombre del Miembro 3",
+      "role": "Lead Developer",
+      "description": "Descripción breve del miembro del equipo. Experiencia y especialidades principales."
+    },
+    "member4": {
+      "name": "Nombre del Miembro 4",
+      "role": "Product Designer",
+      "description": "Descripción breve del miembro del equipo. Experiencia y especialidades principales."
+    },
+    "valuesTitle": "Nuestros Valores",
+    "value1": {
+      "title": "Innovación",
+      "description": "Buscamos constantemente nuevas formas de resolver problemas y crear soluciones que marquen la diferencia."
+    },
+    "value2": {
+      "title": "Excelencia",
+      "description": "Nos comprometemos con los más altos estándares de calidad en cada proyecto que emprendemos."
+    },
+    "value3": {
+      "title": "Colaboración",
+      "description": "Trabajamos en estrecha colaboración con nuestros clientes para entender y superar sus expectativas."
+    },
+    "ctaTitle": "¿Listo para juntos?",
+    "ctaText": "Estamos aquí para ayudarte a llevar tu negocio al siguiente nivel con soluciones tecnológicas innovadoras."
+  },
   "contactButtonText": "Contacto",
   "mainSubtitle": "Impulsa el crecimiento de tu negocio con nuestras soluciones a medida",
   "discoverOurProposal": "Descubre nuestra propuesta",

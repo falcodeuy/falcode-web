@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import LanguageSelector from "../LanguageSelector";
-import { useIntl } from "gatsby-plugin-intl";
+import { useIntl, Link } from "gatsby-plugin-intl";
 import { handleScrollClick } from "../../utils/scroll";
 
 const Header: React.FC = () => {
@@ -50,13 +50,13 @@ const Header: React.FC = () => {
         className={`navbar-menu ${isMenuOpen ? "is-active" : ""}`}
       >
         <div className='navbar-end gap-tab'>
-          <a 
-            href='#how-we-work' 
+          <Link 
+            to='/team' 
             className='navbar-item has-text-dark link-redirect-margin'
-            onClick={(e) => handleScrollClick(e, "how-we-work", closeMenu)}
+            onClick={closeMenu}
           >
             {intl.formatMessage({ id: "menu.aboutUs" })}
-          </a>
+          </Link>
 
           <a 
             href='#technologies' 

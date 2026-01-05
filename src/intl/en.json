@@ -9,6 +9,45 @@
     "successCases": "Success Stories",
     "contact": "Contact"
   },
+  "team": {
+    "title": "Our Founding Team",
+    "subtitle": "Meet the passionate people behind Falcode who make technological innovation possible.",
+    "member1": {
+      "name": "Team Member 1 Name",
+      "role": "CEO & Co-Founder",
+      "description": "Brief description of the team member. Experience and main specialties."
+    },
+    "member2": {
+      "name": "Team Member 2 Name",
+      "role": "CTO & Co-Founder",
+      "description": "Brief description of the team member. Experience and main specialties."
+    },
+    "member3": {
+      "name": "Team Member 3 Name",
+      "role": "Lead Developer",
+      "description": "Brief description of the team member. Experience and main specialties."
+    },
+    "member4": {
+      "name": "Team Member 4 Name",
+      "role": "Product Designer",
+      "description": "Brief description of the team member. Experience and main specialties."
+    },
+    "valuesTitle": "Our Values",
+    "value1": {
+      "title": "Innovation",
+      "description": "We constantly seek new ways to solve problems and create solutions that make a difference."
+    },
+    "value2": {
+      "title": "Excellence",
+      "description": "We are committed to the highest quality standards in every project we undertake."
+    },
+    "value3": {
+      "title": "Collaboration",
+      "description": "We work closely with our clients to understand and exceed their expectations."
+    },
+    "ctaTitle": "Ready to together?",
+    "ctaText": "We're here to help you take your business to the next level with innovative technology solutions."
+  },
   "contactButtonText": "Contact",
   "mainSubtitle": "Boost the growth of your business with our tailored solutions",
   "discoverOurProposal": "Discover our proposal",

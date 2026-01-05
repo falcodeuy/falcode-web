@@ -1,0 +1,33 @@
+// Minimal custom styles for team page - using Bulma classes where possible
+
+.card .card-image {
+  overflow: hidden;
+}
+
+.card .image.is-square img {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+// Team member card hover effects
+.section-padding .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    
+    .image.is-square img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Value box hover effects
+.has-background-light .box {
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
