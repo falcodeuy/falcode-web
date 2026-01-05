@@ -21,7 +21,7 @@ const Header: React.FC = () => {
       aria-label='main navigation'
     >
       <div className='navbar-brand'>
-        <a className='navbar-item' href='#'>
+        <a className='navbar-item' href='/#'>
           <StaticImage
             src='../../images/falcode-logo-navbar.svg'
             alt='Descripción de la imagen'
