@@ -1,3 +1,13 @@
+// Utility classes
+.is-relative {
+  position: relative;
+}
+
+.is-rounded-small {
+  border-radius: 8px;
+}
+
+// Typography
 .title-secondary-size {
   font-size: 24px;
 
@@ -18,55 +28,14 @@
   }
 }
 
-.container-title-card {
-  @include tablet {
-    height: 54px;
-  }
-}
-
-.container-cards {
-  height: 1100px;
-
-  @include tablet-only {
-    height: 640px;
-  }
-
-  @include desktop {
-    height: 480px;
-  }
-
-  @include widescreen {
-    height: 380px;
-  }
-}
-
+// Card positioning
 .badge-card-position {
   position: absolute;
   top: -27px;
   left: 22px;
 }
 
-.container-content-card {
-  border-radius: 8px;
-  position: relative;
-
-  @include tablet {
-    height: 260px;
-  }
-
-  @include desktop {
-    height: 385px;
-  }
-
-  @include widescreen {
-    height: 290px;
-  }
-
-  @include fullhd {
-    height: 280px;
-  }
-}
-
+// Section elements
 .divider {
   height: 2px;
 

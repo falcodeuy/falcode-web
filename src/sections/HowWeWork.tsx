@@ -36,7 +36,6 @@ const HowWeWork: React.FC = () => {
             content={intl.formatMessage({ id: "card1Content" })}
             image={
               <StaticImage
-                className='badge-card-position'
                 src='../images/lightbulb.png'
                 alt='icon'
               />
@@ -47,7 +46,6 @@ const HowWeWork: React.FC = () => {
             content={intl.formatMessage({ id: "card2Content" })}
             image={
               <StaticImage
-                className='badge-card-position'
                 src='../images/badge.png'
                 alt='icon'
               />
@@ -58,7 +56,6 @@ const HowWeWork: React.FC = () => {
             content={intl.formatMessage({ id: "card4Content" })}
             image={
               <StaticImage
-                className='badge-card-position'
                 src='../images/rocket.png'
                 alt='icon'
               />

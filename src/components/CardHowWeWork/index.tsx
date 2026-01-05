@@ -9,25 +9,15 @@ const CardHowWeWork: React.FC<T.CardHowWeWorkProps> = ({
 }) => {
   return (
     <div className='column is-12-mobile is-4-tablet is-4-desktop' {...rest}>
-      <div
-        className='has-background-light'
-        style={{ borderRadius: 8, position: "relative" }}
-      >
-        {image}
+      <div className='has-background-light is-relative is-rounded-small'>
+        <div className='badge-card-position'>
+          {image}
+        </div>
         <div className='p-5'>
-          <div className='columns is-mobile mt-5 mb-4'>
-            <div className='column is-8-mobile is-8-tablet is-12-desktop is-11-widescreen is-12-fullhd py-0'>
-              <h3 className='title is-outfit has-text-primary title-cards-size'>
-                {title}
-              </h3>
-            </div>
-          </div>
-
-          <div className='columns is-mobile'>
-            <div className='column is-12-mobile is-12-tablet is-12-desktop'>
-              <p className=''>{content}</p>
-            </div>
-          </div>
+          <h3 className='title is-outfit has-text-primary title-cards-size mt-5 mb-4'>
+            {title}
+          </h3>
+          <p>{content}</p>
         </div>
       </div>
     </div>
