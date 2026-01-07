@@ -58,6 +58,7 @@ export const Head: HeadFC = ({ pageContext }) => {
         "consultoría tecnológica",
         "AWS partners",
         "desarrollo de sistemas",
+        "desarrollo de software",
       ]
     : [
         "web development",
@@ -67,6 +68,7 @@ export const Head: HeadFC = ({ pageContext }) => {
         "technology consulting",
         "AWS partners",
         "systems development",
+        "software development",
       ];
 
   return (

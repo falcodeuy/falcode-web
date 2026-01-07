@@ -34,12 +34,6 @@ const config: GatsbyConfig = {
       },
     },
     {
-      resolve: "gatsby-plugin-google-gtag",
-      options: {
-        trackingIds: ["GA-TRACKING_ID"],
-      },
-    },
-    {
       resolve: "gatsby-plugin-sitemap",
       options: {
         query: `
@@ -77,7 +71,6 @@ const config: GatsbyConfig = {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {

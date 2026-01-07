@@ -65,5 +65,10 @@
   "contactError": "Algo salió mal. Por favor, inténtalo de nuevo.",
   "ourToolbox": "Nuestra caja de herramientas",
   "docsForDevs": "Documentación para desarrolladores",
-  "awsPartnerText": "Somos AWS Partners; accedé a los beneficios de la infraestructura cloud más importante del planeta a través nuestro."
+  "awsPartnerText": "Somos AWS Partners; accedé a los beneficios de la infraestructura cloud más importante del planeta a través nuestro.",
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "Lo sentimos, la página que buscas no existe o fue movida.",
+    "cta": "Volver al inicio"
+  }
 }
