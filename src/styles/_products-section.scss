@@ -29,137 +29,63 @@
   text-decoration-thickness: 1.5px;
 }
 
-.arrow-icon-margin-right {
-  margin-right: 3px;
-}
-
-.content-card-size {
-  font-size: 12px;
-
-  @include tablet {
-    font-size: 16px;
+.image-column {
+  @include mobile {
+    height: 470px;
   }
-}
-
-.title-cards-size {
-  font-size: 1rem;
-
   @include tablet {
-    font-size: 1.25rem;
+    height: 500px;
   }
-
-  @include widescreen {
-    font-size: 1.5rem;
+  @include desktop {
+    height: 415px;
   }
 }
 
-.image-1-transform .gatsby-image-wrapper {
-  @include from(360px) {
-    transform: translate(-12px, 35px) scale(1.5);
-  }
+.device-image-effects {
+  animation: deviceFloat 6s ease-in-out infinite;
+  // Use drop-shadow so PNG transparency is preserved (no fake white background box)
+  filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.4));
+}
 
-  @include from(385px) {
-    transform: translate(-12px, 30px) scale(1.5);
-  }
-
-  @include from(392px) {
-    transform: translate(-12px, 18px) scale(1.5);
-  }
-
-  @include from(400px) {
-    transform: translate(-12px, 13px) scale(1.4);
-  }
-
-  @include from(420px) {
-    transform: translate(-10px, 8px) scale(1.3);
-  }
-
-  @include tablet {
-    transform: translate(-10px, 0px) scale(1.2);
-  }
-
-  @include widescreen {
-    transform: translate(-15px, 20px) scale(1.4);
-  }
-
-  @include fullhd {
-    transform: translate(-10px, -15px) scale(1.1);
+.phone-image-position {
+  @extend .device-image-effects;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 220px;
+  @include desktop {
+    width: 108%;
+    max-width: none;
   }
 }
 
-.image-2-transform .gatsby-image-wrapper {
-  @include tablet {
-    transform: translate(15px, -25px) scale(1.3);
-  }
-
-  @include widescreen {
-    transform: translate(-8px, 21px) scale(1.25);
-  }
-
-  @include fullhd {
-    transform: translate(0px, -14px) scale(1.1);
-  }
-}
-
-.image-3-transform .gatsby-image-wrapper {
-  transform: translate(50px, -15px) scale(1.1);
-
-  @include tablet {
-    transform: translate(45px, -33px) scale(1.2);
-  }
-
-  @include widescreen {
-    transform: translate(46px, 43px) scale(1.6);
-  }
-
-  @include fullhd {
-    transform: translate(46px, 35px) scale(1.6);
-  }
-}
-
-.image-4-transform .gatsby-image-wrapper {
-  @include from(360px) {
-    transform: translate(10px, 35px) scale(1.5);
-  }
-
-  @include from(385px) {
-    transform: translate(10px, 30px) scale(1.5);
-  }
-
-  @include from(392px) {
-    transform: translate(10px, 18px) scale(1.5);
-  }
-
-  @include from(400px) {
-    transform: translate(10px, 13px) scale(1.4);
-  }
-
-  @include from(420px) {
-    transform: translate(10px, 8px) scale(1.3);
-  }
-
-  @include tablet {
-    transform: translate(-2px, 0px) scale(1.2);
-  }
-
-  @include widescreen {
-    transform: translate(13px, 13px) scale(1.35);
-  }
-
-  @include fullhd {
-    transform: translate(10px, -16px) scale(1.1);
-  }
+.computer-image-position {
+  @extend .phone-image-position;
+  width: 100%;
+  max-width: 400px;
 }
 
 .container-product {
   border-radius: 8px;
-
-  @include widescreen {
-    height: 320px;
-  }
 }
 
 .container-summary {
   border-radius: 8px;
   position: relative;
+}
+
+@keyframes deviceFloat {
+  0% {
+    transform: translate(-50%, -50%) rotate(-1deg);
+  }
+
+  50% {
+    transform: translate(-50%, -52%) rotate(1deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(-1deg);
+  }
 }

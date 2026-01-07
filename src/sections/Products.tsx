@@ -21,7 +21,6 @@ const Products: React.FC = () => {
             link="https://agenda.zalon.app"
             imagePosition="right"
             size="small"
-            imageClassName="image-1-transform"
             image={
               <StaticImage
                 src="../images/zalon-cellphone.png"
@@ -36,7 +35,6 @@ const Products: React.FC = () => {
             link="https://famil-e.cl"
             imagePosition="right"
             size="large"
-            imageClassName="image-2-transform"
             image={
               <StaticImage
                 src="../images/laptop-famile.png"
@@ -54,10 +52,9 @@ const Products: React.FC = () => {
             imagePosition="left"
             size="large"
             reversed
-            imageClassName="image-3-transform"
             image={
               <StaticImage
-                src="../images/monitor-mac.svg"
+                src="../images/manungo.png"
                 alt="Famile backoffice"
               />
             }
@@ -69,10 +66,10 @@ const Products: React.FC = () => {
             link="https://showapp.com.uy"
             imagePosition="left"
             size="small"
-            imageClassName="image-4-transform"
+            reversed
             image={
               <StaticImage
-                src="../images/rocket-mobile.svg"
+                src="../images/showapp.png"
                 alt="Zalon design"
               />
             }
