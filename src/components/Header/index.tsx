@@ -7,6 +7,11 @@ import { handleScrollClick } from "../../utils/scroll";
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const intl = useIntl();
+  const localizedHomePath = intl.locale === "en" ? "/en/" : "/";
+  const homeLinkPath = "/";
+  const currentPath = typeof window !== "undefined" ? window.location.pathname : "";
+  const normalizePath = (path: string) => (path === "/" ? "/" : path.replace(/\/+$/, ""));
+  const isHomePage = normalizePath(currentPath) === normalizePath(localizedHomePath);
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -59,17 +64,21 @@ const Header: React.FC = () => {
           </Link>
 
           <Link
-            to='#technologies'
+            to={`${homeLinkPath}#technologies`}
             className='navbar-item has-text-dark link-redirect-margin'
-            onClick={(e) => handleScrollClick(e, "technologies", closeMenu)}
+            onClick={(e) =>
+              isHomePage ? handleScrollClick(e, "technologies", closeMenu) : closeMenu()
+            }
           >
             {intl.formatMessage({ id: "menu.services" })}
           </Link>
 
           <Link
-            to='#products'
+            to={`${homeLinkPath}#products`}
             className='navbar-item has-text-dark link-redirect-margin'
-            onClick={(e) => handleScrollClick(e, "products", closeMenu)}
+            onClick={(e) =>
+              isHomePage ? handleScrollClick(e, "products", closeMenu) : closeMenu()
+            }
           >
             {intl.formatMessage({ id: "menu.successCases" })}
           </Link>
@@ -85,7 +94,17 @@ const Header: React.FC = () => {
           <div className='navbar-item container-button-navbar'>
             <button 
               className='button is-primary header-btn'
-              onClick={(e) => handleScrollClick(e, "contact-us", closeMenu)}
+              onClick={(e) => {
+                if (isHomePage) {
+                  handleScrollClick(e, "contact-us", closeMenu);
+                  return;
+                }
+
+                closeMenu();
+                if (typeof window !== "undefined") {
+                  window.location.assign(`${localizedHomePath}#contact-us`);
+                }
+              }}
             >
               {intl.formatMessage({ id: "contactButtonText" })}
             </button>

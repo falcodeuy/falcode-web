@@ -7,7 +7,15 @@ exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
 
   createTypes(`
-    type MarkdownRemarkFrontmatter {
+    type MarkdownRemarkFrontmatter @dontInfer {
+      title: String
+      description: String
+      date: Date @dateformat
+      updatedAt: Date @dateformat
+      lang: String
+      translationKey: String
+      tags: [String]
+      draft: Boolean
       featuredImage: File @fileByRelativePath
     }
   `);

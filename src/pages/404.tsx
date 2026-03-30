@@ -25,7 +25,7 @@ const NotFoundPage: React.FC<PageProps> = () => {
             <div className="columns is-vcentered is-variable is-8 is-centered">
               <div className="column is-12-tablet is-8-desktop has-text-centered">
                 <p className="has-text-primary has-text-weight-semibold mb-2">404</p>
-                <h1 className="title is-outfit mb-4">{title}</h1>
+                <h1 className="title is-outfit is-spaced mb-4">{title}</h1>
                 <p className="subtitle mb-5">{description}</p>
                 <Link to="/" className="button is-primary custom-btn">
                   {cta}
