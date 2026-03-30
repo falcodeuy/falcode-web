@@ -256,7 +256,7 @@ export default BlogListTemplate;
 
 export const Head: HeadFC<BlogListData, BlogListContext> = ({ pageContext }) => {
   const lang = pageContext.language || pageContext.intl?.language || "es";
-  const title = lang === "es" ? "Blog de Falcode" : "Falcode Blog";
+  const title = "Blog";
   const description =
     lang === "es"
       ? "Ideas practicas sobre desarrollo, IA, AWS y producto digital."

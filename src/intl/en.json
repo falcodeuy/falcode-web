@@ -11,21 +11,18 @@
   },
   "team": {
     "title": "Our Founding Team",
-    "subtitle": "Meet the passionate people behind Falcode who make technological innovation possible.",
+    "subtitle": "Meet the passionate people behind Falcode",
     "member1": {
-      "name": "Crhistyan Silva",
-      "role": "CEO & Co-Founder",
-      "description": "Brief description of the team member. Experience and main specialties."
+      "role": "AI and Python Expert",
+      "description": "We're not talking about plugging a couple of APIs and burning tokens... no, this is guy is the real deal."
     },
     "member2": {
-      "name": "Fausto Márquez",
-      "role": "CTO & Co-Founder",
-      "description": "Brief description of the team member. Experience and main specialties."
+      "role": "Solution Architect",
+      "description": "With innovation as a standard, he doesn't rest until he molds the perfect solution to your needs."
     },
     "member3": {
-      "name": "Leando Paz",
-      "role": "Lead Developer",
-      "description": "Brief description of the team member. Experience and main specialties."
+      "role": "Lead Engineer",
+      "description": "Attention to detail and commitment to quality and time. Do you want an app delivered tomorrow? This is your guy."
     },
     "valuesTitle": "Our Values",
     "value1": {

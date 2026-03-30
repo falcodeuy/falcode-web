@@ -11,21 +11,18 @@
   },
   "team": {
     "title": "Nuestro Equipo Fundador",
-    "subtitle": "Conoce a las personas apasionadas detrás de Falcode que hacen posible la innovación tecnológica.",
+    "subtitle": "Conoce a las personas apasionadas detrás de Falcode",
     "member1": {
-      "name": "Nombre del Miembro 1",
-      "role": "CEO & Co-Fundador",
-      "description": "Descripción breve del miembro del equipo. Experiencia y especialidades principales."
+      "role": "Experto en IA y Python",
+      "description": "No estamos hablando de conectar un par de APIs y quemar tokens... no, este crack es el real deal."
     },
     "member2": {
-      "name": "Nombre del Miembro 2",
-      "role": "CTO & Co-Fundador",
-      "description": "Descripción breve del miembro del equipo. Experiencia y especialidades principales."
+      "role": "Arquitecto de soluciones",
+      "description": "Con la innovación como estandarte, no descansa hasta moldear la pieza perfecta de solución a tus necesidades."
     },
     "member3": {
-      "name": "Nombre del Miembro 3",
-      "role": "Lead Developer",
-      "description": "Descripción breve del miembro del equipo. Experiencia y especialidades principales."
+      "role": "Líder de ingeniería",
+      "description": "Atención al detalle y compromiso con la calidad y los tiempos. ¿Querés una app para mañana? Este es tu tipo."
     },
     "valuesTitle": "Nuestros Valores",
     "value1": {
