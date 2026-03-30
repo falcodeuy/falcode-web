@@ -1,9 +1,38 @@
 Blog authoring guide
 ====================
 
-Create one `.md` file per post in this directory.
+Use one directory per blog post inside `src/content/blog`.
 
-Required frontmatter:
+Slug and language rules
+-----------------------
+
+- Slug comes from the post directory name.
+- Language comes from `lang` frontmatter (recommended) and should match file name (`es.md` or `en.md`).
+- URLs are generated as `/<lang>/blog/<post-directory>/`.
+- Translations are detected automatically when `es.md` and `en.md` exist in the same directory.
+
+Examples:
+
+- `mcp-getting-started/es.md` -> `/es/blog/mcp-getting-started/`
+- `mcp-getting-started/en.md` -> `/en/blog/mcp-getting-started/`
+- `seo-tecnico-sitios-headless/es.md` -> `/es/blog/seo-tecnico-sitios-headless/`
+
+Recommended structure:
+
+```txt
+src/content/blog/
+  mcp-getting-started/
+    es.md
+    en.md
+    cover.jpg
+    images/
+      architecture.png
+  seo-tecnico-sitios-headless/
+    es.md
+```
+
+Required frontmatter
+--------------------
 
 ```yaml
 ---
@@ -12,7 +41,6 @@ description: "Short summary"
 date: "2026-03-20"
 updatedAt: "2026-03-20"
 lang: "es" # "es" or "en"
-translationKey: "my-post" # optional; same value across translated versions
 tags:
   - "gatsby"
   - "seo"
@@ -20,27 +48,19 @@ draft: false
 ---
 ```
 
-Slug is generated from the file name.
-
-Examples:
-- `es-mi-post.md` -> `/es/blog/es-mi-post/`
-- `en-my-post.md` -> `/en/blog/en-my-post/`
-
-If you publish translations, use the same `translationKey` in each language file.
-If you publish in only one language, omit `translationKey`.
-
 Images
 ------
 
-This project supports two image types in blog posts:
+This project supports:
 
-1) Featured image (frontmatter, optional)
-2) Inline images in markdown body
+1) Featured image (`featuredImage` in frontmatter, optional)
+2) Inline markdown images
 
-How to organize files:
+Rules:
 
-- Keep each post image in the same folder as the `.md` file, or in a relative subfolder.
-- Always use relative paths from the markdown file location.
+- Do not use a shared blog images folder.
+- Keep each post image inside the same post directory.
+- Use relative paths from each markdown file.
 
 Featured image example:
 
@@ -51,20 +71,21 @@ description: "Short summary"
 date: "2026-03-20"
 updatedAt: "2026-03-20"
 lang: "en"
-featuredImage: "./images/my-post-cover.jpg"
+featuredImage: "./cover.jpg"
 draft: false
 ---
 ```
 
-Inline image example:
+Inline image examples:
 
 ```md
-![Architecture diagram](./images/mcp-architecture.png)
+![Architecture diagram](./cover.jpg)
+![Flow](./images/mcp-architecture.png)
 ```
 
 Notes:
 
-- `featuredImage` is rendered automatically at the top of the post.
-- Inline markdown images are optimized by Gatsby during build.
+- `featuredImage` renders automatically at the top of the post.
+- Inline markdown images are optimized at build time.
 - Prefer `.jpg`, `.png`, `.webp`, or `.avif`.
 - SVG/GIF are not processed by Sharp the same way as raster images.

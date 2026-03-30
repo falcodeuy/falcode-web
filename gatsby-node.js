@@ -7,13 +7,22 @@ exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
 
   createTypes(`
+    type MarkdownRemarkFields {
+      slug: String
+      lang: String
+      postGroup: String
+    }
+
+    type MarkdownRemark implements Node {
+      fields: MarkdownRemarkFields
+    }
+
     type MarkdownRemarkFrontmatter @dontInfer {
       title: String
       description: String
       date: Date @dateformat
       updatedAt: Date @dateformat
       lang: String
-      translationKey: String
       tags: [String]
       draft: Boolean
       featuredImage: File @fileByRelativePath
@@ -28,17 +37,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     return;
   }
 
-  const baseSlug = createFilePath({ node, getNode, basePath: "content/blog" }).replace(
-    /^\/|\/$/g,
-    ""
-  );
-  const language = node.frontmatter?.lang || "es";
-  const translationKey = node.frontmatter?.translationKey || baseSlug;
+  const relativePath = createFilePath({ node, getNode, basePath: "content/blog" }).replace(/^\/|\/$/g, "");
+  const [postGroup, languageFromFile] = relativePath.split("/");
+  const language = node.frontmatter?.lang || languageFromFile || "es";
 
   createNodeField({
     node,
     name: "slug",
-    value: `/blog/${baseSlug}/`,
+    value: `/${language}/blog/${postGroup}/`,
   });
 
   createNodeField({
@@ -49,8 +55,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   createNodeField({
     node,
-    name: "translationKey",
-    value: translationKey,
+    name: "postGroup",
+    value: postGroup,
   });
 };
 
@@ -72,7 +78,7 @@ exports.createPages = async ({ graphql, actions }) => {
           fields {
             slug
             lang
-            translationKey
+            postGroup
           }
         }
       }
@@ -96,10 +102,22 @@ exports.createPages = async ({ graphql, actions }) => {
 
   });
 
+  languages.forEach((lang) => {
+    createPage({
+      path: `/${lang}/blog/`,
+      component: blogListTemplate,
+      context: {
+        language: lang,
+        postsPerPage: POSTS_PER_PAGE,
+      },
+    });
+  });
+
   createPage({
     path: `/blog/`,
     component: blogListTemplate,
     context: {
+      language: "es",
       postsPerPage: POSTS_PER_PAGE,
     },
   });
@@ -111,7 +129,8 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         id: post.id,
         language: post.fields.lang,
-        translationKey: post.fields.translationKey,
+        postGroup: post.fields.postGroup,
+        slugGroupPattern: `/\\/blog\\/${post.fields.postGroup}\\/$/`,
       },
     });
   });

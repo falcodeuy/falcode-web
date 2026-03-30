@@ -8,6 +8,7 @@ import Header from "../components/Header";
 import SEO from "../components/SEO";
 
 interface BlogListContext {
+  language?: "en" | "es";
   intl?: {
     language?: "en" | "es";
   };
@@ -43,7 +44,7 @@ const BlogListTemplate: React.FC<PageProps<BlogListData, BlogListContext>> = ({
   pageContext,
 }) => {
   const intl = useIntl();
-  const language = pageContext.intl?.language || "es";
+  const language = pageContext.language || pageContext.intl?.language || "es";
   const { postsPerPage = 6 } = pageContext;
   const posts = data.allMarkdownRemark.nodes.filter((post) => post.frontmatter.lang === language);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -205,7 +206,7 @@ export const query = graphql`
 export default BlogListTemplate;
 
 export const Head: HeadFC<BlogListData, BlogListContext> = ({ pageContext }) => {
-  const lang = pageContext.intl?.language || "es";
+  const lang = pageContext.language || pageContext.intl?.language || "es";
   const title = lang === "es" ? "Blog de Falcode" : "Falcode Blog";
   const description =
     lang === "es"

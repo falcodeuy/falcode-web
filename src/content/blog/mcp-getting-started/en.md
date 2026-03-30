@@ -4,12 +4,11 @@ description: "How to integrate Model Context Protocol to speed up integrations b
 date: "2026-03-10"
 updatedAt: "2026-03-10"
 lang: "en"
-translationKey: "mcp-getting-started"
 tags:
   - "mcp"
   - "ai"
   - "architecture"
-featuredImage: "./images/ss.jpg"
+featuredImage: "./ss.jpg"
 draft: false
 ---
 
@@ -23,4 +22,4 @@ At Falcode we use it to reduce friction between internal APIs and development as
 - Define permissions per tool.
 - Keep traces for auditability.
 
-![MCP architecture](./images/ss.jpg)
+![MCP architecture](./ss.jpg)

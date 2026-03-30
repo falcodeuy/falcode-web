@@ -15,7 +15,7 @@ interface BlogPostData {
     fields: {
       slug: string;
       lang: string;
-      translationKey: string;
+      postGroup: string;
     };
     frontmatter: {
       title: string;
@@ -104,7 +104,7 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
                 {primaryTranslation ? (
                   <Link
                     className="has-text-link blog-language-link"
-                    to={`/${primaryTranslation.fields.lang}${primaryTranslation.fields.slug}`}
+                    to={primaryTranslation.fields.slug}
                   >
                     {translationCtaText}
                   </Link>
@@ -155,7 +155,7 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
 };
 
 export const query = graphql`
-  query BlogPostById($id: String!, $translationKey: String!) {
+  query BlogPostById($id: String!, $slugGroupPattern: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
@@ -163,7 +163,7 @@ export const query = graphql`
       fields {
         slug
         lang
-        translationKey
+        postGroup
       }
       frontmatter {
         title
@@ -186,7 +186,7 @@ export const query = graphql`
     allMarkdownRemark(
       filter: {
         frontmatter: { draft: { ne: true }, date: { ne: null }, title: { ne: null } }
-        fields: { translationKey: { eq: $translationKey } }
+        fields: { slug: { regex: $slugGroupPattern } }
       }
       sort: { fields: { lang: ASC } }
     ) {
