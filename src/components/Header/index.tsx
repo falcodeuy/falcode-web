@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import LanguageSelector from "../LanguageSelector";
-import { useIntl } from "gatsby-plugin-intl";
+import { useIntl, Link } from "gatsby-plugin-intl";
 import { handleScrollClick } from "../../utils/scroll";
 
 const Header: React.FC = () => {
@@ -21,14 +21,14 @@ const Header: React.FC = () => {
       aria-label='main navigation'
     >
       <div className='navbar-brand'>
-        <a className='navbar-item' href='/'>
+        <Link className='navbar-item' to='/'>
           <StaticImage
             src='../../images/falcode-logo-navbar.svg'
             alt='Logo de Falcode'
           />
-        </a>
+        </Link>
 
-        <a
+        <button
           role='button'
           className={`navbar-burger ${
             isMenuOpen ? "is-active" : ""
@@ -42,7 +42,7 @@ const Header: React.FC = () => {
           <span aria-hidden='true'></span>
           <span aria-hidden='true'></span>
           <span aria-hidden='true'></span>
-        </a>
+        </button>
       </div>
 
       <div
@@ -50,37 +50,37 @@ const Header: React.FC = () => {
         className={`navbar-menu ${isMenuOpen ? "is-active" : ""}`}
       >
         <div className='navbar-end gap-tab'>
-          <a 
-            href='#how-we-work' 
+          <Link 
+            to='/team' 
             className='navbar-item has-text-dark link-redirect-margin'
-            onClick={(e) => handleScrollClick(e, "how-we-work", closeMenu)}
+            onClick={closeMenu}
           >
             {intl.formatMessage({ id: "menu.aboutUs" })}
-          </a>
+          </Link>
 
-          <a 
-            href='#technologies' 
+          <Link
+            to='#technologies'
             className='navbar-item has-text-dark link-redirect-margin'
             onClick={(e) => handleScrollClick(e, "technologies", closeMenu)}
           >
             {intl.formatMessage({ id: "menu.services" })}
-          </a>
+          </Link>
 
-          <a 
-            href='#products' 
+          <Link
+            to='#products'
             className='navbar-item has-text-dark link-redirect-margin'
             onClick={(e) => handleScrollClick(e, "products", closeMenu)}
           >
             {intl.formatMessage({ id: "menu.successCases" })}
-          </a>
+          </Link>
 
-          <a
-            href={`/${intl.locale}/blog/`}
+          <Link
+            to='/blog/'
             className='navbar-item has-text-dark link-redirect-margin'
             onClick={closeMenu}
           >
             Blog
-          </a>
+          </Link>
 
           <div className='navbar-item container-button-navbar'>
             <button 
