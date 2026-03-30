@@ -38,13 +38,6 @@ const teamMembers: TeamMember[] = [
     roleKey: "team.member3.role",
     descriptionKey: "team.member3.description",
     placeholder: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
-  },
-  {
-    id: "member4",
-    nameKey: "team.member4.name",
-    roleKey: "team.member4.role",
-    descriptionKey: "team.member4.description",
-    placeholder: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face"
   }
 ];
 
@@ -90,7 +83,7 @@ const TeamPage: React.FC<PageProps> = () => {
                     <p className="title is-5 is-outfit has-text-dark mb-1">
                       {intl.formatMessage({ id: member.nameKey })}
                     </p>
-                    <p className="subtitle is-6 has-text-primary mb-3">
+                    <p className="is-size-6 has-text-primary mb-3">
                       {intl.formatMessage({ id: member.roleKey })}
                     </p>
                     <p className="is-size-6 has-text-grey-dark">

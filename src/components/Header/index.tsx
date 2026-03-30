@@ -55,14 +55,6 @@ const Header: React.FC = () => {
         className={`navbar-menu ${isMenuOpen ? "is-active" : ""}`}
       >
         <div className='navbar-end gap-tab'>
-          <Link 
-            to='/team' 
-            className='navbar-item has-text-dark link-redirect-margin'
-            onClick={closeMenu}
-          >
-            {intl.formatMessage({ id: "menu.aboutUs" })}
-          </Link>
-
           <Link
             to={`${homeLinkPath}#technologies`}
             className='navbar-item has-text-dark link-redirect-margin'
@@ -81,6 +73,14 @@ const Header: React.FC = () => {
             }
           >
             {intl.formatMessage({ id: "menu.successCases" })}
+          </Link>
+
+          <Link 
+            to='/team' 
+            className='navbar-item has-text-dark link-redirect-margin'
+            onClick={closeMenu}
+          >
+            {intl.formatMessage({ id: "menu.aboutUs" })}
           </Link>
 
           <Link
