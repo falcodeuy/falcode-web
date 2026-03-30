@@ -245,3 +245,33 @@ button.blog-tag-chip:hover {
 .blog-back-link:hover {
   color: #e64863;
 }
+
+.blog-page {
+  @include tablet {
+    font-size: 16px;
+  }
+}
+
+.blog-list-card {
+  overflow: hidden;
+  padding: 0;
+}
+
+.blog-list-card__image {
+  height: 130px;
+  position: relative;
+}
+
+.blog-list-card__image .gatsby-image-wrapper {
+  height: 100%;
+}
+
+.blog-list-card__image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 45%, rgba(255, 255, 255, 1) 100%);
+  pointer-events: none;
+}
+
+.blog-l

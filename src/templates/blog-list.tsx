@@ -1,12 +1,15 @@
 import React, { useMemo, useState } from "react";
 import { graphql, Link, type HeadFC, type PageProps } from "gatsby";
+import { GatsbyImage, getImage, type IGatsbyImageData } from "gatsby-plugin-image";
 import "../styles/main.scss";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SEO from "../components/SEO";
 
 interface BlogListContext {
-  language: "en" | "es";
+  intl?: {
+    language?: "en" | "es";
+  };
   postsPerPage?: number;
 }
 
@@ -22,7 +25,13 @@ interface BlogListData {
         title: string;
         date: string;
         description?: string;
+        lang: "en" | "es";
         tags?: string[];
+        featuredImage?: {
+          childImageSharp?: {
+            gatsbyImageData: IGatsbyImageData;
+          };
+        };
       };
     }>;
   };
@@ -32,8 +41,9 @@ const BlogListTemplate: React.FC<PageProps<BlogListData, BlogListContext>> = ({
   data,
   pageContext,
 }) => {
-  const { language, postsPerPage = 6 } = pageContext;
-  const posts = data.allMarkdownRemark.nodes;
+  const language = pageContext.intl?.language || "es";
+  const { postsPerPage = 6 } = pageContext;
+  const posts = data.allMarkdownRemark.nodes.filter((post) => post.frontmatter.lang === language);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const allTags = useMemo(
@@ -71,7 +81,7 @@ const BlogListTemplate: React.FC<PageProps<BlogListData, BlogListContext>> = ({
   return (
     <>
       <Header />
-      <main className="section section-padding">
+      <main className="section section-padding blog-page">
         <div className="container">
           <h1 className="title is-outfit">{language === "es" ? "Blog" : "Blog"}</h1>
           <p className="mb-6">
@@ -97,27 +107,33 @@ const BlogListTemplate: React.FC<PageProps<BlogListData, BlogListContext>> = ({
           </div>
 
           <div className="columns is-multiline">
-            {paginatedPosts.map((post) => (
-              <article key={post.id} className="column is-12">
-                <div className="box">
-                  <p className="is-size-7 has-text-grey mb-2">{post.frontmatter.date}</p>
-                  <h2 className="title is-4 mb-3">
-                    <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
-                  </h2>
-                  <p className="mb-4">{post.frontmatter.description || post.excerpt}</p>
-                  <p className="is-size-7 mb-3">
-                    {(post.frontmatter.tags || []).map((tag) => (
-                      <span key={tag} className="blog-tag-chip blog-tag-chip--readonly mr-2">
-                        #{tag}
-                      </span>
-                    ))}
-                  </p>
-                  <Link to={post.fields.slug}>
-                    {language === "es" ? "Leer articulo" : "Read article"}
+            {paginatedPosts.map((post) => {
+              const cardImage = getImage(post.frontmatter.featuredImage || null);
+
+              return (
+                <article key={post.id} className="column is-12-mobile is-6-tablet">
+                  <Link to={post.fields.slug} className="box is-block blog-list-card">
+                    {cardImage ? (
+                      <div className="blog-list-card__image">
+                        <GatsbyImage image={cardImage} alt={post.frontmatter.title} />
+                      </div>
+                    ) : null}
+                    <div className="blog-list-card__body">
+                      <p className="is-size-7 has-text-grey mb-2">{post.frontmatter.date}</p>
+                      <h2 className="title is-4 mb-3">{post.frontmatter.title}</h2>
+                      <p className="mb-4">{post.frontmatter.description || post.excerpt}</p>
+                      <p className="is-size-7 mb-3">
+                        {(post.frontmatter.tags || []).map((tag) => (
+                          <span key={tag} className="blog-tag-chip blog-tag-chip--readonly mr-2">
+                            #{tag}
+                          </span>
+                        ))}
+                      </p>
+                    </div>
                   </Link>
-                </div>
-              </article>
-            ))}
+                </article>
+              );
+            })}
           </div>
 
           <nav className="pagination is-centered mt-6" role="navigation" aria-label="pagination">
@@ -145,12 +161,10 @@ const BlogListTemplate: React.FC<PageProps<BlogListData, BlogListContext>> = ({
 };
 
 export const query = graphql`
-  query BlogListPage($language: String!) {
+  query BlogListPage {
     allMarkdownRemark(
       sort: { frontmatter: { date: DESC } }
-      filter: {
-        frontmatter: { draft: { ne: true }, lang: { eq: $language }, date: { ne: null }, title: { ne: null } }
-      }
+      filter: { frontmatter: { draft: { ne: true }, date: { ne: null }, title: { ne: null } } }
     ) {
       nodes {
         id
@@ -162,7 +176,18 @@ export const query = graphql`
           title
           date(formatString: "YYYY-MM-DD")
           description
+          lang
           tags
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData(
+                width: 1200
+                quality: 80
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
+            }
+          }
         }
       }
     }
@@ -172,7 +197,7 @@ export const query = graphql`
 export default BlogListTemplate;
 
 export const Head: HeadFC<BlogListData, BlogListContext> = ({ pageContext }) => {
-  const lang = pageContext.language || "es";
+  const lang = pageContext.intl?.language || "es";
   const title = lang === "es" ? "Blog de Falcode" : "Falcode Blog";
   const description =
     lang === "es"

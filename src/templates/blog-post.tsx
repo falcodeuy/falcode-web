@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql, Link, type HeadFC, type PageProps } from "gatsby";
+import { GatsbyImage, getImage, type IGatsbyImageData } from "gatsby-plugin-image";
 import "../styles/main.scss";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -7,6 +8,7 @@ import SEO from "../components/SEO";
 
 interface BlogPostData {
   markdownRemark: {
+    id: string;
     html: string;
     excerpt: string;
     fields: {
@@ -20,6 +22,11 @@ interface BlogPostData {
       date: string;
       updatedAt?: string;
       tags?: string[];
+      featuredImage?: {
+        childImageSharp?: {
+          gatsbyImageData: IGatsbyImageData;
+        };
+      };
     };
   };
   allMarkdownRemark: {
@@ -48,11 +55,12 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
   const translationCtaText =
     post.fields.lang === "es" ? "Read English version" : "Leer version en espanol";
   const backToBlogHref = `/${post.fields.lang}/blog/`;
+  const featuredImage = getImage(post.frontmatter.featuredImage || null);
 
   return (
     <>
       <Header />
-      <main className="section section-padding">
+      <main className="section section-padding blog-page">
         <div className="container content">
           <Link className="blog-back-link mb-4 is-inline-flex" to={backToBlogHref}>
             <span className="icon is-small">
@@ -63,6 +71,11 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
           <h1 className="title is-outfit">{post.frontmatter.title}</h1>
           {post.frontmatter.description ? (
             <p className="is-size-5 has-text-grey mb-4">{post.frontmatter.description}</p>
+          ) : null}
+          {featuredImage ? (
+            <div className="mb-5">
+              <GatsbyImage image={featuredImage} alt={post.frontmatter.title} />
+            </div>
           ) : null}
           <div className="is-flex is-align-items-center is-flex-wrap-wrap mb-5" style={{ gap: "0.75rem" }}>
             <span className="blog-tag-chip blog-tag-chip--readonly">
@@ -76,7 +89,10 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
                   ? " - "
                   : null}
                 {primaryTranslation ? (
-                  <Link className="has-text-link blog-language-link" to={primaryTranslation.fields.slug}>
+                  <Link
+                    className="has-text-link blog-language-link"
+                    to={`/${primaryTranslation.fields.lang}${primaryTranslation.fields.slug}`}
+                  >
                     {translationCtaText}
                   </Link>
                 ) : null}
@@ -134,6 +150,16 @@ export const query = graphql`
         date(formatString: "YYYY-MM-DD")
         updatedAt(formatString: "YYYY-MM-DD")
         tags
+        featuredImage {
+          childImageSharp {
+            gatsbyImageData(
+              width: 1200
+              quality: 85
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
+        }
       }
     }
     allMarkdownRemark(
@@ -203,5 +229,3 @@ export const Head: HeadFC<BlogPostData> = ({ data }) => {
       keywords={post.frontmatter.tags}
       structuredData={structuredData}
     />
-  );
-};

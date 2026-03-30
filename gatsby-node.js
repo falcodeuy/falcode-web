@@ -3,6 +3,16 @@ const { createFilePath } = require("gatsby-source-filesystem");
 
 const POSTS_PER_PAGE = 6;
 
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+
+  createTypes(`
+    type MarkdownRemarkFrontmatter {
+      featuredImage: File @fileByRelativePath
+    }
+  `);
+};
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
@@ -20,7 +30,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   createNodeField({
     node,
     name: "slug",
-    value: `/${language}/blog/${baseSlug}/`,
+    value: `/blog/${baseSlug}/`,
   });
 
   createNodeField({
@@ -76,14 +86,14 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     });
 
-    createPage({
-      path: `/${lang}/blog/`,
-      component: blogListTemplate,
-      context: {
-        language: lang,
-        postsPerPage: POSTS_PER_PAGE,
-      },
-    });
+  });
+
+  createPage({
+    path: `/blog/`,
+    component: blogListTemplate,
+    context: {
+      postsPerPage: POSTS_PER_PAGE,
+    },
   });
 
   posts.forEach((post) => {

@@ -1,6 +1,22 @@
 import React from "react";
 import { changeLocale, useIntl } from "gatsby-plugin-intl";
 
+const LOCALE_PREFIX_REGEX = /^\/(?:en|es)(?=\/|$)/;
+
+const stripAllLocalePrefixes = (pathname: string): string => {
+  let sanitizedPath = pathname;
+
+  while (LOCALE_PREFIX_REGEX.test(sanitizedPath)) {
+    sanitizedPath = sanitizedPath.replace(LOCALE_PREFIX_REGEX, "");
+  }
+
+  if (!sanitizedPath) {
+    return "/";
+  }
+
+  return sanitizedPath.startsWith("/") ? sanitizedPath : `/${sanitizedPath}`;
+};
+
 const LanguageSelector: React.FC = () => {
   const intl = useIntl();
   const currentLocale = intl.locale;
@@ -8,7 +24,12 @@ const LanguageSelector: React.FC = () => {
   const otherLocale = currentLocale === "en" ? "es" : "en";
 
   const handleChangeLocale = () => {
-    changeLocale(otherLocale);
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const targetPath = stripAllLocalePrefixes(window.location.pathname);
+    changeLocale(otherLocale, targetPath);
   };
 
   return (

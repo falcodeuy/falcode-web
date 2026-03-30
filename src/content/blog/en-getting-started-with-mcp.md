@@ -9,6 +9,7 @@ tags:
   - "mcp"
   - "ai"
   - "architecture"
+featuredImage: "./images/ss.jpg"
 draft: false
 ---
 
@@ -21,3 +22,5 @@ At Falcode we use it to reduce friction between internal APIs and development as
 - Start with small use cases.
 - Define permissions per tool.
 - Keep traces for auditability.
+
+![MCP architecture](./images/ss.jpg)
