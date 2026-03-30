@@ -68,7 +68,7 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
             </span>
             <span>{post.fields.lang === "es" ? "Volver al blog" : "Back to blog"}</span>
           </Link>
-          <h1 className="title is-outfit">{post.frontmatter.title}</h1>
+          <h1 className="mb-2 title is-outfit">{post.frontmatter.title}</h1>
           {post.frontmatter.description ? (
             <p className="is-size-5 has-text-grey mb-4">{post.frontmatter.description}</p>
           ) : null}
@@ -229,3 +229,5 @@ export const Head: HeadFC<BlogPostData> = ({ data }) => {
       keywords={post.frontmatter.tags}
       structuredData={structuredData}
     />
+  );
+};
