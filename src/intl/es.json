@@ -114,7 +114,11 @@
     "list": {
       "title": "Blog",
       "subtitle": "Articulos sobre software, IA y estrategia digital.",
-      "clearFilters": "Limpiar filtros"
+      "clearFilters": "Limpiar filtros",
+      "pagination": {
+        "previous": "Anterior",
+        "next": "Siguiente"
+      }
     },
     "post": {
       "backToBlog": "Volver al blog",

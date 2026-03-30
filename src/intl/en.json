@@ -114,7 +114,11 @@
     "list": {
       "title": "Blog",
       "subtitle": "Articles about software, AI and digital strategy.",
-      "clearFilters": "Clear filters"
+      "clearFilters": "Clear filters",
+      "pagination": {
+        "previous": "Previous",
+        "next": "Next"
+      }
     },
     "post": {
       "backToBlog": "Back to blog",

@@ -145,23 +145,52 @@ const BlogListTemplate: React.FC<PageProps<BlogListData, BlogListContext>> = ({
             })}
           </div>
 
-          <nav className="pagination is-centered mt-6" role="navigation" aria-label="pagination">
-            <ul className="pagination-list">
-              {Array.from({ length: totalPages }).map((_, index) => {
-                const page = index + 1;
-                return (
-                  <li key={page}>
-                    <button
-                      className={`pagination-link ${currentPage === page ? "is-current" : ""}`}
-                      onClick={() => setCurrentPage(page)}
-                    >
-                      {page}
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
+          {totalPages > 1 ? (
+            <nav className="blog-pagination mt-6" role="navigation" aria-label="pagination">
+              {currentPage > 1 ? (
+                <button
+                  type="button"
+                  className="blog-pagination__control"
+                  onClick={() => setCurrentPage(currentPage - 1)}
+                >
+                  {intl.formatMessage({
+                    id: "blog.list.pagination.previous",
+                    defaultMessage: "Previous",
+                  })}
+                </button>
+              ) : null}
+
+              <ul className="blog-pagination__list">
+                {Array.from({ length: totalPages }).map((_, index) => {
+                  const page = index + 1;
+                  return (
+                    <li key={page}>
+                      <button
+                        type="button"
+                        className={`blog-pagination__page ${currentPage === page ? "blog-pagination__page--active" : ""}`}
+                        onClick={() => setCurrentPage(page)}
+                      >
+                        {page}
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+
+              {currentPage < totalPages ? (
+                <button
+                  type="button"
+                  className="blog-pagination__control"
+                  onClick={() => setCurrentPage(currentPage + 1)}
+                >
+                  {intl.formatMessage({
+                    id: "blog.list.pagination.next",
+                    defaultMessage: "Next",
+                  })}
+                </button>
+              ) : null}
+            </nav>
+          ) : null}
         </div>
       </main>
       <Footer />

@@ -292,3 +292,48 @@ button.blog-tag-chip:hover {
   padding: 1.25rem;
   margin-top: -0.65rem;
 }
+
+.blog-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.blog-pagination__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-pagination__page,
+.blog-pagination__control {
+  border: 1px solid #d9dce5;
+  border-radius: 999px;
+  background: #f7f8fc;
+  color: #2f3552;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.5rem 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.blog-pagination__page:hover,
+.blog-pagination__control:hover {
+  background: #eceffd;
+  border-color: #b8c1ff;
+}
+
+.blog-pagination__page--active {
+  background: #e64863;
+  border-color: #e64863;
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(230, 72, 99, 0.28);
+}
