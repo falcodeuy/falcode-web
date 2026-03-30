@@ -115,12 +115,12 @@ const BlogListTemplate: React.FC<PageProps<BlogListData, BlogListContext>> = ({
             </button>
           </div>
 
-          <div className="columns is-multiline">
+          <div className="blog-list-grid">
             {paginatedPosts.map((post) => {
               const cardImage = getImage(post.frontmatter.featuredImage || null);
 
               return (
-                <article key={post.id} className="column is-12-mobile is-6-tablet">
+                <article key={post.id} className="blog-list-grid__item">
                   <Link to={post.fields.slug} className="box is-block blog-list-card">
                     {cardImage ? (
                       <div className="blog-list-card__image">

@@ -8,7 +8,7 @@ tags:
   - "mcp"
   - "ia"
   - "arquitectura"
-featuredImage: "./ss.jpg"
+featuredImage: "./featured.png"
 draft: false
 ---
 
@@ -22,4 +22,4 @@ En Falcode lo usamos para reducir friccion entre APIs internas y asistentes de d
 - Define permisos por herramienta.
 - Registra trazas para poder auditar.
 
-![Arquitectura MCP](./ss.jpg)
+![Arquitectura MCP](./featured.png)

@@ -1,9 +1,10 @@
 ---
 title: "SEO tecnico para sitios headless"
-description: "Checklist concreto para mejorar indexacion en sitios construidos con Gatsby."
+description: "Checklist concreto para mejorar indexacion en sitios construidos con Gatsbys construidos con Gatsbys construidos con Gatsbys construidos con Gatsbys construidos con Gatsby."
 date: "2026-03-15"
 updatedAt: "2026-03-15"
 lang: "es"
+featuredImage: "./featured.jpg"
 tags:
   - "seo"
   - "gatsby"

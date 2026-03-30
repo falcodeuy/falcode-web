@@ -253,6 +253,19 @@ button.blog-tag-chip:hover {
   }
 }
 
+.blog-list-grid {
+  column-gap: 1.5rem;
+
+  @include tablet {
+    column-count: 2;
+  }
+}
+
+.blog-list-grid__item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
 .blog-list-card {
   overflow: hidden;
   padding: 0;

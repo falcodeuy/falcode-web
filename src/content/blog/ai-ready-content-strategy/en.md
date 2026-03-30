@@ -4,6 +4,7 @@ description: "Practical ways to make your website easier to understand for both 
 date: "2026-03-18"
 updatedAt: "2026-03-18"
 lang: "en"
+featuredImage: "./featured.jpg"
 tags:
   - "geo"
   - "seo"

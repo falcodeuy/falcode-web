@@ -80,7 +80,7 @@ Inline image examples:
 
 ```md
 ![Architecture diagram](./cover.jpg)
-![Flow](./images/mcp-architecture.png)
+![Flow](./mcp-architecture.png)
 ```
 
 Notes:
