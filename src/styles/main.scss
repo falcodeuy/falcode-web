@@ -337,3 +337,34 @@ button.blog-tag-chip:hover {
   color: #fff;
   box-shadow: 0 8px 22px rgba(230, 72, 99, 0.28);
 }
+
+.go-to-top-btn {
+  position: fixed;
+  right: 1rem;
+  bottom: 1.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: none;
+  border-radius: 999px;
+  background: $primary;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 30;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+
+  @include desktop {
+    width: 3.2rem;
+    height: 3.2rem;
+    right: 2rem;
+    bottom: 2rem;
+  }
+}
+
+.go-to-top-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}

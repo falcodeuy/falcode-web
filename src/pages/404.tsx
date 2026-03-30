@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 import { useIntl } from "gatsby-plugin-intl";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import GoToTopButton from "../components/GoToTopButton";
 import SEO from "../components/SEO";
 import "../styles/main.scss";
 
@@ -35,6 +36,7 @@ const NotFoundPage: React.FC<PageProps> = () => {
           </div>
         </section>
       </main>
+      <GoToTopButton />
       <Footer />
     </>
   );

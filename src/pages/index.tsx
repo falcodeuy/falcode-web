@@ -6,6 +6,7 @@ import type { HeadFC, PageProps } from "gatsby";
 import Header from "../components/Header";
 import ContactUs from "../sections/ContactUs";
 import Footer from "../components/Footer";
+import GoToTopButton from "../components/GoToTopButton";
 import Splash from "../sections/Splash";
 import HowWeWork from "../sections/HowWeWork";
 import Products from "../sections/Products";
@@ -38,6 +39,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <Products />
         <ContactUs />
       </main>
+      <GoToTopButton />
       <Footer />
     </>
   );

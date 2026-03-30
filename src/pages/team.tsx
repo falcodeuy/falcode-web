@@ -5,6 +5,7 @@ import "../styles/main.scss";
 import type { HeadFC, PageProps } from "gatsby";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import GoToTopButton from "../components/GoToTopButton";
 import SEO from "../components/SEO";
 import ContactUs from "../sections/ContactUs";
 import { useIntl } from "gatsby-plugin-intl";
@@ -129,6 +130,7 @@ const TeamPage: React.FC<PageProps> = () => {
 
         <ContactUs />
       </main>
+      <GoToTopButton />
       <Footer />
     </>
   );
