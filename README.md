@@ -25,7 +25,7 @@ npm install
 npm run develop
 ```
 
-Your site will be running at http://localhost:8000!
+Your site will be running at http://localhost:9999!
 
 ## 🛠️ Tech Stack
 

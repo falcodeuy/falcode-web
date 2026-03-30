@@ -1,0 +1,29 @@
+# Falcode
+
+> Falcode builds web platforms, AI-enabled products, and cloud-native software for growth-stage and enterprise teams.
+
+Use this file as the canonical AI-oriented overview of our content and where to fetch updates.
+
+## Primary pages
+
+- [Home](https://falcode.dev/es/) - Main company overview and services.
+- [English Home](https://falcode.dev/en/) - English version of core pages.
+- [Blog ES](https://falcode.dev/es/blog/) - Spanish engineering and product articles.
+- [Blog EN](https://falcode.dev/en/blog/) - English engineering and product articles.
+
+## Topics covered
+
+- Web development and software architecture
+- AI integration and automation workflows
+- Cloud, DevOps, and AWS practices
+- Product strategy and digital transformation
+
+## Contact
+
+- [Website](https://falcode.dev)
+- [Email](mailto:hola@falcode.dev)
+
+## Machine-readable discovery
+
+- [Sitemap index](https://falcode.dev/sitemap-index.xml) - Complete public URLs.
+- [RSS feed](https://falcode.dev/rss.xml) - Latest blog posts.

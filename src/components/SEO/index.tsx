@@ -8,6 +8,10 @@ interface SEOProps {
   image?: string;
   lang?: string;
   keywords?: string[];
+  type?: "website" | "article";
+  publishedTime?: string;
+  modifiedTime?: string;
+  structuredData?: Record<string, unknown>;
   children?: React.ReactNode;
 }
 
@@ -18,6 +22,10 @@ const SEO: React.FC<SEOProps> = ({
   image,
   lang = "es",
   keywords: keywordsProp,
+  type = "website",
+  publishedTime,
+  modifiedTime,
+  structuredData,
   children,
 }) => {
   const { site } = useStaticQuery(graphql`
@@ -30,6 +38,8 @@ const SEO: React.FC<SEOProps> = ({
           author
           image
           keywords
+          companyName
+          location
         }
       }
     }
@@ -42,6 +52,8 @@ const SEO: React.FC<SEOProps> = ({
     author,
     image: defaultImage,
     keywords,
+    companyName,
+    location,
   } = site.siteMetadata;
 
   const seo = {
@@ -60,16 +72,24 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="description" content={seo.description} />
       <meta name="keywords" content={seo.keywords} />
       <meta name="author" content={author} />
+      <meta
+        name="robots"
+        content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+      />
       <link rel="canonical" href={seo.url} />
+      <link rel="alternate" type="application/rss+xml" title="Falcode RSS" href={`${siteUrl}/rss.xml`} />
+      <link rel="alternate" type="text/plain" title="Falcode llms" href={`${siteUrl}/llms.txt`} />
 
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={type} />
       <meta property="og:url" content={seo.url} />
       <meta property="og:title" content={seo.title} />
       <meta property="og:description" content={seo.description} />
       <meta property="og:image" content={seo.image} />
       <meta property="og:site_name" content={defaultTitle} />
       <meta property="og:locale" content={lang === "es" ? "es_ES" : "en_US"} />
+      {publishedTime ? <meta property="article:published_time" content={publishedTime} /> : null}
+      {modifiedTime ? <meta property="article:modified_time" content={modifiedTime} /> : null}
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -88,11 +108,12 @@ const SEO: React.FC<SEOProps> = ({
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Falcode",
+          "@type": "LocalBusiness",
+          name: companyName || "Falcode",
           url: siteUrl,
           logo: `${siteUrl}/icons/icon-512x512.png`,
           description: defaultDescription,
+          areaServed: location || "Montevideo, Uruguay",
           sameAs: [],
           contactPoint: {
             "@type": "ContactPoint",
@@ -107,7 +128,7 @@ const SEO: React.FC<SEOProps> = ({
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
-          name: "Falcode",
+          name: companyName || "Falcode",
           url: siteUrl,
           potentialAction: {
             "@type": "SearchAction",
@@ -116,6 +137,10 @@ const SEO: React.FC<SEOProps> = ({
           },
         })}
       </script>
+
+      {structuredData ? (
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+      ) : null}
 
       {children}
     </>

@@ -7,6 +7,8 @@ const config: GatsbyConfig = {
     siteUrl: `https://falcode.dev`,
     author: `@falcode`,
     image: `/icons/icon-512x512.png`,
+    companyName: "Falcode",
+    location: "Montevideo, Uruguay",
     keywords: [
       "desarrollo web",
       "aplicaciones móviles",
@@ -34,6 +36,14 @@ const config: GatsbyConfig = {
       },
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "blog",
+        path: "./src/content/blog/",
+      },
+      __key: "blog",
+    },
+    {
       resolve: "gatsby-plugin-sitemap",
       options: {
         query: `
@@ -58,6 +68,59 @@ const config: GatsbyConfig = {
       },
     },
     {
+      resolve: "gatsby-plugin-feed",
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }: any) =>
+              allMarkdownRemark.nodes.map((node: any) => ({
+                title: node.frontmatter.title,
+                description: node.frontmatter.description || node.excerpt,
+                date: node.frontmatter.date,
+                url: site.siteMetadata.siteUrl + node.fields.slug,
+                guid: site.siteMetadata.siteUrl + node.fields.slug,
+                custom_elements: [{ "content:encoded": node.html }],
+              })),
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { frontmatter: { date: DESC } }
+                  filter: { frontmatter: { draft: { ne: true }, date: { ne: null }, title: { ne: null } } }
+                ) {
+                  nodes {
+                    excerpt
+                    html
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      description
+                      date(formatString: "YYYY-MM-DD")
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "Falcode Blog RSS Feed",
+          },
+        ],
+      },
+    },
+    {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://falcode.dev",
@@ -73,6 +136,7 @@ const config: GatsbyConfig = {
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-transformer-remark",
     {
       resolve: "gatsby-source-filesystem",
       options: {

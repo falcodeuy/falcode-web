@@ -21,10 +21,10 @@ const Header: React.FC = () => {
       aria-label='main navigation'
     >
       <div className='navbar-brand'>
-        <a className='navbar-item' href='#'>
+        <a className='navbar-item' href='/'>
           <StaticImage
             src='../../images/falcode-logo-navbar.svg'
-            alt='Descripción de la imagen'
+            alt='Logo de Falcode'
           />
         </a>
 
@@ -72,6 +72,14 @@ const Header: React.FC = () => {
             onClick={(e) => handleScrollClick(e, "products", closeMenu)}
           >
             {intl.formatMessage({ id: "menu.successCases" })}
+          </a>
+
+          <a
+            href={`/${intl.locale}/blog/`}
+            className='navbar-item has-text-dark link-redirect-margin'
+            onClick={closeMenu}
+          >
+            Blog
           </a>
 
           <div className='navbar-item container-button-navbar'>
