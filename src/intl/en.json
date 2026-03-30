@@ -109,5 +109,26 @@
     "title": "Page not found",
     "description": "Sorry, the page you are looking for doesn’t exist or was moved.",
     "cta": "Back to homepage"
+  },
+  "blog": {
+    "list": {
+      "title": "Blog",
+      "subtitle": "Articles about software, AI and digital strategy.",
+      "clearFilters": "Clear filters"
+    },
+    "post": {
+      "backToBlog": "Back to blog",
+      "originalLanguage": "Original language",
+      "published": "Published",
+      "updated": "Updated",
+      "translationCta": {
+        "es": "Read English version",
+        "en": "Leer version en espanol"
+      },
+      "language": {
+        "es": "Spanish",
+        "en": "English"
+      }
+    }
   }
 }

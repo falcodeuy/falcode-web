@@ -109,5 +109,26 @@
     "title": "Página no encontrada",
     "description": "Lo sentimos, la página que buscas no existe o fue movida.",
     "cta": "Volver al inicio"
+  },
+  "blog": {
+    "list": {
+      "title": "Blog",
+      "subtitle": "Articulos sobre software, IA y estrategia digital.",
+      "clearFilters": "Limpiar filtros"
+    },
+    "post": {
+      "backToBlog": "Volver al blog",
+      "originalLanguage": "Idioma original",
+      "published": "Publicado",
+      "updated": "Actualizado",
+      "translationCta": {
+        "es": "Read English version",
+        "en": "Leer version en espanol"
+      },
+      "language": {
+        "es": "Español",
+        "en": "Inglés"
+      }
+    }
   }
 }

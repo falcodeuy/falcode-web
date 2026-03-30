@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, Link, type HeadFC, type PageProps } from "gatsby";
 import { GatsbyImage, getImage, type IGatsbyImageData } from "gatsby-plugin-image";
+import { useIntl } from "gatsby-plugin-intl";
 import "../styles/main.scss";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -44,16 +45,19 @@ interface BlogPostData {
 }
 
 const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
+  const intl = useIntl();
   const post = data.markdownRemark;
   const languageNames: Record<string, string> = {
-    es: "Español",
-    en: "English",
+    es: intl.formatMessage({ id: "blog.post.language.es", defaultMessage: "Spanish" }),
+    en: intl.formatMessage({ id: "blog.post.language.en", defaultMessage: "English" }),
   };
   const currentLanguageName = languageNames[post.fields.lang] || post.fields.lang.toUpperCase();
   const translations = data.allMarkdownRemark.nodes.filter((node) => node.id !== post.id);
   const primaryTranslation = translations[0];
-  const translationCtaText =
-    post.fields.lang === "es" ? "Read English version" : "Leer version en espanol";
+  const translationCtaText = intl.formatMessage({
+    id: `blog.post.translationCta.${post.fields.lang}`,
+    defaultMessage: "Read translated version",
+  });
   const backToBlogHref = `/${post.fields.lang}/blog/`;
   const featuredImage = getImage(post.frontmatter.featuredImage || null);
 
@@ -66,7 +70,12 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
             <span className="icon is-small">
               <i className="fas fa-arrow-left" aria-hidden="true" />
             </span>
-            <span>{post.fields.lang === "es" ? "Volver al blog" : "Back to blog"}</span>
+            <span>
+              {intl.formatMessage({
+                id: "blog.post.backToBlog",
+                defaultMessage: "Back to blog",
+              })}
+            </span>
           </Link>
           <h1 className="mb-2 title is-outfit">{post.frontmatter.title}</h1>
           {post.frontmatter.description ? (
@@ -83,7 +92,11 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
                 <i className="fas fa-language" aria-hidden="true" />
               </span>
               <span>
-                {post.fields.lang === "es" ? "Idioma original" : "Original language"}:{" "}
+                {intl.formatMessage({
+                  id: "blog.post.originalLanguage",
+                  defaultMessage: "Original language",
+                })}
+                :{" "}
                 {currentLanguageName}
                 {primaryTranslation
                   ? " - "
@@ -103,7 +116,11 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
                 <i className="fas fa-calendar-alt" aria-hidden="true" />
               </span>
               <span>
-                {post.fields.lang === "es" ? "Publicado" : "Published"}: {post.frontmatter.date}
+                {intl.formatMessage({
+                  id: "blog.post.published",
+                  defaultMessage: "Published",
+                })}
+                : {post.frontmatter.date}
               </span>
             </span>
             <span className="blog-tag-chip blog-tag-chip--readonly">
@@ -111,7 +128,11 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
                 <i className="fas fa-clock" aria-hidden="true" />
               </span>
               <span>
-                {post.fields.lang === "es" ? "Actualizado" : "Updated"}:{" "}
+                {intl.formatMessage({
+                  id: "blog.post.updated",
+                  defaultMessage: "Updated",
+                })}
+                :{" "}
                 {post.frontmatter.updatedAt || post.frontmatter.date}
               </span>
             </span>

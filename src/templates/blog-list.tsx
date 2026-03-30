@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { graphql, Link, type HeadFC, type PageProps } from "gatsby";
 import { GatsbyImage, getImage, type IGatsbyImageData } from "gatsby-plugin-image";
+import { useIntl } from "gatsby-plugin-intl";
 import "../styles/main.scss";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -41,6 +42,7 @@ const BlogListTemplate: React.FC<PageProps<BlogListData, BlogListContext>> = ({
   data,
   pageContext,
 }) => {
+  const intl = useIntl();
   const language = pageContext.intl?.language || "es";
   const { postsPerPage = 6 } = pageContext;
   const posts = data.allMarkdownRemark.nodes.filter((post) => post.frontmatter.lang === language);
@@ -83,11 +85,14 @@ const BlogListTemplate: React.FC<PageProps<BlogListData, BlogListContext>> = ({
       <Header />
       <main className="section section-padding blog-page">
         <div className="container">
-          <h1 className="title is-outfit">{language === "es" ? "Blog" : "Blog"}</h1>
+          <h1 className="title is-outfit">
+            {intl.formatMessage({ id: "blog.list.title", defaultMessage: "Blog" })}
+          </h1>
           <p className="mb-6">
-            {language === "es"
-              ? "Articulos sobre software, IA y estrategia digital."
-              : "Articles about software, AI and digital strategy."}
+            {intl.formatMessage({
+              id: "blog.list.subtitle",
+              defaultMessage: "Articles about software, AI and digital strategy.",
+            })}
           </p>
 
           <div className="mb-5 is-flex is-flex-wrap-wrap is-align-items-center" style={{ gap: "0.5rem" }}>
@@ -102,7 +107,10 @@ const BlogListTemplate: React.FC<PageProps<BlogListData, BlogListContext>> = ({
               </button>
             ))}
             <button type="button" className="blog-clear-filters-btn" onClick={clearFilter}>
-              {language === "es" ? "Limpiar filtros" : "Clear filters"}
+              {intl.formatMessage({
+                id: "blog.list.clearFilters",
+                defaultMessage: "Clear filters",
+              })}
             </button>
           </div>
 
