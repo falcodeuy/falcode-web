@@ -22,6 +22,7 @@ interface BlogListData {
       excerpt: string;
       fields: {
         slug: string;
+        postGroup: string;
       };
       frontmatter: {
         title: string;
@@ -46,7 +47,25 @@ const BlogListTemplate: React.FC<PageProps<BlogListData, BlogListContext>> = ({
   const intl = useIntl();
   const language = pageContext.language || pageContext.intl?.language || "es";
   const { postsPerPage = 6 } = pageContext;
-  const posts = data.allMarkdownRemark.nodes.filter((post) => post.frontmatter.lang === language);
+  const posts = useMemo(() => {
+    const postsByGroup = new Map<string, BlogListData["allMarkdownRemark"]["nodes"][number]>();
+
+    data.allMarkdownRemark.nodes.forEach((post) => {
+      const groupKey = post.fields.postGroup || post.fields.slug;
+      const currentSelection = postsByGroup.get(groupKey);
+
+      if (!currentSelection) {
+        postsByGroup.set(groupKey, post);
+        return;
+      }
+
+      if (currentSelection.frontmatter.lang !== language && post.frontmatter.lang === language) {
+        postsByGroup.set(groupKey, post);
+      }
+    });
+
+    return Array.from(postsByGroup.values());
+  }, [data.allMarkdownRemark.nodes, language]);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const allTags = useMemo(
@@ -209,6 +228,7 @@ export const query = graphql`
         excerpt(pruneLength: 180)
         fields {
           slug
+          postGroup
         }
         frontmatter {
           title
