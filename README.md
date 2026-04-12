@@ -22,10 +22,10 @@ To start the development server:
 npm install
 
 # Start development server
-npm run develop
+npm run start
 ```
 
-Your site will be running at http://localhost:9999!
+Your site will be running at [http://localhost:9999](http://localhost:9999).
 
 ## 🛠️ Tech Stack
 
@@ -43,3 +43,4 @@ Your site will be running at http://localhost:9999!
 - `src/components/` - Reusable components
 - `src/styles/` - SASS stylesheets
 - `src/intl/` - Internationalization files
+- `src/content/blog/` - Blog posts
