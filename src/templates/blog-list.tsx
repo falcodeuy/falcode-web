@@ -67,6 +67,7 @@ const BlogListTemplate: React.FC<PageProps<BlogListData, BlogListContext>> = ({
     return Array.from(postsByGroup.values());
   }, [data.allMarkdownRemark.nodes, language]);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [titleQuery, setTitleQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const allTags = useMemo(
     () =>
@@ -76,15 +77,22 @@ const BlogListTemplate: React.FC<PageProps<BlogListData, BlogListContext>> = ({
     [posts]
   );
   const filteredPosts = useMemo(() => {
-    if (selectedTags.length === 0) {
-      return posts;
+    let list = posts;
+
+    if (selectedTags.length > 0) {
+      list = list.filter((post) => {
+        const tags = (post.frontmatter.tags || []).map((tag) => tag.toLowerCase());
+        return selectedTags.every((selectedTag) => tags.includes(selectedTag));
+      });
     }
 
-    return posts.filter((post) => {
-      const tags = (post.frontmatter.tags || []).map((tag) => tag.toLowerCase());
-      return selectedTags.every((selectedTag) => tags.includes(selectedTag));
-    });
-  }, [posts, selectedTags]);
+    const q = titleQuery.trim().toLowerCase();
+    if (q) {
+      list = list.filter((post) => post.frontmatter.title.toLowerCase().includes(q));
+    }
+
+    return list;
+  }, [posts, selectedTags, titleQuery]);
   const totalPages = Math.max(1, Math.ceil(filteredPosts.length / postsPerPage));
   const paginatedPosts = filteredPosts.slice((currentPage - 1) * postsPerPage, currentPage * postsPerPage);
 
@@ -97,6 +105,7 @@ const BlogListTemplate: React.FC<PageProps<BlogListData, BlogListContext>> = ({
 
   const clearFilter = () => {
     setSelectedTags([]);
+    setTitleQuery("");
     setCurrentPage(1);
   };
 
@@ -105,15 +114,33 @@ const BlogListTemplate: React.FC<PageProps<BlogListData, BlogListContext>> = ({
       <Header />
       <main className="section section-padding blog-page">
         <div className="container">
-          <h1 className="title is-outfit">
-            {intl.formatMessage({ id: "blog.list.title", defaultMessage: "Blog" })}
-          </h1>
-          <p className="mb-6">
-            {intl.formatMessage({
-              id: "blog.list.subtitle",
-              defaultMessage: "Articles about software, AI and digital strategy.",
-            })}
-          </p>
+          <div className="blog-list-header mb-5">
+            <h1 className="title is-outfit blog-list-header__title">
+              {intl.formatMessage({ id: "blog.list.title", defaultMessage: "The Falcode Blog" })}
+            </h1>
+            <div className="field blog-list-search">
+              <div className="control">
+                <input
+                  id="blog-list-title-search"
+                  type="search"
+                  className="input"
+                  value={titleQuery}
+                  onChange={(event) => {
+                    setCurrentPage(1);
+                    setTitleQuery(event.target.value);
+                  }}
+                  placeholder={intl.formatMessage({
+                    id: "blog.list.searchPlaceholder",
+                    defaultMessage: "Search by title…",
+                  })}
+                  aria-label={intl.formatMessage({
+                    id: "blog.list.searchAriaLabel",
+                    defaultMessage: "Search blog posts by title",
+                  })}
+                />
+              </div>
+            </div>
+          </div>
 
           <div className="mb-5 is-flex is-flex-wrap-wrap is-align-items-center" style={{ gap: "0.5rem" }}>
             {allTags.map((tag) => (
@@ -133,6 +160,15 @@ const BlogListTemplate: React.FC<PageProps<BlogListData, BlogListContext>> = ({
               })}
             </button>
           </div>
+
+          {paginatedPosts.length === 0 ? (
+            <p className="has-text-grey mb-5">
+              {intl.formatMessage({
+                id: "blog.list.noResults",
+                defaultMessage: "No posts match your filters.",
+              })}
+            </p>
+          ) : null}
 
           <div className="blog-list-grid">
             {paginatedPosts.map((post) => {
@@ -256,7 +292,7 @@ export default BlogListTemplate;
 
 export const Head: HeadFC<BlogListData, BlogListContext> = ({ pageContext }) => {
   const lang = pageContext.language || pageContext.intl?.language || "es";
-  const title = "Blog";
+  const title = "Falcode Blog";
   const description =
     lang === "es"
       ? "Ideas practicas sobre desarrollo, IA, AWS y producto digital."

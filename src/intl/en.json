@@ -104,8 +104,10 @@
   },
   "blog": {
     "list": {
-      "title": "Blog",
-      "subtitle": "Articles about software, AI and digital strategy.",
+      "title": "The Falcode Blog",
+      "searchPlaceholder": "Search article...",
+      "searchAriaLabel": "Search blog posts by title",
+      "noResults": "No posts match your filters.",
       "clearFilters": "Clear filters",
       "pagination": {
         "previous": "Previous",

@@ -253,6 +253,34 @@ button.blog-tag-chip:hover {
   }
 }
 
+.blog-list-header {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.blog-list-header__title {
+  margin-bottom: 0;
+}
+
+.blog-list-header .blog-list-search {
+  flex: 0 1 auto;
+  margin-bottom: 0;
+  width: 100%;
+  max-width: none;
+
+  @include tablet {
+    flex: 0 1 24rem;
+    max-width: 24rem;
+  }
+}
+
 .blog-list-grid {
   column-gap: 1.5rem;
 
