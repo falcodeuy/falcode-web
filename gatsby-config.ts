@@ -26,6 +26,15 @@ const config: GatsbyConfig = {
   pathPrefix: "/",
   plugins: [
     "gatsby-plugin-image",
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [`G-LSTSPKD7LS`],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-sass`,
