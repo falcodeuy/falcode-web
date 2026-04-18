@@ -21,7 +21,7 @@ Use this file as the canonical AI-oriented overview of our content and where to 
 ## Contact
 
 - [Website](https://falcode.dev)
-- [Email](mailto:hola@falcode.dev)
+- [Email](mailto:hi@falcode.dev)
 
 ## Machine-readable discovery
 

@@ -35,7 +35,7 @@ const config: GatsbyConfig = {
         },
       },
     },
-    `gatsby-plugin-sharp`,
+    "gatsby-plugin-sharp",
     {
       resolve: `gatsby-plugin-sass`,
       options: {
@@ -186,6 +186,7 @@ const config: GatsbyConfig = {
         redirect: true,
       },
     },
+    "gatsby-plugin-decap-cms",
   ],
 };
 
