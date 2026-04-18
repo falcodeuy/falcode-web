@@ -9,7 +9,6 @@ tags:
   - "ai"
   - "architecture"
 featuredImage: "./featured.png"
-draft: false
 ---
 
 MCP helps connect models with external tools through a standard protocol.

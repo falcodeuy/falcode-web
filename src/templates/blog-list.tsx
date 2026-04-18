@@ -257,7 +257,7 @@ export const query = graphql`
   query BlogListPage {
     allMarkdownRemark(
       sort: { frontmatter: { date: DESC } }
-      filter: { frontmatter: { draft: { ne: true }, date: { ne: null }, title: { ne: null } } }
+      filter: { frontmatter: { date: { ne: null }, title: { ne: null } } }
     ) {
       nodes {
         id

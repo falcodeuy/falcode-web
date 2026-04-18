@@ -24,7 +24,6 @@ exports.createSchemaCustomization = ({ actions }) => {
       updatedAt: Date @dateformat
       lang: String
       tags: [String]
-      draft: Boolean
       featuredImage: File @fileByRelativePath
     }
   `);
@@ -71,7 +70,7 @@ exports.createPages = async ({ graphql, actions }) => {
     query BlogPagesQuery {
       allMarkdownRemark(
         sort: { frontmatter: { date: DESC } }
-        filter: { frontmatter: { draft: { ne: true }, date: { ne: null }, title: { ne: null } } }
+        filter: { frontmatter: { date: { ne: null }, title: { ne: null } } }
       ) {
         nodes {
           id

@@ -1,7 +1,8 @@
 Blog authoring guide
 ====================
 
-Use one directory per blog post inside `src/content/blog`.
+Use one directory per blog post inside `src/content/blog` for published content.
+Use `src/content/blog-draft` for work in progress drafts.
 
 Slug and language rules
 -----------------------
@@ -31,6 +32,16 @@ src/content/blog/
     es.md
 ```
 
+Draft structure:
+
+```txt
+src/content/blog-draft/
+  some-new-post/
+    es.md
+    en.md
+    cover.jpg
+```
+
 Required frontmatter
 --------------------
 
@@ -44,7 +55,6 @@ lang: "es" # "es" or "en"
 tags:
   - "gatsby"
   - "seo"
-draft: false
 ---
 ```
 
@@ -72,9 +82,15 @@ date: "2026-03-20"
 updatedAt: "2026-03-20"
 lang: "en"
 featuredImage: "./cover.jpg"
-draft: false
 ---
 ```
+
+Publishing flow
+---------------
+
+1) Create and iterate posts inside `src/content/blog-draft`.
+2) When ready to publish, move the whole post folder to `src/content/blog`.
+3) Keep the same folder name to preserve intended slug.
 
 Inline image examples:
 

@@ -8,7 +8,6 @@ tags:
   - "ia"
   - "automatizacion"
   - "producto"
-draft: false
 ---
 
 Automatizar no significa reemplazar todo, sino quitar friccion en tareas repetidas.

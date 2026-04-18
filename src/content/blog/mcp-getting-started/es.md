@@ -9,7 +9,6 @@ tags:
   - "ia"
   - "arquitectura"
 featuredImage: "./featured.png"
-draft: false
 ---
 
 MCP permite conectar modelos con herramientas externas de forma estandarizada.

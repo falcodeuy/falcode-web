@@ -9,7 +9,6 @@ tags:
   - "geo"
   - "seo"
   - "content"
-draft: false
 ---
 
 AI discovery starts with clear structure and reliable metadata.

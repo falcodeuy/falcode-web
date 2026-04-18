@@ -9,7 +9,6 @@ tags:
   - "seo"
   - "gatsby"
   - "headless"
-draft: false
 ---
 
 Un sitio headless necesita una base tecnica solida para rankear bien.

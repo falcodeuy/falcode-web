@@ -185,7 +185,7 @@ export const query = graphql`
     }
     allMarkdownRemark(
       filter: {
-        frontmatter: { draft: { ne: true }, date: { ne: null }, title: { ne: null } }
+        frontmatter: { date: { ne: null }, title: { ne: null } }
         fields: { slug: { regex: $slugGroupPattern } }
       }
       sort: { fields: { lang: ASC } }
