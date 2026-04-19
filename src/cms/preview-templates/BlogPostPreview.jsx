@@ -3,6 +3,34 @@ import BlogPostView from "../../components/BlogPostView";
 import en from "../../intl/en.json";
 import es from "../../intl/es.json";
 
+function decapReferencesFromList(list) {
+  if (!list || typeof list.toArray !== "function") {
+    return [];
+  }
+  return list
+    .toArray()
+    .map((item) => {
+      if (item == null) {
+        return null;
+      }
+      if (typeof item.get === "function") {
+        const title = item.get("title");
+        if (title == null || !String(title).trim()) {
+          return null;
+        }
+        const titleStr = String(title).trim();
+        const urlRaw = item.get("url");
+        const url = urlRaw != null && String(urlRaw).trim() ? String(urlRaw).trim() : undefined;
+        const detailRaw = item.get("detail");
+        const detail =
+          detailRaw != null && String(detailRaw).trim() ? String(detailRaw).trim() : undefined;
+        return { title: titleStr, url, detail };
+      }
+      return null;
+    })
+    .filter(Boolean);
+}
+
 function decapListToStrings(list) {
   if (!list || typeof list.toArray !== "function") {
     return [];
@@ -53,6 +81,7 @@ const BlogPostPreview = ({ entry, widgetFor, getAsset }) => {
   const lang = entry.getIn(["data", "lang"]) || "es";
   const tags = decapListToStrings(entry.getIn(["data", "tags"]));
   const authors = decapListToStrings(entry.getIn(["data", "authors"]));
+  const references = decapReferencesFromList(entry.getIn(["data", "references"]));
   const featuredImage = entry.getIn(["data", "featuredImage"]);
   const featuredImageUrl = featuredImage ? getAsset(featuredImage)?.toString() : null;
 
@@ -68,6 +97,7 @@ const BlogPostPreview = ({ entry, widgetFor, getAsset }) => {
       description={description}
       tags={tags}
       authors={authors}
+      references={references}
       articleLang={lang}
       publishedDate={publishedDate}
       updatedDate={updatedDate}
@@ -87,6 +117,7 @@ const BlogPostPreview = ({ entry, widgetFor, getAsset }) => {
         published: p.published,
         updated: p.updated,
         authors: p.authors,
+        references: p.references,
       }}
       languageChipInner={languageName}
       previewBanner={

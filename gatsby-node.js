@@ -26,6 +26,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       lang: String
       tags: [String]
       authors: JSON
+      references: JSON
       featuredImage: File @fileByRelativePath
     }
   `);

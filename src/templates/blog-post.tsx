@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, Link, type HeadFC, type PageProps } from "gatsby";
 import { GatsbyImage, getImage, type IGatsbyImageData } from "gatsby-plugin-image";
 import { useIntl } from "gatsby-plugin-intl";
-import BlogPostView, { flattenRemarkAuthors } from "../components/BlogPostView";
+import BlogPostView, { flattenRemarkAuthors, normalizeBlogReferences } from "../components/BlogPostView";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SEO from "../components/SEO";
@@ -24,6 +24,7 @@ interface BlogPostData {
       updatedAt?: string;
       tags?: string[];
       authors?: unknown;
+      references?: unknown;
       featuredImage?: {
         childImageSharp?: {
           gatsbyImageData: IGatsbyImageData;
@@ -62,6 +63,7 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
   const backToBlogHref = `/${post.fields.lang}/blog/`;
   const featuredImage = getImage(post.frontmatter.featuredImage || null);
   const authorNames = flattenRemarkAuthors(post.frontmatter.authors);
+  const referenceItems = normalizeBlogReferences(post.frontmatter.references);
 
   return (
     <>
@@ -71,6 +73,7 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
         description={post.frontmatter.description}
         tags={post.frontmatter.tags}
         authors={authorNames}
+        references={referenceItems}
         articleLang={post.fields.lang}
         publishedDate={post.frontmatter.date}
         updatedDate={post.frontmatter.updatedAt || post.frontmatter.date}
@@ -87,6 +90,10 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
           published: intl.formatMessage({ id: "blog.post.published", defaultMessage: "Published" }),
           updated: intl.formatMessage({ id: "blog.post.updated", defaultMessage: "Updated" }),
           authors: intl.formatMessage({ id: "blog.post.authors", defaultMessage: "Authors" }),
+          references: intl.formatMessage({
+            id: "blog.post.references",
+            defaultMessage: "Credits & sources",
+          }),
         }}
         languageChipInner={
           <>
@@ -124,6 +131,7 @@ export const query = graphql`
         updatedAt(formatString: "YYYY-MM-DD")
         tags
         authors
+        references
         featuredImage {
           childImageSharp {
             gatsbyImageData(
