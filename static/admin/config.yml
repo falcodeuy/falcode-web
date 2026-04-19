@@ -2,8 +2,8 @@ backend:
   name: github
   repo: falcodeuy/falcode-web
   branch: main
-  site_domain: https://falcode.dev
-  base_url: /
+  base_url: https://falcode.dev
+  auth_endpoint: api/auth
 
 publish_mode: editorial_workflow
 
