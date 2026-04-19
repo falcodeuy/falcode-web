@@ -2,7 +2,9 @@ backend:
   name: github
   repo: falcodeuy/falcode-web
   branch: main
-  base_url: https://falcode.dev
+  base_url: /
+
+publish_mode: editorial_workflow
 
 media_folder: "static/images/blog"
 public_folder: "/images/blog"
@@ -17,9 +19,39 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Updated At", name: "updatedAt", widget: "datetime" }
-      - { label: "Language", name: "lang", widget: "string" }
+      - { label: "Original Language", name: "lang", widget: "select", options: ["es", "en"] }
       - { label: "Description", name: "description", widget: "text", required: false }
-      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: false
+        field:
+          label: "Tag"
+          name: "tag"
+          widget: "select"
+          options:
+            - "AI"
+            - "Architecture"
+            - "Automation"
+            - "Cloud"
+            - "Cybersecurity"
+            - "Data"
+            - "DevOps"
+            - "Mobile"
+            - "Product"
+            - "UI/UX"
+            - "Web Development"
       - { label: "Featured Image", name: "featuredImage", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Authors", name: "authors", widget: "list" }
+      - label: "Authors"
+        name: "authors"
+        widget: "list"
+        field:
+          name: "author"
+          label: "Author"
+          widget: "select"
+          options:
+            - "Fausto Márquez"
+            - "Crhistyan Silva"
+            - "Leandro Paz"
+          required: true

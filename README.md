@@ -35,6 +35,11 @@ Your site will be running at [http://localhost:9999](http://localhost:9999).
 - **SASS** - CSS preprocessor for styling. [sass-lang.com](https://sass-lang.com/)
 - **AOS** - Animate on scroll library. [aos.github.io](https://aos.github.io/)
 - **Web3Forms** - Handling contact form without backend. [web3forms.com](https://web3forms.com/)
+- **Decap CMS** - Git-based content management for blog posts and drafts. [decapcms.org](https://decapcms.org/)
+
+## ✍️ Content Management
+
+Blog content is managed with **Decap CMS** via the `/admin` panel.
 
 ## 📁 Project Structure
 
@@ -43,5 +48,5 @@ Your site will be running at [http://localhost:9999](http://localhost:9999).
 - `src/components/` - Reusable components
 - `src/styles/` - SASS stylesheets
 - `src/intl/` - Internationalization files
-- `src/content/blog/` - Published blog posts
+- `content/blog/` - Published blog posts (Decap CMS writes here)
 - `src/content/blog-draft/` - Blog drafts (when work in progress)

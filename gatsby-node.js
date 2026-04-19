@@ -15,6 +15,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 
     type MarkdownRemark implements Node {
       fields: MarkdownRemarkFields
+      frontmatter: MarkdownRemarkFrontmatter
     }
 
     type MarkdownRemarkFrontmatter @dontInfer {
@@ -24,6 +25,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       updatedAt: Date @dateformat
       lang: String
       tags: [String]
+      authors: JSON
       featuredImage: File @fileByRelativePath
     }
   `);

@@ -75,13 +75,13 @@ const Header: React.FC = () => {
             {intl.formatMessage({ id: "menu.successCases" })}
           </Link>
 
-          <Link 
+          {/* <Link 
             to='/team' 
             className='navbar-item has-text-dark link-redirect-margin'
             onClick={closeMenu}
           >
             {intl.formatMessage({ id: "menu.aboutUs" })}
-          </Link>
+          </Link> */}
 
           <Link
             to='/blog/'

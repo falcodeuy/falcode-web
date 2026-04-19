@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, Link, type HeadFC, type PageProps } from "gatsby";
 import { GatsbyImage, getImage, type IGatsbyImageData } from "gatsby-plugin-image";
 import { useIntl } from "gatsby-plugin-intl";
-import "../styles/main.scss";
+import BlogPostView, { flattenRemarkAuthors } from "../components/BlogPostView";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SEO from "../components/SEO";
@@ -23,6 +23,7 @@ interface BlogPostData {
       date: string;
       updatedAt?: string;
       tags?: string[];
+      authors?: unknown;
       featuredImage?: {
         childImageSharp?: {
           gatsbyImageData: IGatsbyImageData;
@@ -60,95 +61,46 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
   });
   const backToBlogHref = `/${post.fields.lang}/blog/`;
   const featuredImage = getImage(post.frontmatter.featuredImage || null);
+  const authorNames = flattenRemarkAuthors(post.frontmatter.authors);
 
   return (
     <>
       <Header />
-      <main className="section section-padding blog-page">
-        <div className="container content">
-          <Link className="blog-back-link mb-4 is-inline-flex" to={backToBlogHref}>
-            <span className="icon is-small">
-              <i className="fas fa-arrow-left" aria-hidden="true" />
-            </span>
-            <span>
-              {intl.formatMessage({
-                id: "blog.post.backToBlog",
-                defaultMessage: "Back to blog",
-              })}
-            </span>
-          </Link>
-          <h1 className="mb-2 title is-outfit">{post.frontmatter.title}</h1>
-          {post.frontmatter.description ? (
-            <p className="is-size-5 has-text-grey mb-4">{post.frontmatter.description}</p>
-          ) : null}
-          {featuredImage ? (
-            <div className="mb-5">
-              <GatsbyImage image={featuredImage} alt={post.frontmatter.title} />
-            </div>
-          ) : null}
-          <div className="is-flex is-align-items-center is-flex-wrap-wrap mb-5" style={{ gap: "0.75rem" }}>
-            <span className="blog-tag-chip blog-tag-chip--readonly">
-              <span className="icon is-small">
-                <i className="fas fa-language" aria-hidden="true" />
-              </span>
-              <span>
-                {intl.formatMessage({
-                  id: "blog.post.originalLanguage",
-                  defaultMessage: "Original language",
-                })}
-                :{" "}
-                {currentLanguageName}
-                {primaryTranslation
-                  ? " - "
-                  : null}
-                {primaryTranslation ? (
-                  <Link
-                    className="has-text-link blog-language-link"
-                    to={primaryTranslation.fields.slug}
-                  >
-                    {translationCtaText}
-                  </Link>
-                ) : null}
-              </span>
-            </span>
-            <span className="blog-tag-chip blog-tag-chip--readonly">
-              <span className="icon is-small">
-                <i className="fas fa-calendar-alt" aria-hidden="true" />
-              </span>
-              <span>
-                {intl.formatMessage({
-                  id: "blog.post.published",
-                  defaultMessage: "Published",
-                })}
-                : {post.frontmatter.date}
-              </span>
-            </span>
-            <span className="blog-tag-chip blog-tag-chip--readonly">
-              <span className="icon is-small">
-                <i className="fas fa-clock" aria-hidden="true" />
-              </span>
-              <span>
-                {intl.formatMessage({
-                  id: "blog.post.updated",
-                  defaultMessage: "Updated",
-                })}
-                :{" "}
-                {post.frontmatter.updatedAt || post.frontmatter.date}
-              </span>
-            </span>
-          </div>
-          <div className="mb-5 is-flex is-flex-wrap-wrap is-align-items-center" style={{ gap: "0.5rem" }}>
-            {(post.frontmatter.tags || []).map((tag) => (
-              <span key={tag} className="blog-tag-chip blog-tag-chip--readonly">
-                #{tag}
-              </span>
-            ))}
-          </div>
-          <article lang={post.fields.lang} translate="yes">
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          </article>
-        </div>
-      </main>
+      <BlogPostView
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+        tags={post.frontmatter.tags}
+        authors={authorNames}
+        articleLang={post.fields.lang}
+        publishedDate={post.frontmatter.date}
+        updatedDate={post.frontmatter.updatedAt || post.frontmatter.date}
+        featuredImageSlot={
+          featuredImage ? <GatsbyImage image={featuredImage} alt={post.frontmatter.title} /> : null
+        }
+        body={<div dangerouslySetInnerHTML={{ __html: post.html }} />}
+        labels={{
+          backToBlog: intl.formatMessage({ id: "blog.post.backToBlog", defaultMessage: "Back to blog" }),
+          originalLanguage: intl.formatMessage({
+            id: "blog.post.originalLanguage",
+            defaultMessage: "Original language",
+          }),
+          published: intl.formatMessage({ id: "blog.post.published", defaultMessage: "Published" }),
+          updated: intl.formatMessage({ id: "blog.post.updated", defaultMessage: "Updated" }),
+          authors: intl.formatMessage({ id: "blog.post.authors", defaultMessage: "Authors" }),
+        }}
+        languageChipInner={
+          <>
+            {currentLanguageName}
+            {primaryTranslation ? " - " : null}
+            {primaryTranslation ? (
+              <Link className="has-text-link blog-language-link" to={primaryTranslation.fields.slug}>
+                {translationCtaText}
+              </Link>
+            ) : null}
+          </>
+        }
+        backToBlogHref={backToBlogHref}
+      />
       <Footer />
     </>
   );
@@ -171,6 +123,7 @@ export const query = graphql`
         date(formatString: "YYYY-MM-DD")
         updatedAt(formatString: "YYYY-MM-DD")
         tags
+        authors
         featuredImage {
           childImageSharp {
             gatsbyImageData(

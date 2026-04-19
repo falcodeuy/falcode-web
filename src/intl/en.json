@@ -119,6 +119,7 @@
       "originalLanguage": "Original language",
       "published": "Published",
       "updated": "Updated",
+      "authors": "Authors",
       "translationCta": {
         "es": "Read English version",
         "en": "Leer version en español"

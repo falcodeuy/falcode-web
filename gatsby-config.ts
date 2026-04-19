@@ -48,7 +48,7 @@ const config: GatsbyConfig = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "blog",
-        path: "./src/content/blog/",
+        path: "./content/blog/",
       },
       __key: "blog",
     },
@@ -186,7 +186,12 @@ const config: GatsbyConfig = {
         redirect: true,
       },
     },
-    "gatsby-plugin-decap-cms",
+    {
+      resolve: "gatsby-plugin-decap-cms",
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
   ],
 };
 
