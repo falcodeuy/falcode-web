@@ -1,17 +1,21 @@
 ---
-title: JamStack, a modern and cheap architecture for the web
+title: JamStack, a modern and cheap architecture for the webb
 date: 2026-04-19T19:56:00.000Z
-updatedAt: 2026-04-19T20:05:00.000Z
+updatedAt: ""
 lang: en
 description: "Decouple the web experience layer from data and business logic,
   improving flexibility, scalability, performance, and maintainability. "
 tags:
   - Architecture
-  - Architecture
   - DevOps
+  - Web Development
 featuredImage: /images/blog/1711112544555.png
 authors:
   - Fausto Márquez
+references:
+  - title: Aidin Kaleqi Moqadam Linkedin Post
+    url: https://www.linkedin.com/pulse/leveraging-jamstack-architecture-unveiling-future-web-kaleqi-moqadam-glfzf/
+    detail: We got cover image from it.
 ---
 # Introduction
 
