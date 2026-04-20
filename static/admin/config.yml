@@ -7,6 +7,8 @@ backend:
 
 publish_mode: editorial_workflow
 
+site_url: https://falcode.dev
+
 media_folder: "static/images/blog"
 public_folder: "/images/blog"
 
@@ -22,6 +24,7 @@ collections:
     folder: "content/blog"
     create: true
     slug: "{{slug}}"
+    preview_path: "/{{fields.lang}}/blog/{{slug}}/"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
