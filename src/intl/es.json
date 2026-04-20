@@ -120,7 +120,10 @@
       "published": "Publicado",
       "updated": "Actualizado",
       "authors": "Autores",
+      "linkedInProfile": "Perfil de LinkedIn",
+      "githubProfile": "Perfil de GitHub",
       "references": "Créditos y fuentes",
+      "closingLine": "Escrito con amor por humanos con teclados mecánicos en Falcode",
       "translationCta": {
         "es": "Read English version",
         "en": "Leer version en español"

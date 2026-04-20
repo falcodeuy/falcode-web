@@ -10,6 +10,12 @@ publish_mode: editorial_workflow
 media_folder: "static/images/blog"
 public_folder: "/images/blog"
 
+# Blog author presets
+blog_author_presets: &blog_author_presets
+  - "Fausto Márquez"
+  - "Crhistyan Silva"
+  - "Leandro Paz"
+
 collections:
   - name: "blog"
     label: "Blog Posts"
@@ -20,7 +26,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Updated At", name: "updatedAt", widget: "datetime", required: false }
-      - { label: "Original Language", name: "lang", widget: "select", options: ["es", "en"] }
+      - { label: "Original Language", name: "lang", widget: "select", options: ["es", "en"], default: "en" }
       - { label: "Description", name: "description", widget: "text", required: false }
       - label: "Tags"
         name: "tags"
@@ -44,6 +50,15 @@ collections:
             - "Web Development"
       - { label: "Featured Image", name: "featuredImage", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Authors"
+        name: "authors"
+        widget: "list"
+        required: false
+        field:
+          label: "Author"
+          name: "author"
+          widget: "select"
+          options: *blog_author_presets
       - label: "Credits & sources"
         name: "references"
         widget: "list"
@@ -52,15 +67,3 @@ collections:
           - { label: "Title", name: "title", widget: "string", required: true }
           - { label: "URL", name: "url", widget: "string", required: false }
           - { label: "Detail", name: "detail", widget: "text", required: false }
-      - label: "Authors"
-        name: "authors"
-        widget: "list"
-        field:
-          name: "author"
-          label: "Author"
-          widget: "select"
-          options:
-            - "Fausto Márquez"
-            - "Crhistyan Silva"
-            - "Leandro Paz"
-          required: true

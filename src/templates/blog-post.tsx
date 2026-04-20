@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, Link, type HeadFC, type PageProps } from "gatsby";
 import { GatsbyImage, getImage, type IGatsbyImageData } from "gatsby-plugin-image";
 import { useIntl } from "gatsby-plugin-intl";
-import BlogPostView, { flattenRemarkAuthors, normalizeBlogReferences } from "../components/BlogPostView";
+import BlogPostView, { normalizeBlogAuthors, normalizeBlogReferences } from "../components/BlogPostView";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SEO from "../components/SEO";
@@ -23,6 +23,7 @@ interface BlogPostData {
       date: string;
       updatedAt?: string;
       tags?: string[];
+      author?: unknown;
       authors?: unknown;
       references?: unknown;
       featuredImage?: {
@@ -62,7 +63,7 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
   });
   const backToBlogHref = `/${post.fields.lang}/blog/`;
   const featuredImage = getImage(post.frontmatter.featuredImage || null);
-  const authorNames = flattenRemarkAuthors(post.frontmatter.authors);
+  const authorItems = normalizeBlogAuthors(post.frontmatter.author ?? post.frontmatter.authors);
   const referenceItems = normalizeBlogReferences(post.frontmatter.references);
 
   return (
@@ -72,7 +73,7 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description}
         tags={post.frontmatter.tags}
-        authors={authorNames}
+        authors={authorItems}
         references={referenceItems}
         articleLang={post.fields.lang}
         publishedDate={post.frontmatter.date}
@@ -93,6 +94,18 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
           references: intl.formatMessage({
             id: "blog.post.references",
             defaultMessage: "Credits & sources",
+          }),
+          linkedInProfile: intl.formatMessage({
+            id: "blog.post.linkedInProfile",
+            defaultMessage: "LinkedIn profile",
+          }),
+          githubProfile: intl.formatMessage({
+            id: "blog.post.githubProfile",
+            defaultMessage: "GitHub profile",
+          }),
+          closingLine: intl.formatMessage({
+            id: "blog.post.closingLine",
+            defaultMessage: "Written with love by humans with mechanical keyboards at Falcode",
           }),
         }}
         languageChipInner={
@@ -130,6 +143,7 @@ export const query = graphql`
         date(formatString: "YYYY-MM-DD")
         updatedAt(formatString: "YYYY-MM-DD")
         tags
+        author
         authors
         references
         featuredImage {

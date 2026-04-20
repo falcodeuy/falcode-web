@@ -3,6 +3,21 @@ import BlogPostView from "../../components/BlogPostView";
 import en from "../../intl/en.json";
 import es from "../../intl/es.json";
 
+const AUTHOR_SOCIALS = {
+  "Fausto Márquez": {
+    linkedin: "https://www.linkedin.com/in/faustom721",
+    github: "https://github.com/faustom721",
+  },
+  "Crhistyan Silva": {
+    linkedin: "https://www.linkedin.com/in/crhistyan-silva-650719149/",
+    github: "https://github.com/CrhistyanSilva",
+  },
+  "Leandro Paz": {
+    linkedin: "https://www.linkedin.com/in/leandro-paz-fructos",
+    github: "https://github.com/leopaz95",
+  },
+};
+
 function decapReferencesFromList(list) {
   if (!list || typeof list.toArray !== "function") {
     return [];
@@ -31,6 +46,101 @@ function decapReferencesFromList(list) {
     .filter(Boolean);
 }
 
+function ensureHttpUrl(value) {
+  const t = String(value).trim();
+  if (!t) {
+    return undefined;
+  }
+  if (/^https?:\/\//i.test(t)) {
+    return t;
+  }
+  return `https://${t.replace(/^\/+/, "")}`;
+}
+
+function enrichAuthorWithPreset(author) {
+  if (!author || !author.name) {
+    return author;
+  }
+  const preset = AUTHOR_SOCIALS[author.name];
+  if (!preset) {
+    return author;
+  }
+  return {
+    ...author,
+    linkedin: author.linkedin ?? preset.linkedin,
+    github: author.github ?? preset.github,
+  };
+}
+
+function decapAuthorsFromList(list) {
+  if (!list || typeof list.toArray !== "function") {
+    return [];
+  }
+  return list
+    .toArray()
+    .map((item) => {
+      if (item == null) {
+        return null;
+      }
+      if (typeof item.get === "function") {
+        const authorValue = item.get("author");
+        const nestedAuthor =
+          authorValue && typeof authorValue.get === "function" ? authorValue : null;
+        const nameRaw = nestedAuthor ? nestedAuthor.get("name") : authorValue;
+        const name = nameRaw != null && String(nameRaw).trim() ? String(nameRaw).trim() : "";
+        if (!name) {
+          return null;
+        }
+        const linkedinRaw = nestedAuthor ? nestedAuthor.get("linkedin") : item.get("linkedin");
+        const githubRaw = nestedAuthor ? nestedAuthor.get("github") : item.get("github");
+        const linkedin =
+          linkedinRaw != null && String(linkedinRaw).trim()
+            ? ensureHttpUrl(String(linkedinRaw))
+            : undefined;
+        const github =
+          githubRaw != null && String(githubRaw).trim() ? ensureHttpUrl(String(githubRaw)) : undefined;
+        const out = { name };
+        if (linkedin) {
+          out.linkedin = linkedin;
+        }
+        if (github) {
+          out.github = github;
+        }
+        return enrichAuthorWithPreset(out);
+      }
+      if (typeof item === "string" && item.trim()) {
+        return enrichAuthorWithPreset({ name: item.trim() });
+      }
+      return null;
+    })
+    .filter(Boolean);
+}
+
+function decapAuthorFromObject(author) {
+  if (!author || typeof author.get !== "function") {
+    return [];
+  }
+  const nameRaw = author.get("name") ?? author.get("author");
+  const name = nameRaw != null && String(nameRaw).trim() ? String(nameRaw).trim() : "";
+  if (!name) {
+    return [];
+  }
+  const linkedinRaw = author.get("linkedin");
+  const githubRaw = author.get("github");
+  const linkedin =
+    linkedinRaw != null && String(linkedinRaw).trim() ? ensureHttpUrl(String(linkedinRaw)) : undefined;
+  const github =
+    githubRaw != null && String(githubRaw).trim() ? ensureHttpUrl(String(githubRaw)) : undefined;
+  const out = { name };
+  if (linkedin) {
+    out.linkedin = linkedin;
+  }
+  if (github) {
+    out.github = github;
+  }
+  return [enrichAuthorWithPreset(out)];
+}
+
 function decapListToStrings(list) {
   if (!list || typeof list.toArray !== "function") {
     return [];
@@ -45,9 +155,9 @@ function decapListToStrings(list) {
         return item;
       }
       if (typeof item.get === "function") {
-        const author = item.get("author");
-        if (author != null) {
-          return String(author);
+        const tag = item.get("tag");
+        if (tag != null) {
+          return String(tag);
         }
         return String(item.get("name") || "").trim() || null;
       }
@@ -78,9 +188,13 @@ const BlogPostPreview = ({ entry, widgetFor, getAsset }) => {
   const description = entry.getIn(["data", "description"]);
   const dateRaw = entry.getIn(["data", "date"]);
   const updatedAtRaw = entry.getIn(["data", "updatedAt"]);
-  const lang = entry.getIn(["data", "lang"]) || "es";
+  const lang = entry.getIn(["data", "lang"]) || "en";
   const tags = decapListToStrings(entry.getIn(["data", "tags"]));
-  const authors = decapListToStrings(entry.getIn(["data", "authors"]));
+  const authorFromSingleField = decapAuthorFromObject(entry.getIn(["data", "author"]));
+  const authors =
+    authorFromSingleField.length > 0
+      ? authorFromSingleField
+      : decapAuthorsFromList(entry.getIn(["data", "authors"]));
   const references = decapReferencesFromList(entry.getIn(["data", "references"]));
   const featuredImage = entry.getIn(["data", "featuredImage"]);
   const featuredImageUrl = featuredImage ? getAsset(featuredImage)?.toString() : null;
@@ -118,6 +232,8 @@ const BlogPostPreview = ({ entry, widgetFor, getAsset }) => {
         updated: p.updated,
         authors: p.authors,
         references: p.references,
+        linkedInProfile: p.linkedInProfile,
+        githubProfile: p.githubProfile,
       }}
       languageChipInner={languageName}
       previewBanner={
