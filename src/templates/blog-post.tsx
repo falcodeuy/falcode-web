@@ -173,7 +173,7 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
 };
 
 export const query = graphql`
-  query BlogPostById($id: String!, $slugGroupPattern: String!) {
+  query BlogPostById($id: String!, $postGroup: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
@@ -208,7 +208,7 @@ export const query = graphql`
     allMarkdownRemark(
       filter: {
         frontmatter: { date: { ne: null }, title: { ne: null } }
-        fields: { slug: { regex: $slugGroupPattern } }
+        fields: { postGroup: { eq: $postGroup } }
       }
       sort: { fields: { lang: ASC } }
     ) {

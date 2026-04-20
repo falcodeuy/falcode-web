@@ -3,6 +3,16 @@ const { createFilePath } = require("gatsby-source-filesystem");
 
 const POSTS_PER_PAGE = 6;
 
+function slugifyTitle(value) {
+  return String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
 
@@ -44,11 +54,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const relativePath = createFilePath({ node, getNode, basePath: "content/blog" }).replace(/^\/|\/$/g, "");
   const [postGroup, languageFromFile] = relativePath.split("/");
   const language = node.frontmatter?.lang || languageFromFile || "es";
+  const titleSlug = slugifyTitle(node.frontmatter?.title);
+  const slugBase = titleSlug || postGroup;
 
   createNodeField({
     node,
     name: "slug",
-    value: `/${language}/blog/${postGroup}/`,
+    value: `/${language}/blog/${slugBase}/`,
   });
 
   createNodeField({
@@ -134,7 +146,6 @@ exports.createPages = async ({ graphql, actions }) => {
         id: post.id,
         language: post.fields.lang,
         postGroup: post.fields.postGroup,
-        slugGroupPattern: `/\\/blog\\/${post.fields.postGroup}\\/$/`,
       },
     });
   });
