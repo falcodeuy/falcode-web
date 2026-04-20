@@ -202,7 +202,7 @@ const BlogPostPreview = ({ entry, widgetFor, getAsset }) => {
   const messages = lang === "en" ? en : es;
   const p = messages.blog.post;
   const publishedDate = formatPreviewDate(dateRaw);
-  const updatedDate = formatPreviewDate(updatedAtRaw) || publishedDate;
+  const updatedDate = formatPreviewDate(updatedAtRaw);
   const languageName = p.language[lang] || lang.toUpperCase();
 
   return (

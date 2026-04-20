@@ -127,6 +127,7 @@ const BlogPostView: React.FC<BlogPostViewProps> = ({
   const closingLineParts = closingLine.split(falcodeName);
   const hasFalcodeInClosingLine = closingLineParts.length > 1;
   const showEndmatter = showAuthors || showReferences;
+  const showUpdatedDate = Boolean(updatedDate && updatedDate !== publishedDate);
 
   return (
     <main className="section section-padding blog-page">
@@ -162,7 +163,7 @@ const BlogPostView: React.FC<BlogPostViewProps> = ({
               </span>
             </span>
           ) : null}
-          {updatedDate ? (
+          {showUpdatedDate ? (
             <span className="blog-tag-chip blog-tag-chip--readonly">
               <span className="icon is-small">
                 <i className="fas fa-clock" aria-hidden="true" />
