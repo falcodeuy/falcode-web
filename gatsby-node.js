@@ -25,6 +25,8 @@ exports.createSchemaCustomization = ({ actions }) => {
       updatedAt: Date @dateformat
       lang: String
       tags: [String]
+      relatedPosts: [String]
+      author: JSON
       authors: JSON
       references: JSON
       featuredImage: File @fileByRelativePath

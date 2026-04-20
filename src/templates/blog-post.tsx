@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, Link, useStaticQuery, type HeadFC, type PageProps } from "gatsby";
+import { graphql, Link, type HeadFC, type PageProps } from "gatsby";
 import { GatsbyImage, getImage, type IGatsbyImageData } from "gatsby-plugin-image";
 import { useIntl } from "gatsby-plugin-intl";
 import BlogPostView, {
@@ -50,10 +50,7 @@ interface BlogPostData {
       };
     }>;
   };
-}
-
-interface BlogRelatedPostsData {
-  allMarkdownRemark: {
+  allBlogPosts: {
     nodes: Array<{
       id: string;
       fields: {
@@ -71,24 +68,6 @@ interface BlogRelatedPostsData {
 
 const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
   const intl = useIntl();
-  const relatedPostsData = useStaticQuery<BlogRelatedPostsData>(graphql`
-    query BlogPostRelatedPosts {
-      allMarkdownRemark(filter: { frontmatter: { date: { ne: null }, title: { ne: null } } }) {
-        nodes {
-          id
-          fields {
-            slug
-            lang
-          }
-          frontmatter {
-            title
-            description
-            date(formatString: "YYYY-MM-DD")
-          }
-        }
-      }
-    }
-  `);
   const post = data.markdownRemark;
   const languageNames: Record<string, string> = {
     es: intl.formatMessage({ id: "blog.post.language.es", defaultMessage: "Spanish" }),
@@ -109,7 +88,7 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
     .map((value) => value.trim())
     .filter(Boolean);
   const postsBySlug = new Map(
-    relatedPostsData.allMarkdownRemark.nodes.map((node) => [node.fields.slug, node]),
+    data.allBlogPosts.nodes.map((node) => [node.fields.slug, node]),
   );
   const manualRelatedPosts: BlogPostRelatedPost[] = manualRelatedPostSlugs
     .map((slug) => postsBySlug.get(slug))
@@ -241,6 +220,20 @@ export const query = graphql`
         }
         frontmatter {
           title
+        }
+      }
+    }
+    allBlogPosts: allMarkdownRemark(filter: { frontmatter: { date: { ne: null }, title: { ne: null } } }) {
+      nodes {
+        id
+        fields {
+          slug
+          lang
+        }
+        frontmatter {
+          title
+          description
+          date(formatString: "YYYY-MM-DD")
         }
       }
     }
