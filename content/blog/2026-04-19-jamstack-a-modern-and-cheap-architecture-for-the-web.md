@@ -16,6 +16,8 @@ references:
   - title: Aidin Kaleqi Moqadam Linkedin Post
     url: https://www.linkedin.com/pulse/leveraging-jamstack-architecture-unveiling-future-web-kaleqi-moqadam-glfzf/
     detail: We got cover image from it.
+  - title: jamstack.org
+    url: https://jamstack.org/
 ---
 # Introduction
 
