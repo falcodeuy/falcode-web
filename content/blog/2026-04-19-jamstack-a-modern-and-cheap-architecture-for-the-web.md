@@ -1,5 +1,5 @@
 ---
-title: JamStack, a modern and cheap architecture for the webb
+title: JamStack, a modern and cheap architecture for the web
 date: 2026-04-19T19:56:00.000Z
 updatedAt: ""
 lang: en
