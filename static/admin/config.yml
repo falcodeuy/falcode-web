@@ -21,7 +21,7 @@ collections:
     label: "Blog Posts"
     folder: "content/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
@@ -67,3 +67,13 @@ collections:
           - { label: "Title", name: "title", widget: "string", required: true }
           - { label: "URL", name: "url", widget: "string", required: false }
           - { label: "Detail", name: "detail", widget: "text", required: false }
+      - label: "Related posts"
+        name: "relatedPosts"
+        widget: "list"
+        required: false
+        hint: "Paste blog post URLs (e.g. /blog/my-post/)."
+        label_singular: "related post"
+        field:
+          label: "Post URL"
+          name: "slug"
+          widget: "string"

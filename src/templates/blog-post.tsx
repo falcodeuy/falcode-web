@@ -1,8 +1,12 @@
 import React from "react";
-import { graphql, Link, type HeadFC, type PageProps } from "gatsby";
+import { graphql, Link, useStaticQuery, type HeadFC, type PageProps } from "gatsby";
 import { GatsbyImage, getImage, type IGatsbyImageData } from "gatsby-plugin-image";
 import { useIntl } from "gatsby-plugin-intl";
-import BlogPostView, { normalizeBlogAuthors, normalizeBlogReferences } from "../components/BlogPostView";
+import BlogPostView, {
+  normalizeBlogAuthors,
+  normalizeBlogReferences,
+  type BlogPostRelatedPost,
+} from "../components/BlogPostView";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SEO from "../components/SEO";
@@ -23,6 +27,7 @@ interface BlogPostData {
       date: string;
       updatedAt?: string;
       tags?: string[];
+      relatedPosts?: string[];
       author?: unknown;
       authors?: unknown;
       references?: unknown;
@@ -47,8 +52,43 @@ interface BlogPostData {
   };
 }
 
+interface BlogRelatedPostsData {
+  allMarkdownRemark: {
+    nodes: Array<{
+      id: string;
+      fields: {
+        slug: string;
+        lang: string;
+      };
+      frontmatter: {
+        title: string;
+        description?: string;
+        date?: string;
+      };
+    }>;
+  };
+}
+
 const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
   const intl = useIntl();
+  const relatedPostsData = useStaticQuery<BlogRelatedPostsData>(graphql`
+    query BlogPostRelatedPosts {
+      allMarkdownRemark(filter: { frontmatter: { date: { ne: null }, title: { ne: null } } }) {
+        nodes {
+          id
+          fields {
+            slug
+            lang
+          }
+          frontmatter {
+            title
+            description
+            date(formatString: "YYYY-MM-DD")
+          }
+        }
+      }
+    }
+  `);
   const post = data.markdownRemark;
   const languageNames: Record<string, string> = {
     es: intl.formatMessage({ id: "blog.post.language.es", defaultMessage: "Spanish" }),
@@ -65,6 +105,24 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
   const featuredImage = getImage(post.frontmatter.featuredImage || null);
   const authorItems = normalizeBlogAuthors(post.frontmatter.author ?? post.frontmatter.authors);
   const referenceItems = normalizeBlogReferences(post.frontmatter.references);
+  const manualRelatedPostSlugs = (post.frontmatter.relatedPosts ?? [])
+    .map((value) => value.trim())
+    .filter(Boolean);
+  const postsBySlug = new Map(
+    relatedPostsData.allMarkdownRemark.nodes.map((node) => [node.fields.slug, node]),
+  );
+  const manualRelatedPosts: BlogPostRelatedPost[] = manualRelatedPostSlugs
+    .map((slug) => postsBySlug.get(slug))
+    .filter((node): node is NonNullable<typeof node> => Boolean(node))
+    .filter((node) => node.id !== post.id && node.fields.lang === post.fields.lang)
+    .slice(0, 3)
+    .map((node) => ({
+      slug: node.fields.slug,
+      title: node.frontmatter.title,
+      description: node.frontmatter.description,
+      publishedDate: node.frontmatter.date,
+    }));
+  const relatedPosts = manualRelatedPosts;
 
   return (
     <>
@@ -75,6 +133,7 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
         tags={post.frontmatter.tags}
         authors={authorItems}
         references={referenceItems}
+        relatedPosts={relatedPosts}
         articleLang={post.fields.lang}
         publishedDate={post.frontmatter.date}
         updatedDate={post.frontmatter.updatedAt || post.frontmatter.date}
@@ -94,6 +153,14 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
           references: intl.formatMessage({
             id: "blog.post.references",
             defaultMessage: "Credits & sources",
+          }),
+          relatedPosts: intl.formatMessage({
+            id: "blog.post.relatedPosts",
+            defaultMessage: "Related posts",
+          }),
+          readArticle: intl.formatMessage({
+            id: "blog.post.readArticle",
+            defaultMessage: "Read article",
           }),
           linkedInProfile: intl.formatMessage({
             id: "blog.post.linkedInProfile",
@@ -143,6 +210,7 @@ export const query = graphql`
         date(formatString: "YYYY-MM-DD")
         updatedAt(formatString: "YYYY-MM-DD")
         tags
+        relatedPosts
         author
         authors
         references

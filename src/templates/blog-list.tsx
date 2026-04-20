@@ -165,7 +165,6 @@ const BlogListTemplate: React.FC<PageProps<BlogListData, BlogListContext>> = ({
             <p className="has-text-grey mb-5">
               {intl.formatMessage({
                 id: "blog.list.noResults",
-                defaultMessage: "No posts match your filters.",
               })}
             </p>
           ) : null}

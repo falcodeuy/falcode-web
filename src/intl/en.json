@@ -107,7 +107,7 @@
       "title": "The Falcode Blog",
       "searchPlaceholder": "Search article...",
       "searchAriaLabel": "Search blog posts by title",
-      "noResults": "No posts match your filters.",
+      "noResults": "No articles match your filters.",
       "clearFilters": "Clear filters",
       "pagination": {
         "previous": "Previous",
@@ -123,7 +123,7 @@
       "linkedInProfile": "LinkedIn profile",
       "githubProfile": "GitHub profile",
       "references": "Credits & sources",
-      "closingLine": "Written with love by humans with mechanical keyboards at Falcode",
+      "closingLine": "Written with love by humans using mechanical keyboards at Falcode",
       "translationCta": {
         "es": "Read English version",
         "en": "Leer version en español"
@@ -131,7 +131,9 @@
       "language": {
         "es": "Spanish",
         "en": "English"
-      }
+      },
+      "relatedPosts": "Related posts",
+      "readArticle": "Read article"
     }
   }
 }

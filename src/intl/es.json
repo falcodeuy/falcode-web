@@ -123,7 +123,7 @@
       "linkedInProfile": "Perfil de LinkedIn",
       "githubProfile": "Perfil de GitHub",
       "references": "Créditos y fuentes",
-      "closingLine": "Escrito con amor por humanos con teclados mecánicos en Falcode",
+      "closingLine": "Escrito con amor por humanos usando teclados mecánicos en Falcode",
       "translationCta": {
         "es": "Read English version",
         "en": "Leer version en español"
@@ -131,7 +131,9 @@
       "language": {
         "es": "Español",
         "en": "Inglés"
-      }
+      },
+      "relatedPosts": "Artículos relacionados",
+      "readArticle": "Leer artículo"
     }
   }
 }

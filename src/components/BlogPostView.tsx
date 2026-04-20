@@ -9,6 +9,8 @@ export interface BlogPostViewLabels {
   updated: string;
   authors?: string;
   references?: string;
+  relatedPosts?: string;
+  readArticle?: string;
   linkedInProfile?: string;
   githubProfile?: string;
   closingLine?: string;
@@ -41,12 +43,20 @@ export interface BlogPostReference {
   detail?: string;
 }
 
+export interface BlogPostRelatedPost {
+  slug: string;
+  title: string;
+  description?: string | null;
+  publishedDate?: string | null;
+}
+
 export interface BlogPostViewProps {
   title: string;
   description?: string | null;
   tags?: string[];
   authors?: BlogPostAuthor[];
   references?: BlogPostReference[];
+  relatedPosts?: BlogPostRelatedPost[];
   articleLang: string;
   publishedDate?: string | null;
   updatedDate?: string | null;
@@ -89,6 +99,7 @@ const BlogPostView: React.FC<BlogPostViewProps> = ({
   tags = [],
   authors = [],
   references = [],
+  relatedPosts = [],
   articleLang,
   publishedDate,
   updatedDate,
@@ -107,6 +118,8 @@ const BlogPostView: React.FC<BlogPostViewProps> = ({
   const referencesHeading = labels.references ?? "Credits & sources";
   const linkedInLabel = labels.linkedInProfile ?? "LinkedIn profile";
   const githubLabel = labels.githubProfile ?? "GitHub profile";
+  const relatedPostsHeading = labels.relatedPosts ?? "Related posts";
+  const readArticleLabel = labels.readArticle ?? "Read article";
   const closingLine =
     labels.closingLine ??
     "Written with love by humans with mechanical keyboards at Falcode";
@@ -232,6 +245,40 @@ const BlogPostView: React.FC<BlogPostViewProps> = ({
               </section>
             ) : null}
           </div>
+        ) : null}
+        {relatedPosts.length > 0 ? (
+          <section className="blog-post-endmatter" aria-labelledby="blog-related-posts-heading">
+            <h2 id="blog-related-posts-heading" className="title is-4 is-outfit mb-4">
+              {relatedPostsHeading}
+            </h2>
+            <div className="columns is-multiline">
+              {relatedPosts.map((relatedPost) => (
+                <div key={relatedPost.slug} className="column is-12-mobile is-6-tablet is-4-desktop">
+                  <Link to={relatedPost.slug} className="card is-block is-fullheight">
+                    <div className="card-content is-flex is-flex-direction-column is-fullheight">
+                      <h3 className="title is-6 is-outfit mb-2">{relatedPost.title}</h3>
+                      {relatedPost.description ? (
+                        <p className="has-text-grey is-size-7 mb-3">{relatedPost.description}</p>
+                      ) : null}
+                      <div className="is-flex is-justify-content-space-between is-align-items-center mt-auto">
+                        {relatedPost.publishedDate ? (
+                          <span className="has-text-grey is-size-7">{relatedPost.publishedDate}</span>
+                        ) : (
+                          <span />
+                        )}
+                        <span className="has-text-link is-size-7 has-text-weight-bold is-inline-flex is-align-items-center">
+                          {readArticleLabel}
+                          <span className="icon is-small ml-1">
+                            <i className="fas fa-arrow-right" aria-hidden="true" />
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </section>
         ) : null}
         <p className="has-text-grey has-text-weight-semibold is-size-7 has-text-centered mt-6" aria-label={closingLine}>
           <span>
