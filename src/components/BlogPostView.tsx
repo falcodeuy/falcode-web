@@ -115,7 +115,7 @@ const BlogPostView: React.FC<BlogPostViewProps> = ({
   const showAuthors = authorItems.length > 0;
   const referenceItems = normalizeBlogReferences(references);
   const showReferences = referenceItems.length > 0;
-  const referencesHeading = labels.references ?? "Credits & sources";
+  const referencesHeading = labels.references ?? "Sources & credits";
   const linkedInLabel = labels.linkedInProfile ?? "LinkedIn profile";
   const githubLabel = labels.githubProfile ?? "GitHub profile";
   const relatedPostsHeading = labels.relatedPosts ?? "Related posts";
@@ -187,7 +187,8 @@ const BlogPostView: React.FC<BlogPostViewProps> = ({
           {body}
         </article>
         {showEndmatter ? (
-          <div className="blog-post-endmatter">
+          <div className="mt-6">
+            <hr className="my-4" />
             {showAuthors ? (
               <section
                 className={showReferences ? "blog-post-endmatter__authors mb-5" : "blog-post-endmatter__authors"}
@@ -248,7 +249,7 @@ const BlogPostView: React.FC<BlogPostViewProps> = ({
           </div>
         ) : null}
         {relatedPosts.length > 0 ? (
-          <section className="blog-post-endmatter" aria-labelledby="blog-related-posts-heading">
+          <section className="mt-6" aria-labelledby="blog-related-posts-heading">
             <h2 id="blog-related-posts-heading" className="title is-4 is-outfit mb-4">
               {relatedPostsHeading}
             </h2>

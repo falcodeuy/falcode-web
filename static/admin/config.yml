@@ -64,7 +64,7 @@ collections:
           name: "author"
           widget: "select"
           options: *blog_author_presets
-      - label: "Credits & sources"
+      - label: "Sources & credits"
         name: "references"
         widget: "list"
         required: false
