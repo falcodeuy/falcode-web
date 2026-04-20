@@ -115,7 +115,7 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
         relatedPosts={relatedPosts}
         articleLang={post.fields.lang}
         publishedDate={post.frontmatter.date}
-        updatedDate={post.frontmatter.updatedAt || post.frontmatter.date}
+        updatedDate={post.frontmatter.updatedAt}
         featuredImageSlot={
           featuredImage ? <GatsbyImage image={featuredImage} alt={post.frontmatter.title} /> : null
         }
