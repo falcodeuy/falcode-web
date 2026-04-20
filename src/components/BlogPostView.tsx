@@ -141,8 +141,8 @@ const BlogPostView: React.FC<BlogPostViewProps> = ({
           </Link>
         ) : null}
         <h1 className="mb-2 title is-outfit">{title}</h1>
+        {featuredImageSlot ? <div className="mt-4 mb-3">{featuredImageSlot}</div> : null}
         {description ? <p className="is-size-5 has-text-grey mb-4">{description}</p> : null}
-        {featuredImageSlot ? <div className="mb-5">{featuredImageSlot}</div> : null}
         <div className="is-flex is-align-items-center is-flex-wrap-wrap mb-5" style={{ gap: "0.75rem" }}>
           <span className="blog-tag-chip blog-tag-chip--readonly">
             <span className="icon is-small">
