@@ -320,6 +320,16 @@ const BlogPostView: React.FC<BlogPostViewProps> = ({
 
 export default BlogPostView;
 
+export function normalizeBlogTags(tags: unknown): string[] {
+  if (!Array.isArray(tags)) {
+    return [];
+  }
+
+  return tags
+    .map((entry) => (typeof entry === "string" ? entry.trim() : ""))
+    .filter(Boolean);
+}
+
 export function normalizeBlogReferences(references: unknown): BlogPostReference[] {
   if (!references || !Array.isArray(references)) {
     return [];

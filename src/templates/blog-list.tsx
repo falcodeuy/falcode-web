@@ -3,6 +3,7 @@ import { graphql, Link, type HeadFC, type PageProps } from "gatsby";
 import { GatsbyImage, getImage, type IGatsbyImageData } from "gatsby-plugin-image";
 import { useIntl } from "gatsby-plugin-intl";
 import "../styles/main.scss";
+import { normalizeBlogTags } from "../components/BlogPostView";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SEO from "../components/SEO";
@@ -72,7 +73,7 @@ const BlogListTemplate: React.FC<PageProps<BlogListData, BlogListContext>> = ({
   const allTags = useMemo(
     () =>
       Array.from(
-        new Set(posts.flatMap((post) => post.frontmatter.tags || []).map((tag) => tag.toLowerCase()))
+        new Set(posts.flatMap((post) => normalizeBlogTags(post.frontmatter.tags)).map((tag) => tag.toLowerCase()))
       ).sort(),
     [posts]
   );
@@ -81,7 +82,7 @@ const BlogListTemplate: React.FC<PageProps<BlogListData, BlogListContext>> = ({
 
     if (selectedTags.length > 0) {
       list = list.filter((post) => {
-        const tags = (post.frontmatter.tags || []).map((tag) => tag.toLowerCase());
+        const tags = normalizeBlogTags(post.frontmatter.tags).map((tag) => tag.toLowerCase());
         return selectedTags.every((selectedTag) => tags.includes(selectedTag));
       });
     }
@@ -186,7 +187,7 @@ const BlogListTemplate: React.FC<PageProps<BlogListData, BlogListContext>> = ({
                       <h2 className="title is-4 mb-3">{post.frontmatter.title}</h2>
                       <p className="mb-4">{post.frontmatter.description || post.excerpt}</p>
                       <p className="is-size-7 mb-3">
-                        {(post.frontmatter.tags || []).map((tag) => (
+                        {normalizeBlogTags(post.frontmatter.tags).map((tag) => (
                           <span key={tag} className="blog-tag-chip blog-tag-chip--readonly mr-2">
                             #{tag}
                           </span>

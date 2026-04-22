@@ -5,6 +5,7 @@ import { useIntl } from "gatsby-plugin-intl";
 import BlogPostView, {
   normalizeBlogAuthors,
   normalizeBlogReferences,
+  normalizeBlogTags,
   type BlogPostRelatedPost,
 } from "../components/BlogPostView";
 import Footer from "../components/Footer";
@@ -82,6 +83,7 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
   });
   const backToBlogHref = `/${post.fields.lang}/blog/`;
   const featuredImage = getImage(post.frontmatter.featuredImage || null);
+  const tagItems = normalizeBlogTags(post.frontmatter.tags);
   const authorItems = normalizeBlogAuthors(post.frontmatter.author ?? post.frontmatter.authors);
   const referenceItems = normalizeBlogReferences(post.frontmatter.references);
   const manualRelatedPostSlugs = (post.frontmatter.relatedPosts ?? [])
@@ -109,7 +111,7 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostData>> = ({ data }) => {
       <BlogPostView
         title={post.frontmatter.title}
         description={post.frontmatter.description}
-        tags={post.frontmatter.tags}
+        tags={tagItems}
         authors={authorItems}
         references={referenceItems}
         relatedPosts={relatedPosts}
@@ -246,6 +248,7 @@ export const Head: HeadFC<BlogPostData> = ({ data }) => {
   const post = data.markdownRemark;
   const lang = post.fields.lang || "es";
   const description = post.frontmatter.description || post.excerpt;
+  const tagItems = normalizeBlogTags(post.frontmatter.tags);
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -258,8 +261,8 @@ export const Head: HeadFC<BlogPostData> = ({ data }) => {
       "@type": "WebPage",
       "@id": `https://falcode.dev${post.fields.slug}`,
     },
-    articleSection: post.frontmatter.tags?.[0],
-    keywords: post.frontmatter.tags,
+    articleSection: tagItems[0],
+    keywords: tagItems,
     author: {
       "@type": "Organization",
       name: "Falcode",
@@ -283,7 +286,7 @@ export const Head: HeadFC<BlogPostData> = ({ data }) => {
       type="article"
       publishedTime={post.frontmatter.date}
       modifiedTime={post.frontmatter.updatedAt || post.frontmatter.date}
-      keywords={post.frontmatter.tags}
+      keywords={tagItems}
       structuredData={structuredData}
     />
   );
