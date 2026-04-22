@@ -15,7 +15,7 @@ references:
 
 Throughout our history as Falcode, we've deployed multiple software products, platforms, MVPs, for our own ventures and our clients'.
 
-As money is always tight, over the years we developed some skills combining tools and services that one can totally use for starting a business online. 
+As we have our day jobs, Falcode our the freelance side hustle working on evenings and weekends; so money is always tight. Hence, over the years we developed some skills combining tools and services that one can totally use for starting a business online with no budget at all.
 
 Want to test your MVP with real users?\
 Need to showcase your product to potential investors?\
