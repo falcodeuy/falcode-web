@@ -16,15 +16,16 @@ const Products: React.FC = () => {
 
         <div className="columns is-mobile is-multiline columns-margin columns-gap">
           <ProductCard
-            titleId="zalonTitle"
-            descriptionId="zalonDescription"
-            link="https://agenda.zalon.app"
+            titleId="turnolinkTitle"
+            descriptionId="turnolinkDescription"
+            link="https://turnolink.app"
             imagePosition="right"
             size="small"
+            imageClassName="phone-image-position-enlarged"
             image={
               <StaticImage
-                src="../images/zalon-cellphone.png"
-                alt="Zalon app"
+                src="../images/turnolink-cellphone.png"
+                alt="Turnolink app"
               />
             }
           />
@@ -70,7 +71,7 @@ const Products: React.FC = () => {
             image={
               <StaticImage
                 src="../images/showapp.png"
-                alt="Zalon design"
+                alt="ShowApp design"
               />
             }
           />

@@ -9,6 +9,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   image,
   imagePosition = "right",
   size = "small",
+  imageClassName,
   reversed = false,
   link,
 }) => {
@@ -45,7 +46,9 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
   const ImageSection = (
     <div className={imageColumnClasses}>
-      <div className={`${size === "large" ? "computer-image-position" : "phone-image-position"}`}>
+      <div
+        className={`${size === "large" ? "computer-image-position" : "phone-image-position"}${imageClassName ? ` ${imageClassName}` : ""}`}
+      >
         {image}
       </div>
     </div>

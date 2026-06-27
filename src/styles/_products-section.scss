@@ -67,6 +67,24 @@
   max-width: 400px;
 }
 
+.phone-image-position-enlarged {
+  width: 190%;
+  max-width: 480px;
+  left: 50%;
+  animation-name: deviceFloatEnlarged;
+
+  @include tablet {
+    width: 135%;
+    max-width: 360px;
+    left: 32%;
+  }
+
+  @include desktop {
+    width: 230%;
+    max-width: none;
+  }
+}
+
 .container-product {
   border-radius: 8px;
 }
@@ -87,5 +105,19 @@
 
   100% {
     transform: translate(-50%, -50%) rotate(-1deg);
+  }
+}
+
+@keyframes deviceFloatEnlarged {
+  0% {
+    transform: translate(-50%, -50%) rotate(-14deg);
+  }
+
+  50% {
+    transform: translate(-50%, -52%) rotate(-10deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(-14deg);
   }
 }
